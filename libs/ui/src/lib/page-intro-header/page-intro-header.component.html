@@ -1,0 +1,8 @@
+<div class="content" [class.content--low]='!isUrl'>
+  <h1 class="content__title">{{ headerData.title | titlecase }}</h1>
+  <img class="content__img"
+       *ngIf='isUrl'
+       [src]="headerData.url" [alt]="headerData.alt"
+       width="300px" height="300px">
+</div>
+

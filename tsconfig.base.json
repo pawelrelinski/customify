@@ -15,7 +15,12 @@
     "skipDefaultLibCheck": true,
     "baseUrl": ".",
     "paths": {
-      "@customify/api-interfaces": ["libs/api-interfaces/src/index.ts"]
+      "@customify/api-interfaces": ["libs/api-interfaces/src/index.ts"],
+      "@customify/ui": ["libs/ui/src/index.ts"],
+      "@customify/data-access": ["libs/data-access/src/index.ts"],
+      "@customify/home": ["libs/home/src/index.ts"],
+      "@customify/category": ["libs/category/src/index.ts"],
+      "@customify/profile": ["libs/profile/src/index.ts"]
     }
   },
   "exclude": ["node_modules", "tmp"]

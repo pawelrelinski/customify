@@ -1,6 +1,4 @@
 import { Component } from '@angular/core';
-import { HttpClient } from '@angular/common/http';
-import { Message } from '@customify/api-interfaces';
 
 @Component({
   selector: 'customify-root',
@@ -8,6 +6,5 @@ import { Message } from '@customify/api-interfaces';
   styleUrls: ['./app.component.scss'],
 })
 export class AppComponent {
-  hello$ = this.http.get<Message>('/api/hello');
-  constructor(private http: HttpClient) {}
+  constructor() {}
 }

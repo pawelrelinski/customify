@@ -1,0 +1,59 @@
+<header class="header" [class.body-pd]="menuIsOpen">
+  <div class="header__toggle">
+    <i class='bx bx-menu' (click)="toggleMenu()"></i>
+  </div>
+</header>
+
+<div class="content" [class.content--active]="menuIsOpen">
+  <ng-content></ng-content>
+</div>
+
+<div class="navbar" [class.show]="menuIsOpen">
+  <nav class="nav">
+    <div>
+      <a routerLink="/home" class="nav__logo"
+         (click)="hiddenMenu()">
+        <i class='bx bx-home nav__logo-icon'></i>
+        <span class="nav__logo-name">{{ title | titlecase }}</span>
+      </a>
+
+      <a routerLink="/category" routerLinkActive="nav__link--active"
+         (click)="hiddenMenu()" class="nav__link">
+        <i class='bx bx-layer nav__icon'></i>
+        <span class="nav__name">Categories</span>
+      </a>
+
+      <a routerLink="/profile" routerLinkActive="nav__link--active"
+         (click)="hiddenMenu()" class="nav__link">
+        <i class='bx bx-user nav__icon'></i>
+        <span class="nav__name">Profile</span>
+      </a>
+
+      <div class="nav__list">
+        <a routerLink="/shopping-bag" routerLinkActive="nav__link--active"
+           (click)="hiddenMenu()" class="nav__link">
+          <i class='bx bx-shopping-bag nav__icon'></i>
+          <span class="nav__name">Shopping bag</span>
+        </a>
+
+        <a routerLink="/favorites" routerLinkActive="nav__link--active"
+           (click)="hiddenMenu()" class="nav__link">
+          <i class='bx bx-heart nav__icon'></i>
+          <span class="nav__name">Favorites</span>
+        </a>
+
+        <a routerLink="/settings" routerLinkActive="nav__link--active"
+           (click)="hiddenMenu()" class="nav__link">
+          <i class='bx bx-abacus nav__icon'></i>
+          <span class="nav__name">Settings</span>
+        </a>
+      </div>
+    </div>
+
+    <a href="#" class="nav__link">
+      <i class='bx bx-log-out nav__icon'></i>
+      <span class="nav__name">Log Out</span>
+    </a>
+  </nav>
+</div>
+
