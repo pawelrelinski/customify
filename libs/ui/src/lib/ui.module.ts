@@ -4,6 +4,7 @@ import { NavbarComponent } from './navbar/navbar.component';
 import { RouterModule } from '@angular/router';
 import { FooterComponent } from './footer/footer.component';
 import { PageIntroHeaderComponent } from './page-intro-header/page-intro-header.component';
+import { BannerComponent } from './banner/banner.component';
 
 @NgModule({
   imports: [
@@ -13,12 +14,14 @@ import { PageIntroHeaderComponent } from './page-intro-header/page-intro-header.
   declarations: [
     NavbarComponent,
     FooterComponent,
-    PageIntroHeaderComponent
+    PageIntroHeaderComponent,
+    BannerComponent
   ],
   exports: [
     NavbarComponent,
     FooterComponent,
     PageIntroHeaderComponent,
+    BannerComponent
   ]
 })
 export class UiModule {}

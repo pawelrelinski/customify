@@ -1,0 +1,16 @@
+<li class='category-types__element'>
+  <button class='category-types__btn' (click)='onClick(category.name)'
+          [class.category-types__btn--current-choose]='isCurrent'>
+    {{ category.name | titlecase }}
+  </button>
+</li>
+<div class='category-subcategories' *ngIf='isCurrent'>
+  <ul class='category-subcategories__list'>
+    <li class='category-subcategories__element'
+        *ngFor='let subcategory of category?.subcategories'>
+      <a class='category-subcategories__link'>
+        {{ subcategory | titlecase }}
+      </a>
+    </li>
+  </ul>
+</div>

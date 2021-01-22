@@ -1,10 +1,11 @@
 import { Component, OnInit } from '@angular/core';
+import { Subject } from 'rxjs';
 
 interface IHeaderData {
   title: string;
 }
 
-interface ICategory {
+export interface ICategory {
   name: string;
   subcategories: Array<string>;
 }
@@ -18,23 +19,28 @@ export class CategoryListComponent implements OnInit {
 
   public pageIntroHeaderData: IHeaderData;
   public categories: Array<ICategory> = [];
-  public currentDisplayCategory: ICategory;
+
+  public categorySubject: Subject<ICategory> = new Subject<ICategory>();
+  public currentCategory$ = this.categorySubject.asObservable();
+  public currentCategory: ICategory;
+
   public categoryIsChoose = false;
   public btnCategoryNameIsActive = false;
 
   constructor() { }
 
   ngOnInit(): void {
-    this.initHeader();
+    this.initHeaderData();
     this.initCategories();
+    this.initCurrentCategorySubscribe();
   }
 
   public showCategoryElements(name: string): void {
     this.categoryIsChoose = true;
-    this.currentDisplayCategory = this.getCategoryDataByName(name);
+    this.categorySubject.next(this.getCategoryDataByName(name));
   }
 
-  private initHeader(): void {
+  private initHeaderData(): void {
     this.pageIntroHeaderData = { title: 'Categories' };
   }
 
@@ -48,6 +54,12 @@ export class CategoryListComponent implements OnInit {
 
   private getCategoryDataByName(name: string): ICategory {
     return this.categories.find(category => category.name === name);
+  }
+
+  private initCurrentCategorySubscribe(): void {
+    this.currentCategory$.subscribe((currentCategory: ICategory) => {
+      this.currentCategory = currentCategory;
+    });
   }
 
 }

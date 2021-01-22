@@ -1,18 +1,5 @@
 $main-color: #4723D9;
 
-.banners {
-  width: 100%;
-  height: auto;
-}
-
-.wrapper {
-  width: 100%;
-  height: auto;
-  box-sizing: border-box;
-  display: flex;
-  flex-direction: column;
-}
-
 .category-types {
   width: 100%;
   height: auto;
@@ -48,16 +35,7 @@ $main-color: #4723D9;
   }
 }
 
-@media (min-width: 768px) {
-  .wrapper {
-    flex-direction: row;
-  }
-
-  .banners {
-    width: calc(100% - 200px);
-  }
-
-  .category-types {
-    width: 200px;
-  }
+.category-subcategories {
+  height: auto;
+  margin-bottom: 20px;
 }

@@ -1,21 +1,15 @@
 <customify-page-intro-header [headerData]='pageIntroHeaderData'></customify-page-intro-header>
-<div class='category-types'>
-  <ul class='category-types__list'>
-    <li class='category-types__element' *ngFor='let category of categories'>
-      <button class='category-types__btn'
-              (click)='showCategoryElements(category.name)'>
-        {{ category.name | titlecase }}
-      </button>
-    </li>
-  </ul>
-  <div class='category-subcategories' *ngIf='categoryIsChoose'>
-    <ul class='category-subcategories__list'>
-      <li class='category-subcategories__element'
-          *ngFor='let subcategory of currentDisplayCategory.subcategories'>
-        <a class='category-subcategories__link'>
-          {{ subcategory | titlecase }}
-        </a>
-      </li>
+<div class='wrapper'>
+  <div class='category-types'>
+    <ul class='category-types__list'>
+      <customify-category-list-element
+        *ngFor='let category of categories'
+        [currentCategory]='currentCategory?.name'
+        [category]='category' (changeCurrentCategory)='showCategoryElements($event)'>
+      </customify-category-list-element>
     </ul>
+  </div>
+  <div class='banners'>
+    <customify-banners-list></customify-banners-list>
   </div>
 </div>
