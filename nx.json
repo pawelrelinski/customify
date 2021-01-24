@@ -1,9 +1,14 @@
 {
   "npmScope": "customify",
-  "affected": { "defaultBase": "master" },
+  "affected": {
+    "defaultBase": "master"
+  },
   "implicitDependencies": {
     "angular.json": "*",
-    "package.json": { "dependencies": "*", "devDependencies": "*" },
+    "package.json": {
+      "dependencies": "*",
+      "devDependencies": "*"
+    },
     "tsconfig.base.json": "*",
     "tslint.json": "*",
     ".eslintrc.json": "*",
@@ -14,21 +19,53 @@
       "runner": "@nrwl/nx-cloud",
       "options": {
         "accessToken": "YzU1NTkzZDgtYmZhNy00MjY0LWI5YTctYzM4ZjQ5OTAzMjVhfHJlYWQtd3JpdGU=",
-        "cacheableOperations": ["build", "test", "lint", "e2e"],
+        "cacheableOperations": [
+          "build",
+          "test",
+          "lint",
+          "e2e"
+        ],
         "canTrackAnalytics": false,
         "showUsageWarnings": true
       }
     }
   },
   "projects": {
-    "client": { "tags": [] },
-    "client-e2e": { "tags": [], "implicitDependencies": ["client"] },
-    "api": { "tags": [] },
-    "api-interfaces": { "tags": [] },
-    "ui": { "tags": [] },
-    "data-access": { "tags": [] },
-    "home": { "tags": [] },
-    "category": { "tags": [] },
-    "profile": { "tags": [] }
+    "client": {
+      "tags": []
+    },
+    "client-e2e": {
+      "tags": [],
+      "implicitDependencies": [
+        "client"
+      ]
+    },
+    "api": {
+      "tags": []
+    },
+    "api-interfaces": {
+      "tags": []
+    },
+    "ui": {
+      "tags": []
+    },
+    "data-access": {
+      "tags": []
+    },
+    "home": {
+      "tags": []
+    },
+    "category": {
+      "tags": []
+    },
+    "profile": {
+      "tags": []
+    },
+    "ui-e2e": {
+      "tags": [],
+      "implicitDependencies": [
+        "ui"
+      ]
+    }
   }
 }

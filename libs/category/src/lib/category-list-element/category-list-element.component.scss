@@ -38,4 +38,13 @@ $main-color: #4723D9;
 .category-subcategories {
   height: auto;
   margin-bottom: 20px;
+
+  &__link {
+    color: black;
+
+    &:visited,
+    &:active {
+      color: black;
+    }
+  }
 }

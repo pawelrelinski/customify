@@ -5,6 +5,7 @@ import { RouterModule } from '@angular/router';
 import { FooterComponent } from './footer/footer.component';
 import { PageIntroHeaderComponent } from './page-intro-header/page-intro-header.component';
 import { BannerComponent } from './banner/banner.component';
+import { ProductComponent } from './product/product.component';
 
 @NgModule({
   imports: [
@@ -15,13 +16,15 @@ import { BannerComponent } from './banner/banner.component';
     NavbarComponent,
     FooterComponent,
     PageIntroHeaderComponent,
-    BannerComponent
+    BannerComponent,
+    ProductComponent
   ],
   exports: [
     NavbarComponent,
     FooterComponent,
     PageIntroHeaderComponent,
-    BannerComponent
+    BannerComponent,
+    ProductComponent
   ]
 })
 export class UiModule {}

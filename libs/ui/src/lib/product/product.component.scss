@@ -1,0 +1,34 @@
+.product {
+  width: 250px;
+  height: 400px;
+  box-sizing: border-box;
+  border-radius: 10px;
+  box-shadow: 0 .4px 3px rgba(20, 20, 20, .1);
+  transition: all .3s ease;
+  color: rgb(50, 50, 50);
+
+  &:hover {
+    box-shadow: 0 1px 10px rgba(20, 20, 20, .2);
+    cursor: pointer;
+    transform: translateY(-2px);
+  }
+
+  &__img {
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+  }
+
+  &__description {
+    padding-left: 10px;
+  }
+
+  &__name {
+    margin-top: 10px;
+    margin-bottom: 10px;
+    font-weight: 700;
+  }
+
+  &__price {
+    margin: 0;
+  }
+}

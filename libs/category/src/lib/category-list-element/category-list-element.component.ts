@@ -1,5 +1,5 @@
 import { Component, EventEmitter, Input, OnChanges, OnInit, Output } from '@angular/core';
-import { ICategory } from '../category-list/category-list.component';
+import { ICategory } from '@customify/category';
 
 @Component({
   selector: 'customify-category-list-element',

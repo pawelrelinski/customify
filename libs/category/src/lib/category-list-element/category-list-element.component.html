@@ -8,7 +8,7 @@
   <ul class='category-subcategories__list'>
     <li class='category-subcategories__element'
         *ngFor='let subcategory of category?.subcategories'>
-      <a class='category-subcategories__link'>
+      <a class='category-subcategories__link' [routerLink]="['/category', subcategory]">
         {{ subcategory | titlecase }}
       </a>
     </li>
