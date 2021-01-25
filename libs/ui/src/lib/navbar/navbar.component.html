@@ -6,7 +6,6 @@
 
 <div class="content" [class.content--active]="menuIsOpen">
   <ng-content></ng-content>
-<!--  <customify-footer [menuIsOpen]='menuIsOpen'></customify-footer>-->
 </div>
 
 <div class="navbar" [class.show]="menuIsOpen">
@@ -18,37 +17,12 @@
         <span class="nav__logo-name">{{ title | titlecase }}</span>
       </a>
 
-      <a routerLink="/category" routerLinkActive="nav__link--active"
+      <a *ngFor='let navEL of navElements'
+         [routerLink]="navEL.routerLink" routerLinkActive="nav__link--active"
          (click)="hiddenMenu()" class="nav__link">
-        <i class='bx bx-layer nav__icon'></i>
-        <span class="nav__name">Categories</span>
+        <i [class]='navEL.classes' class='nav__icon'></i>
+        <span class="nav__name">{{ navEL.name | titlecase }}</span>
       </a>
-
-      <a routerLink="/profile" routerLinkActive="nav__link--active"
-         (click)="hiddenMenu()" class="nav__link">
-        <i class='bx bx-user nav__icon'></i>
-        <span class="nav__name">Profile</span>
-      </a>
-
-      <div class="nav__list">
-        <a routerLink="/shopping-bag" routerLinkActive="nav__link--active"
-           (click)="hiddenMenu()" class="nav__link">
-          <i class='bx bx-shopping-bag nav__icon'></i>
-          <span class="nav__name">Shopping bag</span>
-        </a>
-
-        <a routerLink="/favorites" routerLinkActive="nav__link--active"
-           (click)="hiddenMenu()" class="nav__link">
-          <i class='bx bx-heart nav__icon'></i>
-          <span class="nav__name">Favorites</span>
-        </a>
-
-        <a routerLink="/settings" routerLinkActive="nav__link--active"
-           (click)="hiddenMenu()" class="nav__link">
-          <i class='bx bx-abacus nav__icon'></i>
-          <span class="nav__name">Settings</span>
-        </a>
-      </div>
     </div>
 
     <a href="#" class="nav__link">

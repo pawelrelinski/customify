@@ -7,5 +7,7 @@ module.exports = {
     '<rootDir>/libs/home',
     '<rootDir>/libs/category',
     '<rootDir>/libs/profile',
+    '<rootDir>/libs/util',
+    '<rootDir>/apps/admin',
   ],
 };

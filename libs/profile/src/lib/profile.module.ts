@@ -14,7 +14,7 @@ export const profileRoutes: Route[] = [
 @NgModule({
   imports: [
     CommonModule,
-    RouterModule,
+    RouterModule.forChild(profileRoutes),
     UiModule
   ],
   declarations: [ProfileComponent],

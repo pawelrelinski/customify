@@ -39,22 +39,4 @@ export class ClientProduct implements IProduct {
     return this.price;
   }
 
-  public setBrand(brand: IProduct['brand']): void {
-  }
-
-  public setDescription(description: IProduct['description']): void {
-  }
-
-  public setImgAlt(imgAlt: IProduct['imgAlt']): void {
-  }
-
-  public setImgUrl(imgUrl: IProduct['imgUrl']): void {
-  }
-
-  public setName(name: IProduct['name']): void {
-  }
-
-  public setPrice(price: IProduct['price']): void {
-  }
-
 }
