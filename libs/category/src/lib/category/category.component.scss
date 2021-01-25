@@ -1,0 +1,13 @@
+.content {
+  padding: 20px;
+
+  &__title {
+    margin: 0 0 15px;
+  }
+}
+
+.products-list {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+  grid-gap: 1rem;
+}

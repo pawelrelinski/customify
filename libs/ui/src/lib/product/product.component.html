@@ -1,10 +1,9 @@
-<a>
-  <div class='product'>
-    <img [src]='getImgUrl()' alt='' width='250px' height='330px'
-         class='product__img'>
-    <div class='product__description'>
-      <p class='product__name'>{{ getName() }}</p>
-      <p class='product__price'>{{ getPrice() }} PLN</p>
-    </div>
+<div class='product'>
+  <img [src]='product.getImgUrl()' [alt]='product.getImgAlt()'
+       width='250px' height='330px'
+       class='product__img'>
+  <div class='product__description'>
+    <p class='product__name'>{{ product.getName() }}</p>
+    <p class='product__price'>{{ product.getPrice() }} PLN</p>
   </div>
-</a>
+</div>

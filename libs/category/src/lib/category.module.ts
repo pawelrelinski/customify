@@ -18,7 +18,12 @@ export const categoryRoutes: Route[] = [
     RouterModule.forChild(categoryRoutes),
     UiModule
   ],
-  declarations: [CategoryListComponent, CategoryListElementComponent, BannersListComponent, CategoryComponent],
+  declarations: [
+    CategoryListComponent,
+    CategoryListElementComponent,
+    BannersListComponent,
+    CategoryComponent
+  ],
   exports: [CategoryListComponent]
 })
 export class CategoryModule {}

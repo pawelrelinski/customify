@@ -13,6 +13,11 @@ const routes: Routes = [
   {
     path: 'profile',
     loadChildren: () => import('@customify/profile').then(({ ProfileModule }) => ProfileModule)
+  },
+  {
+    path: '',
+    pathMatch: 'full',
+    redirectTo: 'home'
   }
 ];
 
