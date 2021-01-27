@@ -1,25 +1,21 @@
-import { ComponentFixture, TestBed } from '@angular/core/testing';
-
-import { BannerComponent } from './banner.component';
+import { BannerComponent, IBanner } from '@customify/ui';
 
 describe('BannerComponent', () => {
-  let component: BannerComponent;
-  let fixture: ComponentFixture<BannerComponent>;
 
-  beforeEach(async () => {
-    await TestBed.configureTestingModule({
-      declarations: [ BannerComponent ]
-    })
-    .compileComponents();
-  });
+  let component: BannerComponent;
+  const bannerData: IBanner = {
+    title: 'My banner',
+    description: 'Description of my banner',
+    height: 500
+  };
 
   beforeEach(() => {
-    fixture = TestBed.createComponent(BannerComponent);
-    component = fixture.componentInstance;
-    fixture.detectChanges();
+    component = new BannerComponent();
   });
 
-  it('should create', () => {
-    expect(component).toBeTruthy();
+  it('should be set height to 500px', () => {
+    component.bannerData = bannerData;
+    expect(component.getHeight()).toEqual(`${bannerData.height}px`);
   });
+
 });

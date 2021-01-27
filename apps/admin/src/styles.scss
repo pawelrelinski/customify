@@ -1,1 +1,46 @@
-/* You can add global styles to this file, and also import other style files */
+$header-height: 3rem;
+$nav-width: 68px;
+
+$main-color: #4723D9;
+$main-color-light: #AFA5D9;
+$white-color: #f7f6fb;
+$grey-color: #404040;
+
+$body-font: 'Nunito', sans-serif;
+$normal-font-size: 1rem;
+
+/*===== z index =====*/
+$z-fixed: 100;
+
+*,::before,::after{
+  box-sizing: border-box;
+}
+
+body {
+  position: relative;
+  margin: $header-height 0 0 0;
+  padding: 0;
+  font-family: $body-font;
+  font-size: $normal-font-size;
+  transition: .5s;
+}
+
+a {
+  text-decoration: none;
+}
+
+ul {
+  list-style: none;
+  padding: 0;
+}
+
+html,
+body {
+  height: 100%;
+}
+
+body {
+  margin: 0;
+  font-family: Roboto, "Helvetica Neue", sans-serif;
+}
+

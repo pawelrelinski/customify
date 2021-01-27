@@ -7,7 +7,7 @@ export interface IPageIntroHeaderData {
 }
 
 @Component({
-  selector: 'customify-page-intro-header',
+  selector: 'ui-page-intro-header',
   templateUrl: './page-intro-header.component.html',
   styleUrls: ['./page-intro-header.component.scss']
 })

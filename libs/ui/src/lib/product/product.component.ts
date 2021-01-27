@@ -2,7 +2,7 @@ import { Component, Input, OnInit } from '@angular/core';
 import { ClientProduct } from '@customify/api-interfaces';
 
 @Component({
-  selector: 'customify-product',
+  selector: 'ui-product',
   templateUrl: './product.component.html',
   styleUrls: ['./product.component.scss']
 })

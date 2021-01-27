@@ -4,13 +4,13 @@ export interface IBanner {
   title: string;
   description: string;
   img?: string;
-  backgroundColorInRGB?: string;
+  backgroundColor?: string;
   height?: number;
-  textColorInRgb?: string;
+  textColor?: string;
 }
 
 @Component({
-  selector: 'customify-banner',
+  selector: 'ui-banner',
   templateUrl: './banner.component.html',
   styleUrls: ['./banner.component.scss']
 })
@@ -25,11 +25,16 @@ export class BannerComponent implements OnInit {
   }
 
   public getBackgroundColor(): string {
-    // TODO: create Regex to check rgb
-    return this.bannerData?.backgroundColorInRGB;
+    if (!this.bannerData.backgroundColor)
+      return 'rgb(71, 36, 217)';
+
+    return this.bannerData.backgroundColor;
   }
 
-  public getHeight() {
+  public getHeight(): string {
+    if (!this.bannerData.height)
+      return '300px';
+
     const height: number = this.bannerData.height;
     return `${height}px`;
   }

@@ -9,5 +9,6 @@ module.exports = {
     '<rootDir>/libs/profile',
     '<rootDir>/libs/util',
     '<rootDir>/apps/admin',
+    '<rootDir>/libs/navbar',
   ],
 };

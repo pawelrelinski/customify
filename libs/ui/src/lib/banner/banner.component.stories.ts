@@ -8,8 +8,8 @@ export default {
 const bannerData: IBanner = {
   title: 'My banner',
   description: 'Whats up guys?',
-  backgroundColorInRGB: 'rgb(225,105,241)',
-  textColorInRgb: 'rgb(250,250,250)'
+  backgroundColor: 'rgb(225,105,241)',
+  textColor: 'rgb(250,250,250)'
 };
 
 export const primary = () => ({

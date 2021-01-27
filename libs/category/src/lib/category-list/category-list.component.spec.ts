@@ -1,25 +1,18 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
-
-import { CategoryListComponent } from './category-list.component';
+import { CategoryListComponent } from '@customify/category';
 
 describe('CategoryListComponent', () => {
+
   let component: CategoryListComponent;
   let fixture: ComponentFixture<CategoryListComponent>;
 
-  beforeEach(async () => {
-    await TestBed.configureTestingModule({
-      declarations: [ CategoryListComponent ]
-    })
-    .compileComponents();
-  });
-
   beforeEach(() => {
-    fixture = TestBed.createComponent(CategoryListComponent);
-    component = fixture.componentInstance;
-    fixture.detectChanges();
+    component = new CategoryListComponent();
   });
 
-  it('should create', () => {
-    expect(component).toBeTruthy();
+  it('should be set header title to Categories', () => {
+    component.ngOnInit();
+    expect(component.pageIntroHeaderData.title).toEqual('Categories');
   });
+
 });

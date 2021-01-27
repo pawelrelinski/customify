@@ -1,7 +1,7 @@
 import { Component, Input } from '@angular/core';
 
 @Component({
-  selector: 'customify-footer',
+  selector: 'ui-footer',
   template: `
     <footer class="footer" [class.footer--short]='menuIsOpen'>
       Paweł Reliński &copy; 2021
@@ -10,5 +10,7 @@ import { Component, Input } from '@angular/core';
   styleUrls: ['./footer.component.scss']
 })
 export class FooterComponent {
+
   @Input() menuIsOpen: boolean;
+
 }

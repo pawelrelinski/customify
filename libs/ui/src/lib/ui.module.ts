@@ -6,6 +6,8 @@ import { FooterComponent } from './footer/footer.component';
 import { PageIntroHeaderComponent } from './page-intro-header/page-intro-header.component';
 import { BannerComponent } from './banner/banner.component';
 import { ProductComponent } from './product/product.component';
+import { NavbarLinkElementComponent } from './navbar-link-element/navbar-link-element.component';
+import { NavbarLogoComponent } from './navbar-logo/navbar-logo.component';
 
 @NgModule({
   imports: [
@@ -17,14 +19,17 @@ import { ProductComponent } from './product/product.component';
     FooterComponent,
     PageIntroHeaderComponent,
     BannerComponent,
-    ProductComponent
+    ProductComponent,
+    NavbarLinkElementComponent,
+    NavbarLogoComponent
   ],
   exports: [
     NavbarComponent,
     FooterComponent,
     PageIntroHeaderComponent,
     BannerComponent,
-    ProductComponent
+    ProductComponent,
+    NavbarLinkElementComponent
   ]
 })
 export class UiModule {}

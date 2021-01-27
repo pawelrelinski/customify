@@ -1,0 +1,28 @@
+<header class="header" [class.body-pd]="menuIsOpen">
+  <div class="header__toggle" [style.color]='colors.mainColor'>
+    <i class='bx bx-menu' (click)="toggleMenu()"></i>
+  </div>
+</header>
+
+<div class="content" [class.content--active]="menuIsOpen">
+  <ng-content></ng-content>
+</div>
+
+<div class="navbar" [class.show]="menuIsOpen"
+     [style.backgrounColor]='colors.mainColor'>
+  <nav class="nav">
+    <div>
+      <logo (clickLogo)='hiddenMenu()'
+            [logoData]='logoData'>
+      </logo>
+
+      <link-element *ngFor='let navElement of navElements'
+                    [navElement]='navElement'
+                    (clickLink)='hiddenMenu()'>
+      </link-element>
+    </div>
+
+    <account-action [userNavElement]='userBtnData'>
+    </account-action>
+  </nav>
+</div>

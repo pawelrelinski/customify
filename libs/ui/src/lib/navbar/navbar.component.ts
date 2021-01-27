@@ -1,23 +1,24 @@
 import { Component, HostListener, Input, OnInit } from '@angular/core';
-
-export interface INavElement {
-  readonly routerLink: string;
-  readonly name: string;
-  readonly classes: string;
-}
+import { INavElement } from '../navbar-link-element/navbar-link-element.component';
 
 @Component({
-  selector: 'customify-navbar',
+  selector: 'ui-navbar',
   templateUrl: './navbar.component.html',
   styleUrls: ['./navbar.component.scss']
 })
 export class NavbarComponent implements OnInit {
 
   @Input() navElements: Array<INavElement>;
+  @Input() title: string = 'Customify';
 
-  public title = 'Customify';
   public menuIsOpen = false;
   private windowWidth: number;
+
+  public logoData: INavElement = {
+    routerLink: '/home',
+    name: this.title,
+    classes: 'bx bx-home'
+  };
 
   constructor() {}
 
