@@ -1,5 +1,10 @@
 import { Component, HostListener, Input, OnInit } from '@angular/core';
-import { INavElement } from '../navbar-link-element/navbar-link-element.component';
+
+export interface INavElement {
+  name: string;
+  routerLink: string;
+  classes: string;
+}
 
 @Component({
   selector: 'ui-navbar',
@@ -13,12 +18,6 @@ export class NavbarComponent implements OnInit {
 
   public menuIsOpen = false;
   private windowWidth: number;
-
-  public logoData: INavElement = {
-    routerLink: '/home',
-    name: this.title,
-    classes: 'bx bx-home'
-  };
 
   constructor() {}
 

@@ -1,4 +1,4 @@
-import { Component, Input, OnInit } from '@angular/core';
+import { Component, Input } from '@angular/core';
 import { ClientProduct } from '@customify/api-interfaces';
 
 @Component({
@@ -6,14 +6,11 @@ import { ClientProduct } from '@customify/api-interfaces';
   templateUrl: './product.component.html',
   styleUrls: ['./product.component.scss']
 })
-export class ProductComponent implements OnInit {
+export class ProductComponent {
 
   @Input() product: ClientProduct;
   @Input() subcategory: string;
 
   constructor() { }
-
-  ngOnInit(): void {
-  }
 
 }

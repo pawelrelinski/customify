@@ -6,7 +6,6 @@ import { HttpClientModule } from '@angular/common/http';
 
 import { UiModule } from '@customify/ui';
 import { AppRoutingModule } from './app-routing.module';
-import { NavbarModule } from '@customify/navbar';
 
 @NgModule({
   declarations: [AppComponent],
@@ -14,8 +13,7 @@ import { NavbarModule } from '@customify/navbar';
     BrowserModule,
     AppRoutingModule,
     HttpClientModule,
-    UiModule,
-    NavbarModule
+    UiModule
   ],
   providers: [],
   bootstrap: [AppComponent],

@@ -78,9 +78,6 @@
       "implicitDependencies": [
         "admin"
       ]
-    },
-    "navbar": {
-      "tags": []
     }
   }
 }

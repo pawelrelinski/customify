@@ -9,4 +9,19 @@ export class Product {
   @Column()
   name: string;
 
+  @Column()
+  price: number;
+
+  @Column()
+  description: string;
+
+  @Column()
+  brand: string;
+
+  @Column()
+  imgUrl: string;
+
+  @Column()
+  imgAlt: string;
+
 }

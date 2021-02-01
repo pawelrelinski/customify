@@ -1,0 +1,4 @@
+GET http://localhost:3333/api/product
+Accept: application/json
+
+###

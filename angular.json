@@ -535,63 +535,6 @@
           }
         }
       }
-    },
-    "navbar": {
-      "projectType": "library",
-      "root": "libs/navbar",
-      "sourceRoot": "libs/navbar/src",
-      "prefix": "customify",
-      "architect": {
-        "lint": {
-          "builder": "@nrwl/linter:eslint",
-          "options": {
-            "lintFilePatterns": [
-              "libs/navbar/src/**/*.ts",
-              "libs/navbar/src/**/*.html"
-            ]
-          }
-        },
-        "test": {
-          "builder": "@nrwl/jest:jest",
-          "outputs": [
-            "coverage/libs/navbar"
-          ],
-          "options": {
-            "jestConfig": "libs/navbar/jest.config.js",
-            "passWithNoTests": true
-          }
-        },
-        "storybook": {
-          "builder": "@nrwl/storybook:storybook",
-          "options": {
-            "uiFramework": "@storybook/angular",
-            "port": 4400,
-            "config": {
-              "configFolder": "libs/navbar/.storybook"
-            }
-          },
-          "configurations": {
-            "ci": {
-              "quiet": true
-            }
-          }
-        },
-        "build-storybook": {
-          "builder": "@nrwl/storybook:build",
-          "options": {
-            "uiFramework": "@storybook/angular",
-            "outputPath": "dist/storybook/navbar",
-            "config": {
-              "configFolder": "libs/navbar/.storybook"
-            }
-          },
-          "configurations": {
-            "ci": {
-              "quiet": true
-            }
-          }
-        }
-      }
     }
   },
   "cli": {

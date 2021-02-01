@@ -5,6 +5,7 @@ import { AppService } from './app.service';
 import { ProductModule } from './product/product.module';
 import { TypeOrmModule } from '@nestjs/typeorm';
 import { Product } from './product/Product.entity';
+import { Connection } from 'typeorm';
 
 @Module({
   imports: [
@@ -16,11 +17,17 @@ import { Product } from './product/Product.entity';
       "password": "",
       "database": "customify",
       "entities": [Product],
-      "synchronize": true
+      "synchronize": true,
+      "autoLoadEntities": true
     }),
     ProductModule
   ],
   controllers: [AppController],
   providers: [AppService],
 })
-export class AppModule {}
+export class AppModule {
+
+  constructor(private connection: Connection) {
+  }
+
+}

@@ -11,15 +11,18 @@
 <div class="navbar" [class.show]="menuIsOpen">
   <nav class="nav">
     <div>
-      <ui-navbar-logo (clickLogo)='hiddenMenu()'
-                      [logoData]='logoData'>
-      </ui-navbar-logo>
-
-      <ui-navbar-link-element *ngFor='let navElement of navElements'
-                              [navElement]='navElement'
-                              (clickLink)='hiddenMenu()'>
-      </ui-navbar-link-element>
-    </div>
+      <a routerLink="/home" class="nav__logo"
+         (click)="hiddenMenu()">
+        <i class='bx bx-home nav__logo-icon'></i>
+        <span class="nav__logo-name">{{ title | titlecase }}</span>
+      </a>
+      <a *ngFor='let navEL of navElements'
+         [routerLink]="navEL.routerLink" (click)="hiddenMenu()"
+         class="nav__link" routerLinkActive="nav__link--active">
+        <i [class]='navEL.classes' class='nav__icon'></i>
+        <span class="nav__name">{{ navEL.name | titlecase }}</span>
+      </a>
+      </div>
 
     <a href="#" class="nav__link">
       <i class='bx bx-log-out nav__icon'></i>
