@@ -20,6 +20,7 @@ export class AppComponent implements OnInit {
     this.navElements.push(
       { routerLink: '/dashboard', name: 'dashboard', classes: 'bx bxs-dashboard' },
       { routerLink: '/profile', name: 'profile', classes: 'bx bx-user' },
+      { routerLink: '/products', name: 'products', classes: 'bx bx-cabinet' }
     );
   }
 
