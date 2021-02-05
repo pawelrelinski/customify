@@ -80,7 +80,7 @@
                             <ul class="index-list">
                                 <li>
                                             <span class="modifier">Optional</span>
-                                        <a href="#backgroundColorInRGB">backgroundColorInRGB</a>
+                                        <a href="#backgroundColor">backgroundColor</a>
                                 </li>
                                 <li>
                                         <a href="#description">description</a>
@@ -95,7 +95,7 @@
                                 </li>
                                 <li>
                                             <span class="modifier">Optional</span>
-                                        <a href="#textColorInRgb">textColorInRgb</a>
+                                        <a href="#textColor">textColor</a>
                                 </li>
                                 <li>
                                         <a href="#title">title</a>
@@ -115,13 +115,13 @@
                         <tbody>
                                 <tr>
                                     <td class="col-md-4">
-                                        <a name="backgroundColorInRGB"></a>
-                                        <span class="name"><b>backgroundColorInRGB</b><a href="#backgroundColorInRGB"><span class="icon ion-ios-link"></span></a></span>
+                                        <a name="backgroundColor"></a>
+                                        <span class="name"><b>backgroundColor</b><a href="#backgroundColor"><span class="icon ion-ios-link"></span></a></span>
                                     </td>
                                 </tr>
                                 <tr>
                                     <td class="col-md-4">
-                                        <code>backgroundColorInRGB:         <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank" >string</a></code>
+                                        <code>backgroundColor:         <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank" >string</a></code>
 </code>
                                     </td>
                                 </tr>
@@ -246,13 +246,13 @@
                         <tbody>
                                 <tr>
                                     <td class="col-md-4">
-                                        <a name="textColorInRgb"></a>
-                                        <span class="name"><b>textColorInRgb</b><a href="#textColorInRgb"><span class="icon ion-ios-link"></span></a></span>
+                                        <a name="textColor"></a>
+                                        <span class="name"><b>textColor</b><a href="#textColor"><span class="icon ion-ios-link"></span></a></span>
                                     </td>
                                 </tr>
                                 <tr>
                                     <td class="col-md-4">
-                                        <code>textColorInRgb:         <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank" >string</a></code>
+                                        <code>textColor:         <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank" >string</a></code>
 </code>
                                     </td>
                                 </tr>
@@ -316,13 +316,13 @@ export interface IBanner {
   title: string;
   description: string;
   img?: string;
-  backgroundColorInRGB?: string;
+  backgroundColor?: string;
   height?: number;
-  textColorInRgb?: string;
+  textColor?: string;
 }
 
 @Component({
-  selector: &#x27;customify-banner&#x27;,
+  selector: &#x27;ui-banner&#x27;,
   templateUrl: &#x27;./banner.component.html&#x27;,
   styleUrls: [&#x27;./banner.component.scss&#x27;]
 })
@@ -337,11 +337,16 @@ export class BannerComponent implements OnInit {
   }
 
   public getBackgroundColor(): string {
-    // TODO: create Regex to check rgb
-    return this.bannerData?.backgroundColorInRGB;
+    if (!this.bannerData.backgroundColor)
+      return &#x27;rgb(71, 36, 217)&#x27;;
+
+    return this.bannerData.backgroundColor;
   }
 
-  public getHeight() {
+  public getHeight(): string {
+    if (!this.bannerData.height)
+      return &#x27;300px&#x27;;
+
     const height: number &#x3D; this.bannerData.height;
     return &#x60;${height}px&#x60;;
   }

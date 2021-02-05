@@ -128,7 +128,7 @@
                 <td class="col-md-4">
 
                     <div class="io-description">
-                        <b>Returns : </b>    <code>Message</code>
+                        <b>Returns : </b>        <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank" >string</a></code>
 
                     </div>
                 </td>
@@ -142,13 +142,14 @@
 
     <div class="tab-pane fade  tab-source-code" id="c-source">
         <pre class="line-numbers compodoc-sourcecode"><code class="language-typescript">import { Injectable } from &#x27;@nestjs/common&#x27;;
-import { Message } from &#x27;@customify/api-interfaces&#x27;;
 
 @Injectable()
 export class AppService {
-  getData(): Message {
-    return { message: &#x27;Welcome to api!&#x27; };
+
+  getData(): string {
+    return &#x27;Welcome to api!&#x27;;
   }
+
 }
 </code></pre>
     </div>

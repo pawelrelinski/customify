@@ -228,7 +228,7 @@
 
 
     <section>
-
+    
     <h3 id="methods">
         Methods
     </h3>
@@ -298,7 +298,7 @@
 
                     </div>
                     <div class="io-description">
-
+                        
                     </div>
                 </td>
             </tr>
@@ -532,7 +532,7 @@
 
                     </div>
                     <div class="io-description">
-
+                        
                     </div>
                 </td>
             </tr>
@@ -540,7 +540,7 @@
     </table>
 </section>
     <section>
-
+    
         <h3 id="inputs">
             Properties
         </h3>
@@ -822,7 +822,7 @@ export class CategoryListComponent implements OnInit {
     </div>
 
     <div class="tab-pane fade " id="c-templateData">
-        <pre class="line-numbers"><code class="language-html">&lt;customify-page-intro-header [headerData]&#x3D;&#x27;pageIntroHeaderData&#x27;&gt;&lt;/customify-page-intro-header&gt;
+        <pre class="line-numbers"><code class="language-html">&lt;ui-page-intro-header [headerData]&#x3D;&#x27;pageIntroHeaderData&#x27;&gt;&lt;/ui-page-intro-header&gt;
 &lt;div class&#x3D;&#x27;wrapper&#x27;&gt;
   &lt;div class&#x3D;&#x27;category-types&#x27;&gt;
     &lt;ul class&#x3D;&#x27;category-types__list&#x27;&gt;
@@ -928,7 +928,7 @@ export class CategoryListComponent implements OnInit {
         </div>
     </div>
 
-
+    
 </div>
 
 <script src="../js/libs/vis.min.js"></script>
@@ -936,7 +936,7 @@ export class CategoryListComponent implements OnInit {
 <script src="../js/libs/deep-iterator.js"></script>
 <script>
         var COMPONENT_TEMPLATE = '<div><ui-page-intro-header [headerData]=\'pageIntroHeaderData\'></ui-page-intro-header><div class=\'wrapper\'>  <div class=\'category-types\'>    <ul class=\'category-types__list\'>      <customify-category-list-element        *ngFor=\'let category of categories\'        [currentCategory]=\'currentCategory?.name\'        [category]=\'category\' (changeCurrentCategory)=\'showCategoryElements($event)\'>      </customify-category-list-element>    </ul>  </div>  <div class=\'banners\'>    <customify-banners-list></customify-banners-list>  </div></div></div>'
-    var COMPONENTS = [{'name': 'AppComponent', 'selector': 'customify-root'},{'name': 'BannerComponent', 'selector': 'customify-banner'},{'name': 'BannersListComponent', 'selector': 'customify-banners-list'},{'name': 'CategoryComponent', 'selector': 'customify-category'},{'name': 'CategoryListComponent', 'selector': 'customify-category-list'},{'name': 'CategoryListElementComponent', 'selector': 'customify-category-list-element'},{'name': 'FooterComponent', 'selector': 'customify-footer'},{'name': 'HomeComponent', 'selector': 'customify-home'},{'name': 'NavbarComponent', 'selector': 'customify-navbar'},{'name': 'PageIntroHeaderComponent', 'selector': 'customify-page-intro-header'},{'name': 'ProductComponent', 'selector': 'customify-product'},{'name': 'ProfileComponent', 'selector': 'customify-profile'}];
+    var COMPONENTS = [{'name': 'AppComponent', 'selector': 'customify-root'},{'name': 'AppComponent', 'selector': 'customify-root'},{'name': 'BannerComponent', 'selector': 'ui-banner'},{'name': 'BannersListComponent', 'selector': 'customify-banners-list'},{'name': 'CategoryComponent', 'selector': 'customify-category'},{'name': 'CategoryListComponent', 'selector': 'customify-category-list'},{'name': 'CategoryListElementComponent', 'selector': 'customify-category-list-element'},{'name': 'DashboardComponent', 'selector': 'customify-dashboard'},{'name': 'FooterComponent', 'selector': 'ui-footer'},{'name': 'HomeComponent', 'selector': 'customify-home'},{'name': 'NavbarComponent', 'selector': 'ui-navbar'},{'name': 'PageIntroHeaderComponent', 'selector': 'ui-page-intro-header'},{'name': 'ProductComponent', 'selector': 'ui-product'},{'name': 'ProductsListComponent', 'selector': 'customify-products-list'},{'name': 'ProfileComponent', 'selector': 'customify-profile'}];
     var DIRECTIVES = [];
     var ACTUAL_COMPONENT = {'name': 'CategoryListComponent'};
 </script>
@@ -951,7 +951,7 @@ export class CategoryListComponent implements OnInit {
 
 
 
-
+                   
 
 
 

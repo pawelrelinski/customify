@@ -82,7 +82,7 @@
 
             <tr>
                 <td class="col-md-3">selector</td>
-                <td class="col-md-9"><code>customify-footer</code></td>
+                <td class="col-md-9"><code>ui-footer</code></td>
             </tr>
 
             <tr>
@@ -158,7 +158,7 @@
                 </tr>
                         <tr>
                             <td class="col-md-2" colspan="2">
-                                    <div class="io-line">Defined in <a href="" data-line="13" class="link-to-prism">libs/ui/src/lib/footer/footer.component.ts:13</a></div>
+                                    <div class="io-line">Defined in <a href="" data-line="14" class="link-to-prism">libs/ui/src/lib/footer/footer.component.ts:14</a></div>
                             </td>
                         </tr>
             </tbody>
@@ -176,7 +176,7 @@
         <pre class="line-numbers compodoc-sourcecode"><code class="language-typescript">import { Component, Input } from &#x27;@angular/core&#x27;;
 
 @Component({
-  selector: &#x27;customify-footer&#x27;,
+  selector: &#x27;ui-footer&#x27;,
   template: &#x60;
     &lt;footer class&#x3D;&quot;footer&quot; [class.footer--short]&#x3D;&#x27;menuIsOpen&#x27;&gt;
       Paweł Reliński &amp;copy; 2021
@@ -185,7 +185,9 @@
   styleUrls: [&#x27;./footer.component.scss&#x27;]
 })
 export class FooterComponent {
+
   @Input() menuIsOpen: boolean;
+
 }
 </code></pre>
     </div>
@@ -249,7 +251,7 @@ export class FooterComponent {
 <script src="../js/libs/deep-iterator.js"></script>
 <script>
         var COMPONENT_TEMPLATE = '<div><footer class="footer" [class.footer--short]=\'menuIsOpen\'>  Paweł Reliński &copy; 2021</footer></div>'
-    var COMPONENTS = [{'name': 'AppComponent', 'selector': 'customify-root'},{'name': 'BannerComponent', 'selector': 'customify-banner'},{'name': 'BannersListComponent', 'selector': 'customify-banners-list'},{'name': 'CategoryComponent', 'selector': 'customify-category'},{'name': 'CategoryListComponent', 'selector': 'customify-category-list'},{'name': 'CategoryListElementComponent', 'selector': 'customify-category-list-element'},{'name': 'FooterComponent', 'selector': 'customify-footer'},{'name': 'HomeComponent', 'selector': 'customify-home'},{'name': 'NavbarComponent', 'selector': 'customify-navbar'},{'name': 'PageIntroHeaderComponent', 'selector': 'customify-page-intro-header'},{'name': 'ProductComponent', 'selector': 'customify-product'},{'name': 'ProfileComponent', 'selector': 'customify-profile'}];
+    var COMPONENTS = [{'name': 'AppComponent', 'selector': 'customify-root'},{'name': 'AppComponent', 'selector': 'customify-root'},{'name': 'BannerComponent', 'selector': 'ui-banner'},{'name': 'BannersListComponent', 'selector': 'customify-banners-list'},{'name': 'CategoryComponent', 'selector': 'customify-category'},{'name': 'CategoryListComponent', 'selector': 'customify-category-list'},{'name': 'CategoryListElementComponent', 'selector': 'customify-category-list-element'},{'name': 'DashboardComponent', 'selector': 'customify-dashboard'},{'name': 'FooterComponent', 'selector': 'ui-footer'},{'name': 'HomeComponent', 'selector': 'customify-home'},{'name': 'NavbarComponent', 'selector': 'ui-navbar'},{'name': 'PageIntroHeaderComponent', 'selector': 'ui-page-intro-header'},{'name': 'ProductComponent', 'selector': 'ui-product'},{'name': 'ProductsListComponent', 'selector': 'customify-products-list'},{'name': 'ProfileComponent', 'selector': 'customify-profile'}];
     var DIRECTIVES = [];
     var ACTUAL_COMPONENT = {'name': 'FooterComponent'};
 </script>

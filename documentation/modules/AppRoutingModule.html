@@ -54,7 +54,7 @@
             <h3>File</h3>
         </p>
         <p class="comment">
-            <code>apps/client/src/app/app-routing.module.ts</code>
+            <code>apps/admin/src/app/app-routing.module.ts</code>
         </p>
 
 
@@ -75,21 +75,21 @@ import { RouterModule, Routes } from &#x27;@angular/router&#x27;;
 
 const routes: Routes &#x3D; [
   {
-    path: &#x27;home&#x27;,
-    loadChildren: () &#x3D;&gt; &quot;import(&#x27;@customify/home&#x27;).then(({ HomeModule }) &#x3D;&gt; HomeModule)&quot;
-  },
-  {
-    path: &#x27;category&#x27;,
-    loadChildren: () &#x3D;&gt; &quot;import(&#x27;@customify/category&#x27;).then(({ CategoryModule }) &#x3D;&gt; CategoryModule)&quot;
+    path: &#x27;dashboard&#x27;,
+    loadChildren: () &#x3D;&gt; &quot;import(&#x27;./modules/dashboard/dashboard.module&#x27;).then(({ DashboardModule }) &#x3D;&gt; DashboardModule)&quot;
   },
   {
     path: &#x27;profile&#x27;,
     loadChildren: () &#x3D;&gt; &quot;import(&#x27;@customify/profile&#x27;).then(({ ProfileModule }) &#x3D;&gt; ProfileModule)&quot;
   },
   {
+    path: &#x27;products&#x27;,
+    loadChildren: () &#x3D;&gt; &quot;import(&#x27;./modules/products/products.module&#x27;).then(({ ProductsModule }) &#x3D;&gt; ProductsModule)&quot;
+  },
+  {
     path: &#x27;&#x27;,
     pathMatch: &#x27;full&#x27;,
-    redirectTo: &#x27;home&#x27;
+    redirectTo: &#x27;dashboard&#x27;
   }
 ];
 

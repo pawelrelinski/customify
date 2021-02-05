@@ -188,7 +188,7 @@
 
 
     <section>
-
+    
     <h3 id="methods">
         Methods
     </h3>
@@ -274,7 +274,7 @@
     </table>
 </section>
     <section>
-
+    
         <h3 id="inputs">
             Properties
         </h3>
@@ -341,21 +341,21 @@ export class BannersListComponent implements OnInit {
       title: &#x27;My first banner&#x27;,
       description: &#x27;It is sale for old collection&#x27;,
       height: 300,
-      backgroundColorInRGB: &#x27;rgb(31,165,33)&#x27;,
-      textColorInRgb: &#x27;rgb(255, 255, 255)&#x27;
+      backgroundColor: &#x27;rgb(31,165,33)&#x27;,
+      textColor: &#x27;rgb(255, 255, 255)&#x27;
     });
     this.banners.push({
       title: &#x27;My second banner&#x27;,
       description: &#x27;It is sale for old collection&#x27;,
       height: 100,
-      backgroundColorInRGB: &#x27;rgb(90,96,200)&#x27;,
-      textColorInRgb: &#x27;rgb(231,158,158)&#x27;
+      backgroundColor: &#x27;rgb(90,96,200)&#x27;,
+      textColor: &#x27;rgb(231,158,158)&#x27;
     });
     this.banners.push({
       title: &#x27;My third banner&#x27;,
       description: &#x27;It is sale for old collection&#x27;,
       height: 300,
-      backgroundColorInRGB: &#x27;rgb(215,135,14)&#x27;
+      backgroundColor: &#x27;rgb(215,135,14)&#x27;
     });
   }
 
@@ -364,8 +364,8 @@ export class BannersListComponent implements OnInit {
     </div>
 
     <div class="tab-pane fade " id="c-templateData">
-        <pre class="line-numbers"><code class="language-html">&lt;customify-banner *ngFor&#x3D;&#x27;let banner of banners&#x27; [bannerData]&#x3D;&#x27;banner&#x27;&gt;
-&lt;/customify-banner&gt;
+        <pre class="line-numbers"><code class="language-html">&lt;ui-banner *ngFor&#x3D;&#x27;let banner of banners&#x27; [bannerData]&#x3D;&#x27;banner&#x27;&gt;
+&lt;/ui-banner&gt;
 </code></pre>
     </div>
 
@@ -394,7 +394,7 @@ export class BannersListComponent implements OnInit {
         </div>
     </div>
 
-
+    
 </div>
 
 <script src="../js/libs/vis.min.js"></script>
@@ -402,7 +402,7 @@ export class BannersListComponent implements OnInit {
 <script src="../js/libs/deep-iterator.js"></script>
 <script>
         var COMPONENT_TEMPLATE = '<div><ui-banner *ngFor=\'let banner of banners\' [bannerData]=\'banner\'></ui-banner></div>'
-    var COMPONENTS = [{'name': 'AppComponent', 'selector': 'customify-root'},{'name': 'BannerComponent', 'selector': 'customify-banner'},{'name': 'BannersListComponent', 'selector': 'customify-banners-list'},{'name': 'CategoryComponent', 'selector': 'customify-category'},{'name': 'CategoryListComponent', 'selector': 'customify-category-list'},{'name': 'CategoryListElementComponent', 'selector': 'customify-category-list-element'},{'name': 'FooterComponent', 'selector': 'customify-footer'},{'name': 'HomeComponent', 'selector': 'customify-home'},{'name': 'NavbarComponent', 'selector': 'customify-navbar'},{'name': 'PageIntroHeaderComponent', 'selector': 'customify-page-intro-header'},{'name': 'ProductComponent', 'selector': 'customify-product'},{'name': 'ProfileComponent', 'selector': 'customify-profile'}];
+    var COMPONENTS = [{'name': 'AppComponent', 'selector': 'customify-root'},{'name': 'AppComponent', 'selector': 'customify-root'},{'name': 'BannerComponent', 'selector': 'ui-banner'},{'name': 'BannersListComponent', 'selector': 'customify-banners-list'},{'name': 'CategoryComponent', 'selector': 'customify-category'},{'name': 'CategoryListComponent', 'selector': 'customify-category-list'},{'name': 'CategoryListElementComponent', 'selector': 'customify-category-list-element'},{'name': 'DashboardComponent', 'selector': 'customify-dashboard'},{'name': 'FooterComponent', 'selector': 'ui-footer'},{'name': 'HomeComponent', 'selector': 'customify-home'},{'name': 'NavbarComponent', 'selector': 'ui-navbar'},{'name': 'PageIntroHeaderComponent', 'selector': 'ui-page-intro-header'},{'name': 'ProductComponent', 'selector': 'ui-product'},{'name': 'ProductsListComponent', 'selector': 'customify-products-list'},{'name': 'ProfileComponent', 'selector': 'customify-profile'}];
     var DIRECTIVES = [];
     var ACTUAL_COMPONENT = {'name': 'BannersListComponent'};
 </script>
@@ -417,7 +417,7 @@ export class BannersListComponent implements OnInit {
 
 
 
-
+                   
 
 
 

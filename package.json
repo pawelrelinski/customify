@@ -25,7 +25,8 @@
     "update": "nx migrate latest",
     "workspace-generator": "nx workspace-generator",
     "dep-graph": "nx dep-graph",
-    "help": "nx help"
+    "help": "nx help",
+    "compodoc": "compodoc -p tsconfig.base.json"
   },
   "private": true,
   "dependencies": {

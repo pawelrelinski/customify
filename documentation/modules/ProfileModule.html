@@ -183,7 +183,7 @@ export const profileRoutes: Route[] &#x3D; [
 @NgModule({
   imports: [
     CommonModule,
-    RouterModule,
+    RouterModule.forChild(profileRoutes),
     UiModule
   ],
   declarations: [ProfileComponent],

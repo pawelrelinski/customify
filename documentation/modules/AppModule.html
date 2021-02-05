@@ -63,29 +63,45 @@
 <text text-anchor="start" x="429.73" y="-15.4" font-family="sans-serif" font-size="14.00"> &#160;Exports</text>
 <g id="clust1" class="cluster">
 <title>cluster_AppModule</title>
-<polygon fill="none" stroke="black" stroke-dasharray="1,5" points="175,-70 175,-195 321,-195 321,-70 175,-70"/>
+<polygon fill="none" stroke="black" stroke-dasharray="1,5" points="111,-70 111,-195 385,-195 385,-70 111,-70"/>
+</g>
+<g id="clust3" class="cluster">
+<title>cluster_AppModule_imports</title>
+<polygon fill="none" stroke="black" points="257,-78 257,-130 377,-130 377,-78 257,-78"/>
 </g>
 <g id="clust6" class="cluster">
 <title>cluster_AppModule_providers</title>
-<polygon fill="none" stroke="black" points="183,-78 183,-130 313,-130 313,-78 183,-78"/>
+<polygon fill="none" stroke="black" points="119,-78 119,-130 249,-130 249,-78 119,-78"/>
 </g>
-<!-- AppService -->
+<!-- ProductModule -->
 <g id="node1" class="node">
-<title>AppService</title>
-<ellipse fill="#fdb462" stroke="black" cx="248" cy="-104" rx="56.74" ry="18"/>
-<text text-anchor="middle" x="248" y="-99.8" font-family="Times,serif" font-size="14.00">AppService</text>
+<title>ProductModule</title>
+<polygon fill="#8dd3c7" stroke="black" points="368.6,-122 365.6,-126 344.6,-126 341.6,-122 265.4,-122 265.4,-86 368.6,-86 368.6,-122"/>
+<text text-anchor="middle" x="317" y="-99.8" font-family="Times,serif" font-size="14.00">ProductModule</text>
 </g>
 <!-- AppModule -->
 <g id="node2" class="node">
 <title>AppModule</title>
-<polygon fill="#8dd3c7" stroke="black" points="289.66,-187 286.66,-191 265.66,-191 262.66,-187 206.34,-187 206.34,-151 289.66,-151 289.66,-187"/>
-<text text-anchor="middle" x="248" y="-164.8" font-family="Times,serif" font-size="14.00">AppModule</text>
+<polygon fill="#8dd3c7" stroke="black" points="291.66,-187 288.66,-191 267.66,-191 264.66,-187 208.34,-187 208.34,-151 291.66,-151 291.66,-187"/>
+<text text-anchor="middle" x="250" y="-164.8" font-family="Times,serif" font-size="14.00">AppModule</text>
+</g>
+<!-- ProductModule&#45;&gt;AppModule -->
+<g id="edge1" class="edge">
+<title>ProductModule&#45;&gt;AppModule</title>
+<path fill="none" stroke="black" d="M278.64,-122.11C278.64,-122.11 278.64,-140.99 278.64,-140.99"/>
+<polygon fill="black" stroke="black" points="275.14,-140.99 278.64,-150.99 282.14,-140.99 275.14,-140.99"/>
+</g>
+<!-- AppService -->
+<g id="node3" class="node">
+<title>AppService</title>
+<ellipse fill="#fdb462" stroke="black" cx="184" cy="-104" rx="56.74" ry="18"/>
+<text text-anchor="middle" x="184" y="-99.8" font-family="Times,serif" font-size="14.00">AppService</text>
 </g>
 <!-- AppService&#45;&gt;AppModule -->
-<g id="edge1" class="edge">
+<g id="edge2" class="edge">
 <title>AppService&#45;&gt;AppModule</title>
-<path fill="none" stroke="black" d="M248,-122.11C248,-122.11 248,-140.99 248,-140.99"/>
-<polygon fill="black" stroke="black" points="244.5,-140.99 248,-150.99 251.5,-140.99 244.5,-140.99"/>
+<path fill="none" stroke="black" d="M224.4,-116.84C224.4,-116.84 224.4,-140.52 224.4,-140.52"/>
+<polygon fill="black" stroke="black" points="220.9,-140.52 224.4,-150.52 227.9,-140.52 220.9,-140.52"/>
 </g>
 </g>
 </svg>
@@ -143,6 +159,15 @@
                         </li>
                     </ul>
                 </div>
+                <div class="col-sm-3">
+                    <h3>Imports<a href="https://angular.io/api/core/NgModule#imports" target="_blank" title="Official documentation about module imports"><span
+                                class="icon ion-ios-information-circle-outline"></a></h3>
+                    <ul class="list-group">
+                        <li class="list-group-item">
+                            <a href="../modules/ProductModule.html">ProductModule</a>
+                        </li>
+                    </ul>
+                </div>
             </div>
         </div>
 
@@ -155,13 +180,35 @@
 
 import { AppController } from &#x27;./app.controller&#x27;;
 import { AppService } from &#x27;./app.service&#x27;;
+import { ProductModule } from &#x27;./product/product.module&#x27;;
+import { TypeOrmModule } from &#x27;@nestjs/typeorm&#x27;;
+import { Product } from &#x27;./product/Product.entity&#x27;;
+import { Connection } from &#x27;typeorm&#x27;;
 
 @Module({
-  imports: [],
+  imports: [
+    TypeOrmModule.forRoot({
+      &quot;type&quot;: &quot;mysql&quot;,
+      &quot;host&quot;: &quot;localhost&quot;,
+      &quot;port&quot;: 3306,
+      &quot;username&quot;: &quot;root&quot;,
+      &quot;password&quot;: &quot;&quot;,
+      &quot;database&quot;: &quot;customify&quot;,
+      &quot;entities&quot;: [Product],
+      &quot;synchronize&quot;: true,
+      &quot;autoLoadEntities&quot;: true
+    }),
+    ProductModule
+  ],
   controllers: [AppController],
   providers: [AppService],
 })
-export class AppModule {}
+export class AppModule {
+
+  constructor(private connection: Connection) {
+  }
+
+}
 </code></pre>
     </div>
 </div>

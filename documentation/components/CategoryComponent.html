@@ -202,15 +202,15 @@
                                         <tbody>
                                                 <tr>
                                                         <td>activatedRoute</td>
-
+                                                  
                                                         <td>
                                                                         <code><a href="https://angular.io/api/router/ActivatedRoute" target="_blank" >ActivatedRoute</a></code>
                                                         </td>
-
+                                                  
                                                     <td>
                                                             No
                                                     </td>
-
+                                                    
                                                 </tr>
                                         </tbody>
                                     </table>
@@ -226,7 +226,7 @@
 
 
     <section>
-
+    
     <h3 id="methods">
         Methods
     </h3>
@@ -353,7 +353,7 @@
     </table>
 </section>
     <section>
-
+    
         <h3 id="inputs">
             Properties
         </h3>
@@ -400,7 +400,7 @@
                 </tr>
                     <tr>
                         <td class="col-md-4">
-                            <i>Type : </i>        <code><a href="../classes/ClientProduct.html" target="_self" >Array&lt;ClientProduct&gt;</a></code>
+                            <i>Type : </i>        <code><a href="../classes/Product.html" target="_self" >Array&lt;ClientProduct&gt;</a></code>
 
                         </td>
                     </tr>
@@ -497,8 +497,8 @@ export class CategoryComponent implements OnInit {
         <pre class="line-numbers"><code class="language-html">&lt;div class&#x3D;&#x27;content&#x27;&gt;
   &lt;h1 class&#x3D;&#x27;content__title&#x27;&gt;{{ currentSubcategoryTitle | uppercase }}&lt;/h1&gt;
   &lt;div class&#x3D;&#x27;products-list&#x27;&gt;
-    &lt;customify-product *ngFor&#x3D;&#x27;let product of products&#x27; [product]&#x3D;&#x27;product&#x27;&gt;
-    &lt;/customify-product&gt;
+    &lt;ui-product *ngFor&#x3D;&#x27;let product of products&#x27; [product]&#x3D;&#x27;product&#x27;&gt;
+    &lt;/ui-product&gt;
   &lt;/div&gt;
 &lt;/div&gt;
 </code></pre>
@@ -542,7 +542,7 @@ export class CategoryComponent implements OnInit {
         </div>
     </div>
 
-
+    
 </div>
 
 <script src="../js/libs/vis.min.js"></script>
@@ -550,7 +550,7 @@ export class CategoryComponent implements OnInit {
 <script src="../js/libs/deep-iterator.js"></script>
 <script>
         var COMPONENT_TEMPLATE = '<div><div class=\'content\'>  <h1 class=\'content__title\'>{{ currentSubcategoryTitle | uppercase }}</h1>  <div class=\'products-list\'>    <ui-product *ngFor=\'let product of products\' [product]=\'product\'>    </ui-product>  </div></div></div>'
-    var COMPONENTS = [{'name': 'AppComponent', 'selector': 'customify-root'},{'name': 'BannerComponent', 'selector': 'customify-banner'},{'name': 'BannersListComponent', 'selector': 'customify-banners-list'},{'name': 'CategoryComponent', 'selector': 'customify-category'},{'name': 'CategoryListComponent', 'selector': 'customify-category-list'},{'name': 'CategoryListElementComponent', 'selector': 'customify-category-list-element'},{'name': 'FooterComponent', 'selector': 'customify-footer'},{'name': 'HomeComponent', 'selector': 'customify-home'},{'name': 'NavbarComponent', 'selector': 'customify-navbar'},{'name': 'PageIntroHeaderComponent', 'selector': 'customify-page-intro-header'},{'name': 'ProductComponent', 'selector': 'customify-product'},{'name': 'ProfileComponent', 'selector': 'customify-profile'}];
+    var COMPONENTS = [{'name': 'AppComponent', 'selector': 'customify-root'},{'name': 'AppComponent', 'selector': 'customify-root'},{'name': 'BannerComponent', 'selector': 'ui-banner'},{'name': 'BannersListComponent', 'selector': 'customify-banners-list'},{'name': 'CategoryComponent', 'selector': 'customify-category'},{'name': 'CategoryListComponent', 'selector': 'customify-category-list'},{'name': 'CategoryListElementComponent', 'selector': 'customify-category-list-element'},{'name': 'DashboardComponent', 'selector': 'customify-dashboard'},{'name': 'FooterComponent', 'selector': 'ui-footer'},{'name': 'HomeComponent', 'selector': 'customify-home'},{'name': 'NavbarComponent', 'selector': 'ui-navbar'},{'name': 'PageIntroHeaderComponent', 'selector': 'ui-page-intro-header'},{'name': 'ProductComponent', 'selector': 'ui-product'},{'name': 'ProductsListComponent', 'selector': 'customify-products-list'},{'name': 'ProfileComponent', 'selector': 'customify-profile'}];
     var DIRECTIVES = [];
     var ACTUAL_COMPONENT = {'name': 'CategoryComponent'};
 </script>
@@ -565,7 +565,7 @@ export class CategoryComponent implements OnInit {
 
 
 
-
+                   
 
 
 

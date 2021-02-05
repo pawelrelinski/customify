@@ -91,7 +91,7 @@
 
             <tr>
                 <td class="col-md-3">selector</td>
-                <td class="col-md-9"><code>customify-banner</code></td>
+                <td class="col-md-9"><code>ui-banner</code></td>
             </tr>
 
             <tr>
@@ -283,8 +283,8 @@
 
             <tr>
                 <td class="col-md-4">
-                    <div class="io-line">Defined in <a href="" data-line="32"
-                            class="link-to-prism">libs/ui/src/lib/banner/banner.component.ts:32</a></div>
+                    <div class="io-line">Defined in <a href="" data-line="34"
+                            class="link-to-prism">libs/ui/src/lib/banner/banner.component.ts:34</a></div>
                 </td>
             </tr>
 
@@ -351,13 +351,13 @@ export interface IBanner {
   title: string;
   description: string;
   img?: string;
-  backgroundColorInRGB?: string;
+  backgroundColor?: string;
   height?: number;
-  textColorInRgb?: string;
+  textColor?: string;
 }
 
 @Component({
-  selector: &#x27;customify-banner&#x27;,
+  selector: &#x27;ui-banner&#x27;,
   templateUrl: &#x27;./banner.component.html&#x27;,
   styleUrls: [&#x27;./banner.component.scss&#x27;]
 })
@@ -372,11 +372,16 @@ export class BannerComponent implements OnInit {
   }
 
   public getBackgroundColor(): string {
-    // TODO: create Regex to check rgb
-    return this.bannerData?.backgroundColorInRGB;
+    if (!this.bannerData.backgroundColor)
+      return &#x27;rgb(71, 36, 217)&#x27;;
+
+    return this.bannerData.backgroundColor;
   }
 
-  public getHeight() {
+  public getHeight(): string {
+    if (!this.bannerData.height)
+      return &#x27;300px&#x27;;
+
     const height: number &#x3D; this.bannerData.height;
     return &#x60;${height}px&#x60;;
   }
@@ -389,7 +394,7 @@ export class BannerComponent implements OnInit {
         <pre class="line-numbers"><code class="language-html">&lt;div class&#x3D;&#x27;banner&#x27;
      [style.backgroundColor]&#x3D;&#x27;getBackgroundColor()&#x27;
      [style.height]&#x3D;&#x27;getHeight()&#x27;
-     [style.color]&#x3D;&#x27;bannerData.textColorInRgb&#x27;&gt;
+     [style.color]&#x3D;&#x27;bannerData.textColor&#x27;&gt;
   &lt;h1 class&#x3D;&#x27;banner__title&#x27;&gt;{{ bannerData?.title }}&lt;/h1&gt;
   &lt;p class&#x3D;&#x27;banner__description&#x27;&gt;{{ bannerData?.description }}&lt;/p&gt;
 &lt;/div&gt;
@@ -435,8 +440,8 @@ export class BannerComponent implements OnInit {
 <script src="../js/libs/htmlparser.js"></script>
 <script src="../js/libs/deep-iterator.js"></script>
 <script>
-        var COMPONENT_TEMPLATE = '<div><div class=\'banner\'     [style.backgroundColor]=\'getBackgroundColor()\'     [style.height]=\'getHeight()\'     [style.color]=\'bannerData.textColorInRgb\'>  <h1 class=\'banner__title\'>{{ bannerData?.title }}</h1>  <p class=\'banner__description\'>{{ bannerData?.description }}</p></div></div>'
-    var COMPONENTS = [{'name': 'AppComponent', 'selector': 'customify-root'},{'name': 'BannerComponent', 'selector': 'customify-banner'},{'name': 'BannersListComponent', 'selector': 'customify-banners-list'},{'name': 'CategoryComponent', 'selector': 'customify-category'},{'name': 'CategoryListComponent', 'selector': 'customify-category-list'},{'name': 'CategoryListElementComponent', 'selector': 'customify-category-list-element'},{'name': 'FooterComponent', 'selector': 'customify-footer'},{'name': 'HomeComponent', 'selector': 'customify-home'},{'name': 'NavbarComponent', 'selector': 'customify-navbar'},{'name': 'PageIntroHeaderComponent', 'selector': 'customify-page-intro-header'},{'name': 'ProductComponent', 'selector': 'customify-product'},{'name': 'ProfileComponent', 'selector': 'customify-profile'}];
+        var COMPONENT_TEMPLATE = '<div><div class=\'banner\'     [style.backgroundColor]=\'getBackgroundColor()\'     [style.height]=\'getHeight()\'     [style.color]=\'bannerData.textColor\'>  <h1 class=\'banner__title\'>{{ bannerData?.title }}</h1>  <p class=\'banner__description\'>{{ bannerData?.description }}</p></div></div>'
+    var COMPONENTS = [{'name': 'AppComponent', 'selector': 'customify-root'},{'name': 'AppComponent', 'selector': 'customify-root'},{'name': 'BannerComponent', 'selector': 'ui-banner'},{'name': 'BannersListComponent', 'selector': 'customify-banners-list'},{'name': 'CategoryComponent', 'selector': 'customify-category'},{'name': 'CategoryListComponent', 'selector': 'customify-category-list'},{'name': 'CategoryListElementComponent', 'selector': 'customify-category-list-element'},{'name': 'DashboardComponent', 'selector': 'customify-dashboard'},{'name': 'FooterComponent', 'selector': 'ui-footer'},{'name': 'HomeComponent', 'selector': 'customify-home'},{'name': 'NavbarComponent', 'selector': 'ui-navbar'},{'name': 'PageIntroHeaderComponent', 'selector': 'ui-page-intro-header'},{'name': 'ProductComponent', 'selector': 'ui-product'},{'name': 'ProductsListComponent', 'selector': 'customify-products-list'},{'name': 'ProfileComponent', 'selector': 'customify-profile'}];
     var DIRECTIVES = [];
     var ACTUAL_COMPONENT = {'name': 'BannerComponent'};
 </script>
