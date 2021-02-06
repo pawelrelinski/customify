@@ -1,6 +1,11 @@
-<h1>Products</h1>
-<ul>
-  <li *ngFor='let product of products'>
-    <h1>{{ product.name | titlecase }}</h1>
-  </li>
-</ul>
+<ui-page-intro-header [headerData]='pageHeaderData'></ui-page-intro-header>
+<div class='loader-wrapper' *ngIf='!isLoaded; else productsList'>
+  <ui-loader></ui-loader>
+</div>
+<ng-template #productsList>
+  <ul>
+    <li *ngFor='let product of products'>
+      <h1>{{ product.name | titlecase }}</h1>
+    </li>
+  </ul>
+</ng-template>

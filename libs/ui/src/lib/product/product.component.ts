@@ -1,5 +1,4 @@
 import { Component, Input } from '@angular/core';
-import { ClientProduct } from '@customify/api-interfaces';
 
 @Component({
   selector: 'ui-product',
@@ -8,7 +7,7 @@ import { ClientProduct } from '@customify/api-interfaces';
 })
 export class ProductComponent {
 
-  @Input() product: ClientProduct;
+  @Input() product: any;
   @Input() subcategory: string;
 
   constructor() { }

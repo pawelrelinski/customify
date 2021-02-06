@@ -1,4 +1,4 @@
-export interface IResponse {
+export interface IResponse<T> {
   success: boolean;
-  data: unknown;
+  data: T;
 }

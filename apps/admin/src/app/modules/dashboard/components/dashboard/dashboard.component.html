@@ -1,1 +1,9 @@
-<p>dashboard works!</p>
+<ui-page-intro-header [headerData]='pageHeaderData'></ui-page-intro-header>
+<div class='loader-wrapper' *ngIf='!isLoaded; else dashboardContent'>
+  <ui-loader></ui-loader>
+</div>
+<ng-template #dashboardContent>
+  <div>
+    <h3>Dashboard data</h3>
+  </div>
+</ng-template>
