@@ -7,11 +7,14 @@ import { PageIntroHeaderComponent } from './page-intro-header/page-intro-header.
 import { BannerComponent } from './banner/banner.component';
 import { ProductComponent } from './product/product.component';
 import { LoaderComponent } from './loader/loader.component';
+import { MatTableModule } from '@angular/material/table';
+import { TableComponent } from './table/table.component';
 
 @NgModule({
   imports: [
     CommonModule,
-    RouterModule
+    RouterModule,
+    MatTableModule
   ],
   declarations: [
     NavbarComponent,
@@ -19,7 +22,8 @@ import { LoaderComponent } from './loader/loader.component';
     PageIntroHeaderComponent,
     BannerComponent,
     ProductComponent,
-    LoaderComponent
+    LoaderComponent,
+    TableComponent
   ],
   exports: [
     NavbarComponent,
@@ -27,7 +31,8 @@ import { LoaderComponent } from './loader/loader.component';
     PageIntroHeaderComponent,
     BannerComponent,
     ProductComponent,
-    LoaderComponent
+    LoaderComponent,
+    MatTableModule
   ]
 })
 export class UiModule {}

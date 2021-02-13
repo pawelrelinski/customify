@@ -1,0 +1,14 @@
+<table class='table'>
+  <thead class='table__head'>
+  <tr>
+    <th *ngFor='let column of getColumnNames()' class='table__column-name'>
+      {{ column | titlecase }}
+    </th>
+  </tr>
+  </thead>
+  <tbody class='table__body'>
+  <tr *ngFor='let element of getElements()' class='table__row'>
+    <td *ngFor='let key of getColumnNames()' class='table__data'>{{ element[key] }}</td>
+  </tr>
+  </tbody>
+</table>
