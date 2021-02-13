@@ -9,6 +9,8 @@ import { ProductComponent } from './product/product.component';
 import { LoaderComponent } from './loader/loader.component';
 import { MatTableModule } from '@angular/material/table';
 import { TableComponent } from './table/table.component';
+import { TruncatePipe } from './truncate/truncate.pipe';
+import { ButtonComponent } from './button/button.component';
 
 @NgModule({
   imports: [
@@ -23,7 +25,9 @@ import { TableComponent } from './table/table.component';
     BannerComponent,
     ProductComponent,
     LoaderComponent,
-    TableComponent
+    TableComponent,
+    TruncatePipe,
+    ButtonComponent
   ],
   exports: [
     NavbarComponent,
@@ -32,7 +36,9 @@ import { TableComponent } from './table/table.component';
     BannerComponent,
     ProductComponent,
     LoaderComponent,
-    MatTableModule
+    MatTableModule,
+    TableComponent,
+    ButtonComponent
   ]
 })
 export class UiModule {}

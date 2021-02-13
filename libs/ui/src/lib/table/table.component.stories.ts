@@ -1,6 +1,5 @@
 import { ITableData, TableComponent } from './table.component';
 
-// @ts-ignore
 const tableData: ITableData<any> = {
   columns: ['id', 'name', 'price', 'description'],
   body: [

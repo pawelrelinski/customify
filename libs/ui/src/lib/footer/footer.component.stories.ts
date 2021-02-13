@@ -1,4 +1,4 @@
-import { text, number, boolean } from '@storybook/addon-knobs';
+import { boolean } from '@storybook/addon-knobs';
 import { FooterComponent } from './footer.component';
 
 export default {

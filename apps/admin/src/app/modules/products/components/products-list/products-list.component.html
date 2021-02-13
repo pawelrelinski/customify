@@ -3,9 +3,8 @@
   <ui-loader></ui-loader>
 </div>
 <ng-template #productsList>
-  <ul>
-    <li *ngFor='let product of products'>
-      <h1>{{ product.name | titlecase }}</h1>
-    </li>
-  </ul>
+  <ui-button>Create new product</ui-button>
+  <div class='table-wrapper'>
+    <ui-table [tableData]='productsTableData'></ui-table>
+  </div>
 </ng-template>

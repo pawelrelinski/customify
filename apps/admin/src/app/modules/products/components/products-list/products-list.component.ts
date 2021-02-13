@@ -13,6 +13,7 @@ export class ProductsListComponent implements OnInit {
   public products: Array<IProduct>;
   public isLoaded = false;
   public pageHeaderData = { title: 'Products' };
+  public productsTableData = {};
 
   constructor(private productService: ProductService) {
   }
@@ -26,11 +27,23 @@ export class ProductsListComponent implements OnInit {
       .subscribe((products: IResponse<Array<IProduct>>) => {
         this.checkProducts(products.data);
         this.products = products.data;
+        this.setProductsTableData();
       });
   }
 
   private checkProducts(product: Array<IProduct>): void {
     this.isLoaded = !(!product || product.length === 0);
+  }
+
+  private setProductsTableData(): void {
+    this.productsTableData = {
+      columns: this.getAllProductKeys(),
+      body: this.products
+    };
+  }
+
+  private getAllProductKeys(): Array<string> {
+    return Object.keys(this.products[0]);
   }
 
 }

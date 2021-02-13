@@ -15,11 +15,13 @@ export class TableComponent implements OnInit {
   @Input() tableData: ITableData<unknown>;
 
   private columnNames: Array<string>;
+  private elements: Array<unknown>;
 
   constructor() { }
 
   ngOnInit(): void {
     this.setColumnNames();
+    this.setElements();
   }
 
   public getColumnNames(): Array<string> {
@@ -27,7 +29,7 @@ export class TableComponent implements OnInit {
   }
 
   public getElements(): Array<unknown> {
-    return this.tableData.body;
+    return this.elements;
   }
 
   private setColumnNames(): void {
@@ -36,6 +38,14 @@ export class TableComponent implements OnInit {
     }
 
     this.columnNames = this.tableData.columns;
+  }
+
+  private setElements(): void {
+    if (!this.tableData.body) {
+      throw new Error('Table data body is empty!');
+    }
+
+    this.elements = this.tableData.body;
   }
 
 }

@@ -8,7 +8,9 @@
   </thead>
   <tbody class='table__body'>
   <tr *ngFor='let element of getElements()' class='table__row'>
-    <td *ngFor='let key of getColumnNames()' class='table__data'>{{ element[key] }}</td>
+    <td *ngFor='let key of getColumnNames()' class='table__data'>
+      {{ element[key] | truncate }}
+    </td>
   </tr>
   </tbody>
 </table>
