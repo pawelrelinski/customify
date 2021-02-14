@@ -1,0 +1,14 @@
+.label {
+  font-weight: 700;
+  display: flex;
+  flex-direction: column;
+  background-color: rgb(240, 240, 240);
+  border-radius: 5px;
+  width: 100%;
+  height: auto;
+  padding: 5px;
+
+  p {
+    margin: 10px;
+  }
+}

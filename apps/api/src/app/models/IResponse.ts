@@ -3,3 +3,9 @@ export interface IResponse<T> {
   data?: Array<T> | T;
   error?: string | T;
 }
+
+export class Response<T> implements IResponse<T> {
+
+  constructor(public data: T) { }
+
+}

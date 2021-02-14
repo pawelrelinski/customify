@@ -11,12 +11,17 @@ import { MatTableModule } from '@angular/material/table';
 import { TableComponent } from './table/table.component';
 import { TruncatePipe } from './truncate/truncate.pipe';
 import { ButtonComponent } from './button/button.component';
+import { FormComponent } from './form/form.component';
+import { LabelComponent } from './label/label.component';
+import { ReactiveFormsModule } from '@angular/forms';
+import { InputDirective } from './input/input.directive';
 
 @NgModule({
   imports: [
     CommonModule,
     RouterModule,
-    MatTableModule
+    MatTableModule,
+    ReactiveFormsModule
   ],
   declarations: [
     NavbarComponent,
@@ -27,7 +32,10 @@ import { ButtonComponent } from './button/button.component';
     LoaderComponent,
     TableComponent,
     TruncatePipe,
-    ButtonComponent
+    ButtonComponent,
+    FormComponent,
+    LabelComponent,
+    InputDirective
   ],
   exports: [
     NavbarComponent,
@@ -38,7 +46,10 @@ import { ButtonComponent } from './button/button.component';
     LoaderComponent,
     MatTableModule,
     TableComponent,
-    ButtonComponent
+    ButtonComponent,
+    FormComponent,
+    LabelComponent,
+    InputDirective
   ]
 })
 export class UiModule {}

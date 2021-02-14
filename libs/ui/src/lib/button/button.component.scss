@@ -21,6 +21,8 @@ $main-color: rgb(71, 36, 217);
     color: rgb(200, 200, 200);
     box-shadow: none;
     border: .5px solid rgb(200, 200, 200);
+    background-color: rgba(229, 229, 229, 0.67);
+    color: rgba(202, 202, 202, 0.91);
   }
 }
 
@@ -88,4 +90,8 @@ $main-color: rgb(71, 36, 217);
   background-color: $bg-color;
   box-shadow:  0 .4px 3px $bg-color;
   color: white;
+}
+
+.no-shadow {
+  box-shadow: none;
 }

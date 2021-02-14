@@ -1,0 +1,10 @@
+$margin: 15px;
+
+.form {
+  background-color: rgb(245, 245, 245);
+  border-radius: 10px;
+  height: auto;
+  width: calc(100% - (#{$margin} * 2));
+  padding: 10px;
+  margin: $margin;
+}

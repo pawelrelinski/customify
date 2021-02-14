@@ -1,1 +1,15 @@
-<p>new-product-form works!</p>
+<ui-form [formGroup]='productForm'
+         (ngSubmit)='submitForm()' class='form'>
+  <ui-label *ngFor='let control of productFormControls' [name]='control.name'>
+    <input [formControlName]='control.name' [type]='control.type' uiInput>
+  </ui-label>
+  <div class='btn-actions-wrapper'>
+    <ui-button status='primary' shadow='false' type='submit'
+               [disabled]='productForm.invalid'>
+      Create
+    </ui-button>
+    <ui-button (click)='hideForm()' status='secondary' shadow='false'>
+      Cancel
+    </ui-button>
+  </div>
+</ui-form>

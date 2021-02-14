@@ -1,15 +1,23 @@
 <table class='table'>
   <thead class='table__head'>
   <tr>
-    <th *ngFor='let column of getColumnNames()' class='table__column-name'>
+    <th *ngFor='let column of getColumnNames()' class='table__column-name focus'
+        (click)='sortBy(column)'>
       {{ column | titlecase }}
+    </th>
+    <th class='table__column-name'>
+      Remove
     </th>
   </tr>
   </thead>
   <tbody class='table__body'>
-  <tr *ngFor='let element of getElements()' class='table__row'>
+  <tr *ngFor='let element of getElements()' class='table__row'
+      (contextmenu)='test()'>
     <td *ngFor='let key of getColumnNames()' class='table__data'>
       {{ element[key] | truncate }}
+    </td>
+    <td class='table__data center focus' (click)='deleteProduct(convertToNumber(element.id))'>
+      <i class='bx bx-trash-alt'></i>
     </td>
   </tr>
   </tbody>

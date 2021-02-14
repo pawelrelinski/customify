@@ -1,8 +1,9 @@
-import { Body, Controller, Get, Param, Post } from '@nestjs/common';
+import { Body, Controller, Delete, Get, Param, Post } from '@nestjs/common';
 import { Product } from './Product.entity';
 import { ProductService } from './product.service';
 import { ErrorResponse } from '../models/ErrorResponse';
 import { SuccessResponse } from '../models/SuccessResponse';
+import { Response } from '../models/IResponse';
 
 type ProductResponse = ErrorResponse<Product> | SuccessResponse<Product>;
 type ArrayOfProductsResponse = ErrorResponse<Array<Product>> | SuccessResponse<Array<Product>>;
@@ -41,6 +42,18 @@ export class ProductController {
     }
 
     return  new SuccessResponse(product);
+  }
+
+  @Delete(':id')
+  public async deleteById(@Param('id') id: number | string): Promise<unknown> {
+    const response = await this.productService.remove(id);
+    return {
+      success: true,
+      data: {
+        msg: 'Product has delete',
+        response
+      }
+    }
   }
 
 }

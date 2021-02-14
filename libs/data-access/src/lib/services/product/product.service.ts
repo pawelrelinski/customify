@@ -16,12 +16,17 @@ export class ProductService {
   }
 
   public getById<T>(id: number | string): Observable<T> {
-    const url: string = `${this.DEFAULT_PRODUCT_URL}/${id}`;
+    const url = `${this.DEFAULT_PRODUCT_URL}/${id}`;
     return this.http.get<T>(url);
   }
 
   public add<T>(product: T): Observable<T> {
     return this.http.post<T>(this.DEFAULT_PRODUCT_URL, product);
+  }
+
+  public delete<T>(id: number): Observable<T> {
+    const url = `${this.DEFAULT_PRODUCT_URL}/${id}`;
+    return this.http.delete<T>(url);
   }
 
 }

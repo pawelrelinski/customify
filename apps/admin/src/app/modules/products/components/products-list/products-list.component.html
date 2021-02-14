@@ -3,11 +3,17 @@
   <ui-loader></ui-loader>
 </div>
 <ng-template #productsList>
-  <ui-button class='btn-new-product' (click)='toggleForm()'>
-    {{ btnFormText }}
+  <customify-new-product-form *ngIf='formIsVisible'
+                              (onCreateProduct)='handleSubmit($event)'
+                              (onHideForm)='hideForm($event)'>
+  </customify-new-product-form>
+  <ui-button class='btn-new-product' (click)='showForm()'
+             *ngIf='!formIsVisible'>
+    Create new product
   </ui-button>
-  <customify-new-product-form *ngIf='formIsShow'></customify-new-product-form>
   <div class='table-wrapper'>
-    <ui-table [tableData]='productsTableData'></ui-table>
+    <ui-table [tableData]='productsTableData'
+              (onDelete)='deleteProduct($event)'>
+    </ui-table>
   </div>
 </ng-template>

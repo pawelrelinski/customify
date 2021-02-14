@@ -26,6 +26,7 @@ export class ButtonComponent implements OnInit {
   @Input() status: buttonStatus;
   @Input() size: buttonSize;
   @Input() disabled: boolean;
+  @Input() shadow: boolean;
 
   public classList: string;
 
@@ -36,10 +37,16 @@ export class ButtonComponent implements OnInit {
   }
 
   private setClassList(): void {
+    let shadowClass: string;
+
     if (!this.status) this.status = buttonStatus.DEFAULT;
     if (!this.size) this.size = buttonSize.MEDIUM;
 
-    this.classList = `btn ${this.status} ${this.size}`;
+    (!this.shadow)
+      ? shadowClass = ''
+      : shadowClass = 'no-shadow';
+
+    this.classList = `btn ${this.status} ${this.size} ${shadowClass}`;
   }
 
 }

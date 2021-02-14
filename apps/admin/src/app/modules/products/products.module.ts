@@ -5,6 +5,7 @@ import { ProductsListComponent } from './components/products-list/products-list.
 import { SharedModule } from '../../shared/shared.module';
 import { NewProductFormComponent } from './components/new-product-form/new-product-form.component';
 
+
 @NgModule({
   declarations: [
     ProductsListComponent,

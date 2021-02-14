@@ -1,7 +1,11 @@
 import { Component, OnInit } from '@angular/core';
 import { IProduct } from '@customify/api-interfaces';
-import { ProductService } from '../../../../core/services/product.service';
+import { ErrorService, ProductService } from '@customify/data-access';
 import { IResponse } from '../../../../shared/models/IResponse';
+import { FormGroup } from '@angular/forms';
+import { HttpErrorResponse } from '@angular/common/http';
+
+type CreateProductResponse = IResponse<Array<IProduct>> | IProduct | HttpErrorResponse;
 
 @Component({
   selector: 'customify-products-list',
@@ -15,29 +19,52 @@ export class ProductsListComponent implements OnInit {
   public pageHeaderData = { title: 'Products' };
   public productsTableData = {};
 
-  private btnFormTexts = {
-    close: 'Create new product',
-    open: 'Cancel'
-  };
+  public formIsVisible = false;
 
-  public formIsShow = false;
-  public btnFormText: string = this.btnFormTexts.close;
+  public response: CreateProductResponse;
+  public error: HttpErrorResponse;
+  public errorMessageForUser: string;
 
-  constructor(private productService: ProductService) {
+  constructor(private productService: ProductService,
+              private errorService: ErrorService) {
   }
 
   ngOnInit(): void {
     this.fetchAllProducts();
+    this.errorService.error$.subscribe(error => {
+      this.error = error;
+      console.log(error);
+    });
   }
 
-  public toggleForm(): void {
-    if (this.formIsShow) {
-      this.formIsShow = false;
-      this.btnFormText = this.btnFormTexts.close;
-    } else  {
-      this.formIsShow = true;
-      this.btnFormText = this.btnFormTexts.open;
-    }
+  public showForm(): void {
+    this.formIsVisible = true;
+  }
+
+  public hideForm(event?: unknown): void {
+    this.formIsVisible = false;
+  }
+
+  public deleteProduct(event: number): void {
+    this.productService.delete(event).subscribe((response) => {
+      if (response.success) {
+        this.products.splice(0, this.products.length);
+        this.isLoaded = false;
+        this.fetchAllProducts();
+      }
+    });
+  }
+
+  public handleSubmit(event: FormGroup): void {
+    const product: IProduct = event.value;
+    this.productService.add<IProduct>(product).subscribe((response: CreateProductResponse) => {
+      console.log(response);
+      this.response = response;
+      if (this.response.success) {
+        this.handleSuccessResponse();
+        this.products.push(response.data);
+      }
+    });
   }
 
   private fetchAllProducts(): void {
@@ -46,6 +73,7 @@ export class ProductsListComponent implements OnInit {
         this.checkProducts(products.data);
         this.products = products.data;
         this.setProductsTableData();
+        this.isLoaded = true;
       });
   }
 
@@ -62,6 +90,11 @@ export class ProductsListComponent implements OnInit {
 
   private getAllProductKeys(): Array<string> {
     return Object.keys(this.products[0]);
+  }
+
+  private handleSuccessResponse(): void {
+    this.fetchAllProducts();
+    this.hideForm();
   }
 
 }

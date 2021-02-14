@@ -1,8 +1,13 @@
-import { Component, Input, OnInit } from '@angular/core';
+import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
 
 export interface ITableData<T> {
   columns: Array<string>;
   body: Array<T>
+}
+
+enum Sort {
+  DESC = 'desc',
+  ASC = 'asc'
 }
 
 @Component({
@@ -13,15 +18,24 @@ export interface ITableData<T> {
 export class TableComponent implements OnInit {
 
   @Input() tableData: ITableData<unknown>;
+  @Output() onDelete: EventEmitter<number> = new EventEmitter<number>();
 
   private columnNames: Array<string>;
   private elements: Array<unknown>;
+  private sortType: Sort = Sort.ASC;
 
   constructor() { }
 
   ngOnInit(): void {
-    this.setColumnNames();
-    this.setElements();
+    this.setTableProperties();
+  }
+
+  public sortBy(columnName: string): void {
+    if (this.sortType === Sort.ASC) {
+      this.ascSort(columnName);
+    } else {
+      this.descSort(columnName);
+    }
   }
 
   public getColumnNames(): Array<string> {
@@ -30,6 +44,14 @@ export class TableComponent implements OnInit {
 
   public getElements(): Array<unknown> {
     return this.elements;
+  }
+
+  public deleteProduct(id: number): void {
+    this.onDelete.emit(id);
+  }
+
+  public convertToNumber(val: unknown): number {
+    return Number(val);
   }
 
   private setColumnNames(): void {
@@ -48,6 +70,29 @@ export class TableComponent implements OnInit {
     this.elements = this.tableData.body;
   }
 
+  private setTableProperties(): void {
+    this.setColumnNames();
+    this.setElements();
+  }
+
+  private ascSort(column): void {
+    this.sortType = Sort.DESC;
+    this.elements.sort((a, b) => {
+      if ( a[column] < b[column] ) return -1;
+      if ( a[column] > b[column] ) return 1;
+
+      return 0;
+    });
+  }
+
+  private descSort(column): void {
+    this.sortType = Sort.ASC;
+    this.elements.sort((a, b) => {
+      if ( a[column] > b[column] ) return -1;
+      if ( a[column] < b[column] ) return 1;
+
+      return 0;
+    });
+  }
+
 }
-
-
