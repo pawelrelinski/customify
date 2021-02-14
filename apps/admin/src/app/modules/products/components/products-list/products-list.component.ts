@@ -15,11 +15,29 @@ export class ProductsListComponent implements OnInit {
   public pageHeaderData = { title: 'Products' };
   public productsTableData = {};
 
+  private btnFormTexts = {
+    close: 'Create new product',
+    open: 'Cancel'
+  };
+
+  public formIsShow = false;
+  public btnFormText: string = this.btnFormTexts.close;
+
   constructor(private productService: ProductService) {
   }
 
   ngOnInit(): void {
     this.fetchAllProducts();
+  }
+
+  public toggleForm(): void {
+    if (this.formIsShow) {
+      this.formIsShow = false;
+      this.btnFormText = this.btnFormTexts.close;
+    } else  {
+      this.formIsShow = true;
+      this.btnFormText = this.btnFormTexts.open;
+    }
   }
 
   private fetchAllProducts(): void {

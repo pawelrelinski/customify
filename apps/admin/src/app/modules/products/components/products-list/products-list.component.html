@@ -3,7 +3,10 @@
   <ui-loader></ui-loader>
 </div>
 <ng-template #productsList>
-  <ui-button>Create new product</ui-button>
+  <ui-button class='btn-new-product' (click)='toggleForm()'>
+    {{ btnFormText }}
+  </ui-button>
+  <customify-new-product-form *ngIf='formIsShow'></customify-new-product-form>
   <div class='table-wrapper'>
     <ui-table [tableData]='productsTableData'></ui-table>
   </div>

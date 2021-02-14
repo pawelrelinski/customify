@@ -8,7 +8,6 @@ import { Component, Input } from '@angular/core';
 export class ProductComponent {
 
   @Input() product: any;
-  @Input() subcategory: string;
 
   constructor() { }
 
