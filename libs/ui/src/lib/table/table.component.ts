@@ -18,7 +18,9 @@ enum Sort {
 export class TableComponent implements OnInit {
 
   @Input() tableData: ITableData<unknown>;
+
   @Output() onDelete: EventEmitter<number> = new EventEmitter<number>();
+  @Output() onGetFullInfo: EventEmitter<number> = new EventEmitter<number>();
 
   private columnNames: Array<string>;
   private elements: Array<unknown>;
@@ -52,6 +54,10 @@ export class TableComponent implements OnInit {
 
   public convertToNumber(val: unknown): number {
     return Number(val);
+  }
+
+  public getFullInfo(id: number): void {
+    this.onGetFullInfo.emit(this.convertToNumber(id));
   }
 
   private setColumnNames(): void {

@@ -13,7 +13,8 @@
   </ui-button>
   <div class='table-wrapper'>
     <ui-table [tableData]='productsTableData'
-              (onDelete)='deleteProduct($event)'>
+              (onDelete)='deleteProduct($event)'
+              (onGetFullInfo)='getProductInfo($event)'>
     </ui-table>
   </div>
 </ng-template>

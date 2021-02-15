@@ -11,9 +11,9 @@
   </tr>
   </thead>
   <tbody class='table__body'>
-  <tr *ngFor='let element of getElements()' class='table__row'
-      (contextmenu)='test()'>
-    <td *ngFor='let key of getColumnNames()' class='table__data'>
+  <tr *ngFor='let element of getElements()' class='table__row'>
+    <td *ngFor='let key of getColumnNames()'
+        (click)='getFullInfo(element.id)' class='table__data'>
       {{ element[key] | truncate }}
     </td>
     <td class='table__data center focus' (click)='deleteProduct(convertToNumber(element.id))'>

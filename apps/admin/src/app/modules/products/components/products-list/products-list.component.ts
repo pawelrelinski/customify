@@ -4,6 +4,7 @@ import { ErrorService, ProductService } from '@customify/data-access';
 import { IResponse } from '../../../../shared/models/IResponse';
 import { FormGroup } from '@angular/forms';
 import { HttpErrorResponse } from '@angular/common/http';
+import { Router } from '@angular/router';
 
 type CreateProductResponse = IResponse<Array<IProduct>> | IProduct | HttpErrorResponse;
 
@@ -26,7 +27,8 @@ export class ProductsListComponent implements OnInit {
   public errorMessageForUser: string;
 
   constructor(private productService: ProductService,
-              private errorService: ErrorService) {
+              private errorService: ErrorService,
+              private router: Router) {
   }
 
   ngOnInit(): void {
@@ -47,7 +49,7 @@ export class ProductsListComponent implements OnInit {
 
   public deleteProduct(event: number): void {
     this.productService.delete(event).subscribe((response) => {
-      if (response.success) {
+      if (response['success']) {
         this.products.splice(0, this.products.length);
         this.isLoaded = false;
         this.fetchAllProducts();
@@ -60,11 +62,26 @@ export class ProductsListComponent implements OnInit {
     this.productService.add<IProduct>(product).subscribe((response: CreateProductResponse) => {
       console.log(response);
       this.response = response;
-      if (this.response.success) {
+      if (this.response['success']) {
         this.handleSuccessResponse();
-        this.products.push(response.data);
+        this.products.push(response['data']);
       }
     });
+  }
+
+  public async getProductInfo(event: unknown): Promise<void> {
+    this.productService.getById<IResponse<IProduct>>(Number(event)).subscribe((response: IResponse<IProduct>) => {
+      if (!response.success) {
+        this.errorService.error$.subscribe((error) => {
+          console.log(error);
+        });
+      }
+      this.redirectToProductDetailsPage(Number(response.data['id']))
+    });
+  }
+
+  private async redirectToProductDetailsPage(id: number): Promise<void> {
+    await this.router.navigate([ 'products', id ]);
   }
 
   private fetchAllProducts(): void {
