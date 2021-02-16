@@ -11,10 +11,12 @@
              *ngIf='!formIsVisible'>
     Create new product
   </ui-button>
+  <customify-product-filter-bar [productKeys]='productAllAvailableKeys'
+                                (onFiltersChange)='changeProductKeysToDisplayInTable($event)'>
+  </customify-product-filter-bar>
   <div class='table-wrapper'>
-    <ui-table [tableData]='productsTableData'
-              (onDelete)='deleteProduct($event)'
-              (onGetFullInfo)='getProductInfo($event)'>
-    </ui-table>
+    <customify-product-table [columnNames]='columnNames'
+                             [products]='products'>
+    </customify-product-table>
   </div>
 </ng-template>

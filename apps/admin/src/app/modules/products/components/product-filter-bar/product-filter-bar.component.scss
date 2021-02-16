@@ -1,0 +1,18 @@
+$margin: 15px;
+
+.filter-bar {
+  width: calc(100% - 2 * #{$margin});
+  min-height: 100px;
+  height: auto;
+  border-radius: 15px;
+  margin-left: $margin;
+  margin-right: $margin;
+  box-shadow: 0 .4px 3px rgba(20, 20, 20, .3);
+  box-sizing: border-box;
+  padding: 10px;
+
+  &__list {
+    margin: 0;
+    padding-left: 5px;
+  }
+}

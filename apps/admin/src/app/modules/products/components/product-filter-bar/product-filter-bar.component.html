@@ -1,0 +1,14 @@
+<div class='filter-bar'>
+  <ul class='filter-bar__list'>
+    <li *ngFor='let key of productsKeysToDisplay'>
+      <label>
+        <input [value]='key' (change)='onChange($event)'
+               type='checkbox'>
+        {{ key | titlecase }}
+      </label>
+    </li>
+  </ul>
+  <ui-button (click)='toggleDisplayKeys()'>
+    {{ buttonText }}
+  </ui-button>
+</div>

@@ -10,18 +10,18 @@ type CreateProductResponse = IResponse<Array<IProduct>> | IProduct | HttpErrorRe
 
 @Component({
   selector: 'customify-products-list',
-  templateUrl: './products-list.component.html',
-  styleUrls: ['./products-list.component.scss']
+  templateUrl: './products-page.component.html',
+  styleUrls: ['./products-page.component.scss']
 })
-export class ProductsListComponent implements OnInit {
+export class ProductsPageComponent implements OnInit {
 
+  public columnNames: Array<string> = [ 'id', 'name', 'price' ];
+  public productAllAvailableKeys: Array<string> = ['name', 'price', 'description'];
   public products: Array<IProduct>;
   public isLoaded = false;
   public pageHeaderData = { title: 'Products' };
   public productsTableData = {};
-
   public formIsVisible = false;
-
   public response: CreateProductResponse;
   public error: HttpErrorResponse;
   public errorMessageForUser: string;
@@ -78,6 +78,10 @@ export class ProductsListComponent implements OnInit {
       }
       this.redirectToProductDetailsPage(Number(response.data['id']))
     });
+  }
+
+  public changeProductKeysToDisplayInTable(event: Array<string>): void {
+    this.productAllAvailableKeys = event;
   }
 
   private async redirectToProductDetailsPage(id: number): Promise<void> {

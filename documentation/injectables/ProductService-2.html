@@ -97,6 +97,10 @@
                             </li>
                             <li>
                                     <span class="modifier">Public</span>
+                                <a href="#delete">delete</a>
+                            </li>
+                            <li>
+                                    <span class="modifier">Public</span>
                                 <a href="#getAll">getAll</a>
                             </li>
                             <li>
@@ -225,6 +229,86 @@
                                     <td>product</td>
                                     <td>
                                             <code>T</code>
+                                    </td>
+
+                                    <td>
+                                        No
+                                    </td>
+
+
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <div>
+                    </div>
+                    <div class="io-description">
+                        <b>Returns : </b>    <code>Observable&lt;T&gt;</code>
+
+                    </div>
+                    <div class="io-description">
+                        
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="delete"></a>
+                    <span class="name">
+                        <b>
+                            <span class="modifier">Public</span>
+                            delete
+                        </b>
+                        <a href="#delete"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+                    <span class="modifier-icon icon ion-ios-reset"></span>
+                    <code>delete(id: <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/number" target="_blank">number</a>)</code>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-line">Defined in <a href="" data-line="27"
+                            class="link-to-prism">libs/data-access/src/lib/services/product/product.service.ts:27</a></div>
+                </td>
+            </tr>
+
+            <tr>
+                <td class="col-md-4">
+                    <b>Type parameters :</b>
+                    <ul class="type-parameters">
+                        <li>T</li>
+                    </ul>
+                </td>
+            </tr>
+
+            <tr>
+                <td class="col-md-4">
+
+                    <div class="io-description">
+                        <b>Parameters :</b>
+                        <table class="params">
+                            <thead>
+                                <tr>
+                                    <td>Name</td>
+                                    <td>Type</td>
+                                    <td>Optional</td>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>id</td>
+                                    <td>
+                                                <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/number" target="_blank" >number</a></code>
                                     </td>
 
                                     <td>
@@ -442,12 +526,17 @@ export class ProductService {
   }
 
   public getById&lt;T&gt;(id: number | string): Observable&lt;T&gt; {
-    const url: string &#x3D; &#x60;${this.DEFAULT_PRODUCT_URL}/${id}&#x60;;
+    const url &#x3D; &#x60;${this.DEFAULT_PRODUCT_URL}/${id}&#x60;;
     return this.http.get&lt;T&gt;(url);
   }
 
   public add&lt;T&gt;(product: T): Observable&lt;T&gt; {
     return this.http.post&lt;T&gt;(this.DEFAULT_PRODUCT_URL, product);
+  }
+
+  public delete&lt;T&gt;(id: number): Observable&lt;T&gt; {
+    const url &#x3D; &#x60;${this.DEFAULT_PRODUCT_URL}/${id}&#x60;;
+    return this.http.delete&lt;T&gt;(url);
   }
 
 }

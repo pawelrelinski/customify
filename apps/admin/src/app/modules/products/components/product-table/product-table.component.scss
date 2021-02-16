@@ -1,0 +1,47 @@
+.table {
+  box-shadow: 0 .4px 3px rgba(20, 20, 20, .3);
+  width: 100%;
+  height: auto;
+  border-spacing: 0;
+
+  &__column-name {
+    color: rgb(120, 120, 120);
+    font-weight: 400;
+    text-align: left;
+    padding: 10px;
+  }
+
+  & td {
+    padding: 10px 20px 10px 10px;
+    width: auto;
+    height: auto;
+  }
+
+  &__row {
+    margin: 0;
+    padding: 0;
+    width: auto;
+    height: auto;
+    box-sizing: border-box;
+    transition: all .3s ease;
+
+    &:hover {
+      cursor: pointer;
+      background-color: rgb(230, 230, 230);
+    }
+  }
+}
+
+.center {
+  text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.focus {
+
+  &:hover {
+    cursor: pointer;
+  }
+}

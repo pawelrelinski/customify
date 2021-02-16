@@ -61,7 +61,7 @@
     <h3>File</h3>
 </p>
 <p class="comment">
-    <code>apps/admin/src/app/app.component.ts</code>
+    <code>apps/client/src/app/app.component.ts</code>
 </p>
 
 
@@ -150,7 +150,7 @@
                             </li>
                             <li>
                                     <span class="modifier">Private</span>
-                                <a href="#setNavElements">setNavElements</a>
+                                <a href="#setRouterLinks">setRouterLinks</a>
                             </li>
                         </ul>
                     </td>
@@ -175,7 +175,7 @@
                 </tr>
                         <tr>
                             <td class="col-md-4">
-                                <div class="io-line">Defined in <a href="" data-line="11" class="link-to-prism">apps/admin/src/app/app.component.ts:11</a></div>
+                                <div class="io-line">Defined in <a href="" data-line="11" class="link-to-prism">apps/client/src/app/app.component.ts:11</a></div>
                             </td>
                         </tr>
 
@@ -188,7 +188,7 @@
 
 
     <section>
-    
+
     <h3 id="methods">
         Methods
     </h3>
@@ -215,7 +215,7 @@
             <tr>
                 <td class="col-md-4">
                     <div class="io-line">Defined in <a href="" data-line="15"
-                            class="link-to-prism">apps/admin/src/app/app.component.ts:15</a></div>
+                            class="link-to-prism">apps/client/src/app/app.component.ts:15</a></div>
                 </td>
             </tr>
 
@@ -235,20 +235,20 @@
         <tbody>
             <tr>
                 <td class="col-md-4">
-                    <a name="setNavElements"></a>
+                    <a name="setRouterLinks"></a>
                     <span class="name">
                         <b>
                             <span class="modifier">Private</span>
-                            setNavElements
+                            setRouterLinks
                         </b>
-                        <a href="#setNavElements"><span class="icon ion-ios-link"></span></a>
+                        <a href="#setRouterLinks"><span class="icon ion-ios-link"></span></a>
                     </span>
                 </td>
             </tr>
             <tr>
                 <td class="col-md-4">
                     <span class="modifier-icon icon ion-ios-reset"></span>
-                    <code>setNavElements()</code>
+                    <code>setRouterLinks()</code>
                 </td>
             </tr>
 
@@ -256,7 +256,7 @@
             <tr>
                 <td class="col-md-4">
                     <div class="io-line">Defined in <a href="" data-line="19"
-                            class="link-to-prism">apps/admin/src/app/app.component.ts:19</a></div>
+                            class="link-to-prism">apps/client/src/app/app.component.ts:19</a></div>
                 </td>
             </tr>
 
@@ -274,7 +274,7 @@
     </table>
 </section>
     <section>
-    
+
         <h3 id="inputs">
             Properties
         </h3>
@@ -304,7 +304,7 @@
                     </tr>
                         <tr>
                             <td class="col-md-4">
-                                    <div class="io-line">Defined in <a href="" data-line="11" class="link-to-prism">apps/admin/src/app/app.component.ts:11</a></div>
+                                    <div class="io-line">Defined in <a href="" data-line="11" class="link-to-prism">apps/client/src/app/app.component.ts:11</a></div>
                             </td>
                         </tr>
 
@@ -331,15 +331,17 @@ export class AppComponent implements OnInit {
 
   constructor() { }
 
-  ngOnInit() {
-    this.setNavElements();
+  ngOnInit(): void {
+    this.setRouterLinks();
   }
 
-  private setNavElements(): void {
+  private setRouterLinks(): void {
     this.navElements.push(
-      { routerLink: &#x27;/dashboard&#x27;, name: &#x27;dashboard&#x27;, classes: &#x27;bx bxs-dashboard&#x27; },
+      { routerLink: &#x27;/category&#x27;, name: &#x27;category&#x27;, classes: &#x27;bx bx-layer&#x27; },
       { routerLink: &#x27;/profile&#x27;, name: &#x27;profile&#x27;, classes: &#x27;bx bx-user&#x27; },
-      { routerLink: &#x27;/products&#x27;, name: &#x27;products&#x27;, classes: &#x27;bx bx-cabinet&#x27; }
+      { routerLink: &#x27;/shopping-bag&#x27;, name: &#x27;shopping bag&#x27;, classes: &#x27;bx bx-shopping-bag&#x27; },
+      { routerLink: &#x27;/favorites&#x27;, name: &#x27;favorites&#x27;, classes: &#x27;bx bx-heart&#x27; },
+      { routerLink: &#x27;/settings&#x27;, name: &#x27;settings&#x27;, classes: &#x27;bx bx-abacus&#x27; }
     );
   }
 
@@ -358,8 +360,7 @@ export class AppComponent implements OnInit {
                 <p class="comment">
                     <code>./app.component.scss</code>
                 </p>
-                <pre class="line-numbers"><code class="language-scss">
-</code></pre>
+                <pre class="line-numbers"><code class="language-scss"></code></pre>
     </div>
 
     <div class="tab-pane fade " id="c-tree">
@@ -380,7 +381,7 @@ export class AppComponent implements OnInit {
         </div>
     </div>
 
-    
+
 </div>
 
 <script src="../js/libs/vis.min.js"></script>
@@ -388,8 +389,8 @@ export class AppComponent implements OnInit {
 <script src="../js/libs/deep-iterator.js"></script>
 <script>
         var COMPONENT_TEMPLATE = '<div><ui-navbar [navElements]=\'navElements\'>  <router-outlet></router-outlet></ui-navbar></div>'
-    var COMPONENTS = [{'name': 'AppComponent', 'selector': 'customify-root'},{'name': 'AppComponent', 'selector': 'customify-root'},{'name': 'BannerComponent', 'selector': 'ui-banner'},{'name': 'BannersListComponent', 'selector': 'customify-banners-list'},{'name': 'CategoryComponent', 'selector': 'customify-category'},{'name': 'CategoryListComponent', 'selector': 'customify-category-list'},{'name': 'CategoryListElementComponent', 'selector': 'customify-category-list-element'},{'name': 'DashboardComponent', 'selector': 'customify-dashboard'},{'name': 'FooterComponent', 'selector': 'ui-footer'},{'name': 'HomeComponent', 'selector': 'customify-home'},{'name': 'NavbarComponent', 'selector': 'ui-navbar'},{'name': 'PageIntroHeaderComponent', 'selector': 'ui-page-intro-header'},{'name': 'ProductComponent', 'selector': 'ui-product'},{'name': 'ProductsListComponent', 'selector': 'customify-products-list'},{'name': 'ProfileComponent', 'selector': 'customify-profile'}];
-    var DIRECTIVES = [];
+    var COMPONENTS = [{'name': 'AppComponent', 'selector': 'customify-root'},{'name': 'AppComponent', 'selector': 'customify-root'},{'name': 'BannerComponent', 'selector': 'ui-banner'},{'name': 'BannersListComponent', 'selector': 'customify-banners-list'},{'name': 'ButtonComponent', 'selector': 'ui-button'},{'name': 'CategoryComponent', 'selector': 'customify-category'},{'name': 'CategoryListComponent', 'selector': 'customify-category-list'},{'name': 'CategoryListElementComponent', 'selector': 'customify-category-list-element'},{'name': 'DashboardComponent', 'selector': 'customify-dashboard'},{'name': 'FooterComponent', 'selector': 'ui-footer'},{'name': 'FormComponent', 'selector': 'ui-form'},{'name': 'HomeComponent', 'selector': 'customify-home'},{'name': 'LabelComponent', 'selector': 'ui-label'},{'name': 'LoaderComponent', 'selector': 'ui-loader'},{'name': 'NavbarComponent', 'selector': 'ui-navbar'},{'name': 'NewProductFormComponent', 'selector': 'customify-new-product-form'},{'name': 'PageIntroHeaderComponent', 'selector': 'ui-page-intro-header'},{'name': 'ProductComponent', 'selector': 'ui-product'},{'name': 'ProductDetailsComponent', 'selector': 'customify-product-details'},{'name': 'ProductsListComponent', 'selector': 'customify-products-page'},{'name': 'ProfileComponent', 'selector': 'customify-profile'},{'name': 'TableComponent', 'selector': 'ui-table'}];
+    var DIRECTIVES = [{'name': 'InputDirective', 'selector': '[uiInput]'}];
     var ACTUAL_COMPONENT = {'name': 'AppComponent'};
 </script>
 <script src="../js/tree.js"></script>
@@ -403,7 +404,7 @@ export class AppComponent implements OnInit {
 
 
 
-                   
+
 
 
 

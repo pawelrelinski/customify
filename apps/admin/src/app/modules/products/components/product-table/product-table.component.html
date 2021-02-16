@@ -1,0 +1,17 @@
+<table class='table'>
+  <thead class='table__head'>
+  <tr>
+    <th *ngFor='let column of columnNames'
+        (click)='sortBy(column)' class='table__column-name focus'>
+      {{ column }}
+    </th>
+  </tr>
+  </thead>
+  <tbody class='table__body'>
+  <tr *ngFor='let product of products' class='table__column-row'>
+    <td *ngFor='let column of columnNames'>
+      {{ product[column] }}
+    </td>
+  </tr>
+  </tbody>
+</table>

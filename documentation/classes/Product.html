@@ -65,6 +65,12 @@
 
 
 
+            <p class="comment">
+                <h3>Implements</h3>
+            </p>
+            <p class="comment">
+                            <code><a href="../interfaces/IProduct.html" target="_self" >IProduct</a></code>
+            </p>
 
 
             <section>
@@ -148,7 +154,7 @@
                     </tr>
                         <tr>
                             <td class="col-md-4">
-                                    <div class="io-line">Defined in <a href="" data-line="19" class="link-to-prism">apps/api/src/app/product/Product.entity.ts:19</a></div>
+                                    <div class="io-line">Defined in <a href="" data-line="20" class="link-to-prism">apps/api/src/app/product/Product.entity.ts:20</a></div>
                             </td>
                         </tr>
 
@@ -184,7 +190,7 @@
                     </tr>
                         <tr>
                             <td class="col-md-4">
-                                    <div class="io-line">Defined in <a href="" data-line="16" class="link-to-prism">apps/api/src/app/product/Product.entity.ts:16</a></div>
+                                    <div class="io-line">Defined in <a href="" data-line="17" class="link-to-prism">apps/api/src/app/product/Product.entity.ts:17</a></div>
                             </td>
                         </tr>
 
@@ -220,7 +226,7 @@
                     </tr>
                         <tr>
                             <td class="col-md-4">
-                                    <div class="io-line">Defined in <a href="" data-line="7" class="link-to-prism">apps/api/src/app/product/Product.entity.ts:7</a></div>
+                                    <div class="io-line">Defined in <a href="" data-line="8" class="link-to-prism">apps/api/src/app/product/Product.entity.ts:8</a></div>
                             </td>
                         </tr>
 
@@ -256,7 +262,7 @@
                     </tr>
                         <tr>
                             <td class="col-md-4">
-                                    <div class="io-line">Defined in <a href="" data-line="25" class="link-to-prism">apps/api/src/app/product/Product.entity.ts:25</a></div>
+                                    <div class="io-line">Defined in <a href="" data-line="26" class="link-to-prism">apps/api/src/app/product/Product.entity.ts:26</a></div>
                             </td>
                         </tr>
 
@@ -292,7 +298,7 @@
                     </tr>
                         <tr>
                             <td class="col-md-4">
-                                    <div class="io-line">Defined in <a href="" data-line="22" class="link-to-prism">apps/api/src/app/product/Product.entity.ts:22</a></div>
+                                    <div class="io-line">Defined in <a href="" data-line="23" class="link-to-prism">apps/api/src/app/product/Product.entity.ts:23</a></div>
                             </td>
                         </tr>
 
@@ -328,7 +334,7 @@
                     </tr>
                         <tr>
                             <td class="col-md-4">
-                                    <div class="io-line">Defined in <a href="" data-line="10" class="link-to-prism">apps/api/src/app/product/Product.entity.ts:10</a></div>
+                                    <div class="io-line">Defined in <a href="" data-line="11" class="link-to-prism">apps/api/src/app/product/Product.entity.ts:11</a></div>
                             </td>
                         </tr>
 
@@ -364,7 +370,7 @@
                     </tr>
                         <tr>
                             <td class="col-md-4">
-                                    <div class="io-line">Defined in <a href="" data-line="13" class="link-to-prism">apps/api/src/app/product/Product.entity.ts:13</a></div>
+                                    <div class="io-line">Defined in <a href="" data-line="14" class="link-to-prism">apps/api/src/app/product/Product.entity.ts:14</a></div>
                             </td>
                         </tr>
 
@@ -384,9 +390,10 @@
 
     <div class="tab-pane fade  tab-source-code" id="c-source">
         <pre class="line-numbers compodoc-sourcecode"><code class="language-typescript">import { Column, Entity, PrimaryGeneratedColumn } from &#x27;typeorm&#x27;;
+import { IProduct } from &#x27;@customify/api-interfaces&#x27;;
 
 @Entity()
-export class Product {
+export class Product implements IProduct {
 
   @PrimaryGeneratedColumn()
   id: number;

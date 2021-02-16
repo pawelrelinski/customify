@@ -213,6 +213,12 @@
   data?: Array&lt;T&gt; | T;
   error?: string | T;
 }
+
+export class Response&lt;T&gt; implements IResponse&lt;T&gt; {
+
+  constructor(public data: T) { }
+
+}
 </code></pre>
     </div>
 </div>
