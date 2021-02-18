@@ -23,6 +23,10 @@ export class ProductService {
     return await this.productRepository.save(product);
   }
 
+  public async updateById(id: number, product: Product) {
+    return await this.productRepository.update(id, product);
+  }
+
   public async remove(id: number | string): Promise<void> {
     await this.productRepository.delete(id);
   }

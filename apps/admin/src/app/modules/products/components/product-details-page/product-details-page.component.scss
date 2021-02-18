@@ -1,0 +1,29 @@
+$margin: 10px;
+$page-width: calc(100% - 2 * #{$margin});
+
+.bx {
+  font-size: 1rem;
+}
+
+.page-wrapper {
+  margin: $margin;
+  width: $page-width;
+  height: auto;
+  display: flex;
+  flex-direction: row;
+
+  &__photos {
+    width: calc(#{$page-width} / 2);
+    display: flex;
+    justify-content: center;
+
+    & img {
+      width: 95%;
+      height: auto;
+    }
+  }
+
+  &__details {
+    width: calc(#{$page-width} / 2);
+  }
+}

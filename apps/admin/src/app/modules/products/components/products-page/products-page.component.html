@@ -4,19 +4,17 @@
 </div>
 <ng-template #productsList>
   <customify-new-product-form *ngIf='formIsVisible'
-                              (onCreateProduct)='handleSubmit($event)'
-                              (onHideForm)='hideForm($event)'>
+                              (onCreateProduct)='handleCreateProductSubmit($event)'
+                              (onHideForm)='hideCreateProductForm($event)'>
   </customify-new-product-form>
-  <ui-button class='btn-new-product' (click)='showForm()'
+  <ui-button class='btn-new-product' (click)='showCreateProductForm()'
              *ngIf='!formIsVisible'>
     Create new product
   </ui-button>
-  <customify-product-filter-bar [productKeys]='productAllAvailableKeys'
-                                (onFiltersChange)='changeProductKeysToDisplayInTable($event)'>
-  </customify-product-filter-bar>
   <div class='table-wrapper'>
     <customify-product-table [columnNames]='columnNames'
-                             [products]='products'>
+                             [products]='products'
+                             (onClickProduct)='getFullProductInfoPage($event)'>
     </customify-product-table>
   </div>
 </ng-template>

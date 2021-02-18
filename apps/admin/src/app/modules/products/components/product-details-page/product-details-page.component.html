@@ -1,0 +1,28 @@
+<ui-button status='default' size='small' (click)='goToPreviousPage()'>
+  <i class='bx bxs-chevron-left'></i>
+</ui-button>
+<div class='page-wrapper'>
+  <div class='page-wrapper__photos'>
+    <img [src]='product.imgUrl' [alt]='product.imgAlt'>
+  </div>
+  <div class='page-wrapper__details'>
+    <ui-form>
+      <ui-label name='name'>
+        <input type='text' [value]='product.name' uiInput>
+      </ui-label>
+      <ui-label name='description'>
+        <input type='text' [value]='product.description' uiInput>
+      </ui-label>
+      <ui-label name='price'>
+        <input type='text' [value]='product.price' uiInput>
+      </ui-label>
+      <ui-label name='brand'>
+        <input type='text' [value]='product.brand' uiInput>
+      </ui-label>
+      <div class='btn-wrapper'>
+        <ui-button status='primary' shadow='false'>Update</ui-button>
+        <ui-button status='secondary' shadow='false'>Cancel</ui-button>
+      </div>
+    </ui-form>
+  </div>
+</div>

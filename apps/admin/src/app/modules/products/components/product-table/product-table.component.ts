@@ -1,4 +1,4 @@
-import { Component, Input, OnInit } from '@angular/core';
+import { Component, EventEmitter, Input, Output } from '@angular/core';
 
 export interface ITableData<T> {
   columns: Array<string>;
@@ -15,16 +15,19 @@ enum Sort {
   templateUrl: './product-table.component.html',
   styleUrls: ['./product-table.component.scss']
 })
-export class ProductTableComponent implements OnInit {
+export class ProductTableComponent {
 
   @Input() columnNames: Array<string>;
   @Input() products: Array<unknown>;
+
+  @Output() onClickProduct: EventEmitter<number> = new EventEmitter<number>();
 
   private sortType: Sort = Sort.ASC;
 
   constructor() { }
 
-  ngOnInit(): void {
+  public emitProductId(id: number): void {
+    this.onClickProduct.emit(id);
   }
 
   public sortBy(columnName: string): void {

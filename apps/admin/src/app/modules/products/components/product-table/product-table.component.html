@@ -8,7 +8,8 @@
   </tr>
   </thead>
   <tbody class='table__body'>
-  <tr *ngFor='let product of products' class='table__column-row'>
+  <tr *ngFor='let product of products'
+      (click)='emitProductId(product.id)' class='table__column-row table__row'>
     <td *ngFor='let column of columnNames'>
       {{ product[column] }}
     </td>

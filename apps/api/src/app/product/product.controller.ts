@@ -1,9 +1,9 @@
-import { Body, Controller, Delete, Get, Param, Post } from '@nestjs/common';
+import { Body, Controller, Delete, Get, Param, Post, Put } from '@nestjs/common';
 import { Product } from './Product.entity';
 import { ProductService } from './product.service';
 import { ErrorResponse } from '../models/ErrorResponse';
 import { SuccessResponse } from '../models/SuccessResponse';
-import { Response } from '../models/IResponse';
+import { UpdateResult } from 'typeorm';
 
 type ProductResponse = ErrorResponse<Product> | SuccessResponse<Product>;
 type ArrayOfProductsResponse = ErrorResponse<Array<Product>> | SuccessResponse<Array<Product>>;
@@ -42,6 +42,12 @@ export class ProductController {
     }
 
     return  new SuccessResponse(product);
+  }
+
+  @Put(':id')
+  public async updateById(@Param('id') id: number, @Body() updateProduct: Product): Promise<SuccessResponse<UpdateResult>> {
+    const updatedProduct: UpdateResult = await this.productService.updateById(id, updateProduct);
+    return new SuccessResponse(updatedProduct);
   }
 
   @Delete(':id')

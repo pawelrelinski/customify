@@ -4,7 +4,7 @@ import { RouterModule} from '@angular/router';
 import { ProductsPageComponent } from './components/products-page/products-page.component';
 import { SharedModule } from '../../shared/shared.module';
 import { NewProductFormComponent } from './components/new-product-form/new-product-form.component';
-import { ProductDetailsComponent } from './components/product-details/product-details.component';
+import { ProductDetailsPageComponent } from './components/product-details-page/product-details-page.component';
 import { ProductTableComponent } from './components/product-table/product-table.component';
 import { ProductFilterBarComponent } from './components/product-filter-bar/product-filter-bar.component';
 
@@ -13,7 +13,7 @@ import { ProductFilterBarComponent } from './components/product-filter-bar/produ
   declarations: [
     ProductsPageComponent,
     NewProductFormComponent,
-    ProductDetailsComponent,
+    ProductDetailsPageComponent,
     ProductTableComponent,
     ProductFilterBarComponent
   ],
@@ -21,7 +21,7 @@ import { ProductFilterBarComponent } from './components/product-filter-bar/produ
     CommonModule,
     RouterModule.forChild([
       { path: '', component: ProductsPageComponent },
-      { path: ':id', component: ProductDetailsComponent }
+      { path: ':id', component: ProductDetailsPageComponent }
     ]),
     SharedModule
   ]
