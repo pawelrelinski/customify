@@ -6,21 +6,21 @@
     <img [src]='product.imgUrl' [alt]='product.imgAlt'>
   </div>
   <div class='page-wrapper__details'>
-    <ui-form>
+    <ui-form [formGroup]='updateProductForm' (ngSubmit)='updateProduct()'>
       <ui-label name='name'>
-        <input type='text' [value]='product.name' uiInput>
+        <input type='text' [value]='product.name' formControlName='name' uiInput>
       </ui-label>
       <ui-label name='description'>
-        <input type='text' [value]='product.description' uiInput>
+        <input type='text' [value]='product.description' formControlName='description' uiInput>
       </ui-label>
       <ui-label name='price'>
-        <input type='text' [value]='product.price' uiInput>
+        <input type='number' [value]='product.price' formControlName='price' uiInput>
       </ui-label>
       <ui-label name='brand'>
-        <input type='text' [value]='product.brand' uiInput>
+        <input type='text' [value]='product.brand' formControlName='brand' uiInput>
       </ui-label>
       <div class='btn-wrapper'>
-        <ui-button status='primary' shadow='false'>Update</ui-button>
+        <ui-button status='primary' shadow='false' type='submit'>Update</ui-button>
         <ui-button status='secondary' shadow='false'>Cancel</ui-button>
       </div>
     </ui-form>

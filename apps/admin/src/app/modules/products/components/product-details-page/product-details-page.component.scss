@@ -6,14 +6,14 @@ $page-width: calc(100% - 2 * #{$margin});
 }
 
 .page-wrapper {
-  margin: $margin;
   width: $page-width;
   height: auto;
   display: flex;
-  flex-direction: row;
+  align-items: center;
+  flex-direction: column;
 
   &__photos {
-    width: calc(#{$page-width} / 2);
+    width: calc(#{$page-width} - 2 * #{$margin});
     display: flex;
     justify-content: center;
 
@@ -24,6 +24,18 @@ $page-width: calc(100% - 2 * #{$margin});
   }
 
   &__details {
-    width: calc(#{$page-width} / 2);
+    width: calc(#{$page-width} - 2 * #{$margin});
+  }
+}
+
+@media (min-width: 768px) {
+  .page-wrapper {
+    margin: $margin;
+    flex-direction: row;
+
+    &__photos,
+    &__details {
+      width: calc(#{$page-width} / 2);
+    }
   }
 }

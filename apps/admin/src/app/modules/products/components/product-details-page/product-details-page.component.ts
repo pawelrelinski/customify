@@ -4,6 +4,8 @@ import { Location } from '@angular/common';
 import { IProduct } from '@customify/api-interfaces';
 import { ProductService } from '@customify/data-access';
 import { IResponse } from '../../../../shared/models/IResponse';
+import { FormBuilder, FormGroup, Validators } from '@angular/forms';
+import { ProductFormService } from '../../../../core/services/product-form.service';
 
 @Component({
   selector: 'customify-product-details-page',
@@ -13,16 +15,20 @@ import { IResponse } from '../../../../shared/models/IResponse';
 export class ProductDetailsPageComponent implements OnInit {
 
   public product: IProduct;
+  public updateProductForm: FormGroup;
 
   private productId: number;
 
   constructor(private route: ActivatedRoute,
               private location: Location,
-              private productService: ProductService) { }
+              private productService: ProductService,
+              private formBuilder: FormBuilder,
+              private productFormService: ProductFormService) { }
 
   ngOnInit(): void {
-    this.setProductIdFromParams();
-    this.setProduct();
+    this.getProductIdFromParams();
+    this.getProduct();
+    this.initUpdateProductForm();
   }
 
   public goToPreviousPage(): void {
@@ -30,21 +36,40 @@ export class ProductDetailsPageComponent implements OnInit {
   }
 
   public updateProduct(): void {
-    // this.productService.update()
+    this.productService.update<IResponse<IProduct>>(this.productId, this.updateProductForm.value)
+      .subscribe((response: IResponse<IProduct>) => {
+        if (response.success) {
+          this.getProduct();
+        }
+      });
   }
 
-  private setProductIdFromParams(): void {
+  private getProductIdFromParams(): void {
     this.route.params.subscribe((params: Params) => {
       this.productId = params['id'];
     });
   }
 
-  private setProduct(): void {
+  private getProduct(): void {
     this.productService.getById<IResponse<IProduct>>(this.productId).subscribe((response: IResponse<IProduct>) => {
       if (response.success) {
         this.product = response.data;
+        this.setDefaultUpdateProductFormValues();
       }
     });
+  }
+
+  private initUpdateProductForm(): void {
+    this.updateProductForm = this.formBuilder.group(this.productFormService.getControlsConfig());
+  }
+
+  private setDefaultUpdateProductFormValues(): void {
+    this.updateProductForm.get('name').setValue(this.product?.name);
+    this.updateProductForm.get('price').setValue(this.product?.price);
+    this.updateProductForm.get('description').setValue(this.product?.description);
+    this.updateProductForm.get('brand').setValue(this.product?.brand);
+    this.updateProductForm.get('imgUrl').setValue(this.product?.imgUrl);
+    this.updateProductForm.get('imgAlt').setValue(this.product?.imgAlt);
   }
 
 }

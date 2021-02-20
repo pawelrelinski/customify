@@ -1,5 +1,6 @@
 import { Component, EventEmitter, OnInit, Output } from '@angular/core';
 import { AbstractControl, FormBuilder, FormGroup, Validators } from '@angular/forms';
+import { ProductFormService } from '../../../../core/services/product-form.service';
 
 interface IControlSimpleData {
   name: string;
@@ -10,10 +11,10 @@ type ControlTypes = 'text' | 'number';
 
 @Component({
   selector: 'customify-new-product-form',
-  templateUrl: './new-product-form.component.html',
-  styleUrls: ['./new-product-form.component.scss']
+  templateUrl: './product-form.component.html',
+  styleUrls: ['./product-form.component.scss']
 })
-export class NewProductFormComponent implements OnInit {
+export class ProductFormComponent implements OnInit {
 
   @Output() onCreateProduct: EventEmitter<FormGroup> = new EventEmitter<FormGroup>();
   @Output() onHideForm: EventEmitter<boolean> = new EventEmitter<boolean>();
@@ -21,7 +22,8 @@ export class NewProductFormComponent implements OnInit {
   public productForm: FormGroup;
   public productFormControls: Array<IControlSimpleData>;
 
-  constructor(private formBuilder: FormBuilder) { }
+  constructor(private formBuilder: FormBuilder,
+              private productFormService: ProductFormService) { }
 
   ngOnInit(): void {
     this.initProductForm();
@@ -41,33 +43,7 @@ export class NewProductFormComponent implements OnInit {
   }
 
   private initProductForm(): void {
-    this.productForm = this.formBuilder.group({
-      name: ['', [
-        Validators.required,
-        Validators.minLength(3),
-        Validators.maxLength(50)
-      ]],
-      price: [0.00, [
-        Validators.required,
-        Validators.min(0.00),
-        Validators.max(99_999.99)
-      ]],
-      description: ['', [
-        Validators.required,
-        Validators.minLength(3),
-        Validators.maxLength(255)
-      ]],
-      brand: ['', [
-        Validators.required,
-        Validators.minLength(2),
-        Validators.maxLength(50)
-      ]],
-      imgUrl: ['', []],
-      imgAlt: ['', [
-        Validators.minLength(3),
-        Validators.maxLength(255)
-      ]]
-    });
+    this.productForm = this.formBuilder.group(this.productFormService.getControlsConfig());
   }
 
   private getProductFormControls(): void {
