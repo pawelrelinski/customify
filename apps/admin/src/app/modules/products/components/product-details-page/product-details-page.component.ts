@@ -4,8 +4,10 @@ import { Location } from '@angular/common';
 import { IProduct } from '@customify/api-interfaces';
 import { ProductService } from '@customify/data-access';
 import { IResponse } from '../../../../shared/models/IResponse';
-import { FormBuilder, FormGroup, Validators } from '@angular/forms';
+import { FormBuilder, FormGroup } from '@angular/forms';
 import { ProductFormService } from '../../../../core/services/product-form.service';
+
+type ResponseProduct = IResponse<IProduct>;
 
 @Component({
   selector: 'customify-product-details-page',
@@ -36,10 +38,19 @@ export class ProductDetailsPageComponent implements OnInit {
   }
 
   public updateProduct(): void {
-    this.productService.update<IResponse<IProduct>>(this.productId, this.updateProductForm.value)
-      .subscribe((response: IResponse<IProduct>) => {
+    this.productService.update<ResponseProduct>(this.productId, this.updateProductForm.value)
+      .subscribe((response: ResponseProduct) => {
         if (response.success) {
           this.getProduct();
+        }
+      });
+  }
+
+  public removeProduct(): void {
+    this.productService.delete<ResponseProduct>(this.productId)
+      .subscribe((response: ResponseProduct) => {
+        if (response.success) {
+          this.goToPreviousPage();
         }
       });
   }
@@ -51,7 +62,7 @@ export class ProductDetailsPageComponent implements OnInit {
   }
 
   private getProduct(): void {
-    this.productService.getById<IResponse<IProduct>>(this.productId).subscribe((response: IResponse<IProduct>) => {
+    this.productService.getById<ResponseProduct>(this.productId).subscribe((response: ResponseProduct) => {
       if (response.success) {
         this.product = response.data;
         this.setDefaultUpdateProductFormValues();

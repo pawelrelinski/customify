@@ -21,7 +21,9 @@
       </ui-label>
       <div class='btn-wrapper'>
         <ui-button status='primary' shadow='false' type='submit'>Update</ui-button>
-        <ui-button status='secondary' shadow='false'>Cancel</ui-button>
+        <ui-button status='warning' shadow='false' (click)='removeProduct()'>
+          Remove
+        </ui-button>
       </div>
     </ui-form>
   </div>
