@@ -1,8 +1,8 @@
 import { Body, Controller, Delete, Get, Param, Post, Put } from '@nestjs/common';
 import { Product } from './Product.entity';
 import { ProductService } from './product.service';
-import { ErrorResponse } from '../models/ErrorResponse';
-import { SuccessResponse } from '../models/SuccessResponse';
+import { ErrorResponse } from '../../models/ErrorResponse';
+import { SuccessResponse } from '../../models/SuccessResponse';
 import { UpdateResult } from 'typeorm';
 
 type ProductResponse = ErrorResponse<Product> | SuccessResponse<Product>;

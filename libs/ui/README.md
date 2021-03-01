@@ -159,7 +159,7 @@ public navElements: Array<INavElement> = [];
 
 this.navElements.push(
       { routerLink: '/dashboard', name: 'dashboard', classes: 'bx bxs-dashboard' },
-      { routerLink: '/profile', name: 'profile', classes: 'bx bx-user' }
+      { routerLink: '/account', name: 'profile', classes: 'bx bx-user' }
     );
 ```
 

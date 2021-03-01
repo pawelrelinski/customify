@@ -1,0 +1,27 @@
+$photo-size: 100px;
+
+.account {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+
+  &__img {
+    width: $photo-size;
+    height: $photo-size;
+    border-radius: $photo-size / 2;
+  }
+
+  &__simple-data {
+    margin-left: 20px;
+  }
+
+  &__name {
+    font-size: 1.5rem;
+    margin: 0;
+  }
+
+  &__type {
+    color: #0001FC;
+  }
+}
+

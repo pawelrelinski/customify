@@ -1,0 +1,15 @@
+<div class='page-wrapper'>
+  <ui-loader *ngIf='isLoading; else content'></ui-loader>
+  <ng-template #content>
+    <div class='main-data'>
+      <div class='main-data__photos-list'></div>
+      <div class='main-data__current-display-photo'></div>
+      <div class='main-data__basic-info'>
+        <p class='product__status'>new</p>
+        <p class='product__name'>tees</p>
+        <p class='product__price'>149$</p>
+        <p class='product__colors'>r g b</p>
+      </div>
+    </div>
+  </ng-template>
+</div>

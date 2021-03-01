@@ -1,0 +1,14 @@
+<div class='wrapper'>
+  <customify-previous-page></customify-previous-page>
+  <customify-page-title>
+    {{ name }}
+  </customify-page-title>
+  <div class='data'>
+    <customify-account-information-wrapper [name]='name'
+                                           [value]='value'
+                                           editButtonIsActive='false'>
+    </customify-account-information-wrapper>
+  </div>
+  <ng-content></ng-content>
+  <ui-button>Confirm modification</ui-button>
+</div>

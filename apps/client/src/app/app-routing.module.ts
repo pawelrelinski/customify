@@ -11,8 +11,12 @@ const routes: Routes = [
     loadChildren: () => import('@customify/category').then(({ CategoryModule }) => CategoryModule)
   },
   {
-    path: 'profile',
-    loadChildren: () => import('@customify/profile').then(({ ProfileModule }) => ProfileModule)
+    path: 'products/:productId',
+    loadChildren: () => import('./modules/product/product.module').then(({ ProductModule }) => ProductModule)
+  },
+  {
+    path: 'account',
+    loadChildren: () => import('./modules/account/account.module').then(({ AccountModule }) => AccountModule)
   },
   {
     path: '',

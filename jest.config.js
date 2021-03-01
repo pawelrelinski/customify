@@ -6,7 +6,7 @@ module.exports = {
     '<rootDir>/libs/data-access',
     '<rootDir>/libs/home',
     '<rootDir>/libs/category',
-    '<rootDir>/libs/profile',
+    '<rootDir>/libs/account',
     '<rootDir>/libs/util',
     '<rootDir>/apps/admin',
     '<rootDir>/libs/navbar',

@@ -1,0 +1,28 @@
+.page-wrapper {
+  width: 100%;
+  min-height: 300px;
+  height: auto;
+  padding-top: 10px;
+}
+
+.main-data {
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+  height: auto;
+
+  &__photos-list {
+    width: 20%;
+    border: 1px solid blue;
+  }
+
+  &__current-display-photo {
+    width: 40%;
+    border: 1px solid pink;
+  }
+
+  &__basic-info {
+    width: 40%;
+    border: 1px solid orange;
+  }
+}

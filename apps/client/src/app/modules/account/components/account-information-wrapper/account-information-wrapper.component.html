@@ -1,0 +1,12 @@
+<div class='wrapper'>
+  <div class='data'>
+    <h1 class='data__name'>{{ name }}</h1>
+    <p class='data__value'>{{ value }}</p>
+  </div>
+  <div class='buttons' *ngIf='editButtonIsActive; else blankBox'>
+    <button class='buttons__change' (click)='emitClickChange()'>
+      Change
+    </button>
+  </div>
+  <ng-template #blankBox></ng-template>
+</div>
