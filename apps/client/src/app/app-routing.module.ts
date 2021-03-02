@@ -4,7 +4,7 @@ import { RouterModule, Routes } from '@angular/router';
 const routes: Routes = [
   {
     path: 'home',
-    loadChildren: () => import('@customify/home').then(({ HomeModule }) => HomeModule)
+    loadChildren: () => import('./modules/home/home.module').then(({ HomeModule }) => HomeModule)
   },
   {
     path: 'category',

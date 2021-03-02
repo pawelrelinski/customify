@@ -1,0 +1,11 @@
+.back-icon-wrapper {
+  margin-top: 10px;
+
+  &:hover {
+    cursor: pointer;
+  }
+}
+
+.back-icon-wrapper > .bx {
+  font-size: 2rem;
+}

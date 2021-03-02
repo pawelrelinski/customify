@@ -8,6 +8,7 @@ import { UiModule } from '@customify/ui';
 import { AppRoutingModule } from './app-routing.module';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { ProductModule } from './modules/product/product.module';
+import { HomeModule } from './modules/home/home.module';
 
 @NgModule({
   declarations: [AppComponent],
@@ -17,7 +18,8 @@ import { ProductModule } from './modules/product/product.module';
     HttpClientModule,
     UiModule,
     BrowserAnimationsModule,
-    ProductModule
+    ProductModule,
+    HomeModule
   ],
   providers: [],
   bootstrap: [AppComponent],

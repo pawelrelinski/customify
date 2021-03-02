@@ -19,7 +19,7 @@ export class AppComponent implements OnInit {
   private setNavElements(): void {
     this.navElements.push(
       { routerLink: '/dashboard', name: 'dashboard', classes: 'bx bxs-dashboard' },
-      { routerLink: '/account', name: 'profile', classes: 'bx bx-user' },
+      { routerLink: '/account-page-header', name: 'profile', classes: 'bx bx-user' },
       { routerLink: '/products', name: 'products', classes: 'bx bx-cabinet' }
     );
   }

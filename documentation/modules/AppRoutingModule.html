@@ -83,8 +83,12 @@ const routes: Routes &#x3D; [
     loadChildren: () &#x3D;&gt; &quot;import(&#x27;@customify/category&#x27;).then(({ CategoryModule }) &#x3D;&gt; CategoryModule)&quot;
   },
   {
-    path: &#x27;profile&#x27;,
-    loadChildren: () &#x3D;&gt; &quot;import(&#x27;@customify/profile&#x27;).then(({ ProfileModule }) &#x3D;&gt; ProfileModule)&quot;
+    path: &#x27;products/:productId&#x27;,
+    loadChildren: () &#x3D;&gt; &quot;import(&#x27;./modules/product/product.module&#x27;).then(({ ProductModule }) &#x3D;&gt; ProductModule)&quot;
+  },
+  {
+    path: &#x27;account&#x27;,
+    loadChildren: () &#x3D;&gt; &quot;import(&#x27;./modules/account/account.module&#x27;).then(({ AccountModule }) &#x3D;&gt; AccountModule)&quot;
   },
   {
     path: &#x27;&#x27;,

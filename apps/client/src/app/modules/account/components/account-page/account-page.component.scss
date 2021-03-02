@@ -36,3 +36,25 @@
     }
   }
 }
+
+@media (min-width: 768px) {
+  .page-wrapper {
+    padding-left: 25px;
+  }
+
+  .title {
+    font-size: 2.5rem;
+  }
+
+  .list {
+
+    &__element {
+      transition: all .3s ease;
+
+      &:hover {
+        transform: translateY(-3px) scale(1.05);
+        box-shadow: 0 8px 40px rgba(0, 0, 0, 0.1);
+      }
+    }
+  }
+}

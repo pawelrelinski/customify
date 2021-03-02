@@ -7,7 +7,7 @@ const routes: Routes = [
     loadChildren: () => import('./modules/dashboard/dashboard.module').then(({ DashboardModule }) => DashboardModule)
   },
   {
-    path: 'account',
+    path: 'account-page-header',
     loadChildren: () => import('@customify/profile').then(({ ProfileModule }) => ProfileModule)
   },
   {

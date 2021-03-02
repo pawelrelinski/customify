@@ -61,7 +61,7 @@
             <h3>File</h3>
         </p>
         <p class="comment">
-            <code>apps/admin/src/app/modules/products/components/new-product-form/new-product-form.component.ts</code>
+            <code>apps/admin/src/app/modules/products/components/product-form/product-form.component.ts</code>
         </p>
 
 
@@ -160,6 +160,7 @@
     <div class="tab-pane fade  tab-source-code" id="c-source">
         <pre class="line-numbers compodoc-sourcecode"><code class="language-typescript">import { Component, EventEmitter, OnInit, Output } from &#x27;@angular/core&#x27;;
 import { AbstractControl, FormBuilder, FormGroup, Validators } from &#x27;@angular/forms&#x27;;
+import { ProductFormService } from &#x27;../../../../core/services/product-form.service&#x27;;
 
 interface IControlSimpleData {
   name: string;
@@ -170,10 +171,10 @@ type ControlTypes &#x3D; &#x27;text&#x27; | &#x27;number&#x27;;
 
 @Component({
   selector: &#x27;customify-new-product-form&#x27;,
-  templateUrl: &#x27;./new-product-form.component.html&#x27;,
-  styleUrls: [&#x27;./new-product-form.component.scss&#x27;]
+  templateUrl: &#x27;./product-form.component.html&#x27;,
+  styleUrls: [&#x27;./product-form.component.scss&#x27;]
 })
-export class NewProductFormComponent implements OnInit {
+export class ProductFormComponent implements OnInit {
 
   @Output() onCreateProduct: EventEmitter&lt;FormGroup&gt; &#x3D; new EventEmitter&lt;FormGroup&gt;();
   @Output() onHideForm: EventEmitter&lt;boolean&gt; &#x3D; new EventEmitter&lt;boolean&gt;();
@@ -181,7 +182,8 @@ export class NewProductFormComponent implements OnInit {
   public productForm: FormGroup;
   public productFormControls: Array&lt;IControlSimpleData&gt;;
 
-  constructor(private formBuilder: FormBuilder) { }
+  constructor(private formBuilder: FormBuilder,
+              private productFormService: ProductFormService) { }
 
   ngOnInit(): void {
     this.initProductForm();
@@ -201,33 +203,7 @@ export class NewProductFormComponent implements OnInit {
   }
 
   private initProductForm(): void {
-    this.productForm &#x3D; this.formBuilder.group({
-      name: [&#x27;&#x27;, [
-        Validators.required,
-        Validators.minLength(3),
-        Validators.maxLength(50)
-      ]],
-      price: [0.00, [
-        Validators.required,
-        Validators.min(0.00),
-        Validators.max(99_999.99)
-      ]],
-      description: [&#x27;&#x27;, [
-        Validators.required,
-        Validators.minLength(3),
-        Validators.maxLength(255)
-      ]],
-      brand: [&#x27;&#x27;, [
-        Validators.required,
-        Validators.minLength(2),
-        Validators.maxLength(50)
-      ]],
-      imgUrl: [&#x27;&#x27;, []],
-      imgAlt: [&#x27;&#x27;, [
-        Validators.minLength(3),
-        Validators.maxLength(255)
-      ]]
-    });
+    this.productForm &#x3D; this.formBuilder.group(this.productFormService.getControlsConfig());
   }
 
   private getProductFormControls(): void {

@@ -56,7 +56,7 @@
             <h3>File</h3>
         </p>
         <p class="comment">
-            <code>apps/admin/src/app/core/services/product.service.ts</code>
+            <code>libs/data-access/src/lib/services/product/product.service.ts</code>
         </p>
 
 
@@ -77,7 +77,7 @@
                             <li>
                                     <span class="modifier">Private</span>
                                     <span class="modifier">Readonly</span>
-                                <a href="#DEFAULT_URL">DEFAULT_URL</a>
+                                <a href="#DEFAULT_PRODUCT_URL">DEFAULT_PRODUCT_URL</a>
                             </li>
                         </ul>
                     </td>
@@ -93,7 +93,11 @@
                         <ul class="index-list">
                             <li>
                                     <span class="modifier">Public</span>
-                                <a href="#create">create</a>
+                                <a href="#add">add</a>
+                            </li>
+                            <li>
+                                    <span class="modifier">Public</span>
+                                <a href="#delete">delete</a>
                             </li>
                             <li>
                                     <span class="modifier">Public</span>
@@ -102,6 +106,10 @@
                             <li>
                                     <span class="modifier">Public</span>
                                 <a href="#getById">getById</a>
+                            </li>
+                            <li>
+                                    <span class="modifier">Public</span>
+                                <a href="#update">update</a>
                             </li>
                         </ul>
                     </td>
@@ -126,7 +134,7 @@
                 </tr>
                         <tr>
                             <td class="col-md-4">
-                                <div class="io-line">Defined in <a href="" data-line="10" class="link-to-prism">apps/admin/src/app/core/services/product.service.ts:10</a></div>
+                                <div class="io-line">Defined in <a href="" data-line="10" class="link-to-prism">libs/data-access/src/lib/services/product/product.service.ts:10</a></div>
                             </td>
                         </tr>
 
@@ -173,20 +181,20 @@
         <tbody>
             <tr>
                 <td class="col-md-4">
-                    <a name="create"></a>
+                    <a name="add"></a>
                     <span class="name">
                         <b>
                             <span class="modifier">Public</span>
-                            create
+                            add
                         </b>
-                        <a href="#create"><span class="icon ion-ios-link"></span></a>
+                        <a href="#add"><span class="icon ion-ios-link"></span></a>
                     </span>
                 </td>
             </tr>
             <tr>
                 <td class="col-md-4">
                     <span class="modifier-icon icon ion-ios-reset"></span>
-                    <code>create(product: T)</code>
+                    <code>add(product: T)</code>
                 </td>
             </tr>
 
@@ -194,7 +202,7 @@
             <tr>
                 <td class="col-md-4">
                     <div class="io-line">Defined in <a href="" data-line="23"
-                            class="link-to-prism">apps/admin/src/app/core/services/product.service.ts:23</a></div>
+                            class="link-to-prism">libs/data-access/src/lib/services/product/product.service.ts:23</a></div>
                 </td>
             </tr>
 
@@ -253,6 +261,86 @@
         <tbody>
             <tr>
                 <td class="col-md-4">
+                    <a name="delete"></a>
+                    <span class="name">
+                        <b>
+                            <span class="modifier">Public</span>
+                            delete
+                        </b>
+                        <a href="#delete"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+                    <span class="modifier-icon icon ion-ios-reset"></span>
+                    <code>delete(id: <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/number" target="_blank">number</a>)</code>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-line">Defined in <a href="" data-line="31"
+                            class="link-to-prism">libs/data-access/src/lib/services/product/product.service.ts:31</a></div>
+                </td>
+            </tr>
+
+            <tr>
+                <td class="col-md-4">
+                    <b>Type parameters :</b>
+                    <ul class="type-parameters">
+                        <li>T</li>
+                    </ul>
+                </td>
+            </tr>
+
+            <tr>
+                <td class="col-md-4">
+
+                    <div class="io-description">
+                        <b>Parameters :</b>
+                        <table class="params">
+                            <thead>
+                                <tr>
+                                    <td>Name</td>
+                                    <td>Type</td>
+                                    <td>Optional</td>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>id</td>
+                                    <td>
+                                                <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/number" target="_blank" >number</a></code>
+                                    </td>
+
+                                    <td>
+                                        No
+                                    </td>
+
+
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <div>
+                    </div>
+                    <div class="io-description">
+                        <b>Returns : </b>    <code>Observable&lt;T&gt;</code>
+
+                    </div>
+                    <div class="io-description">
+                        
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
                     <a name="getAll"></a>
                     <span class="name">
                         <b>
@@ -274,7 +362,7 @@
             <tr>
                 <td class="col-md-4">
                     <div class="io-line">Defined in <a href="" data-line="14"
-                            class="link-to-prism">apps/admin/src/app/core/services/product.service.ts:14</a></div>
+                            class="link-to-prism">libs/data-access/src/lib/services/product/product.service.ts:14</a></div>
                 </td>
             </tr>
 
@@ -315,7 +403,7 @@
             <tr>
                 <td class="col-md-4">
                     <span class="modifier-icon icon ion-ios-reset"></span>
-                    <code>getById(id: string | number)</code>
+                    <code>getById(id: number | string)</code>
                 </td>
             </tr>
 
@@ -323,7 +411,7 @@
             <tr>
                 <td class="col-md-4">
                     <div class="io-line">Defined in <a href="" data-line="18"
-                            class="link-to-prism">apps/admin/src/app/core/services/product.service.ts:18</a></div>
+                            class="link-to-prism">libs/data-access/src/lib/services/product/product.service.ts:18</a></div>
                 </td>
             </tr>
 
@@ -353,7 +441,7 @@
                                 <tr>
                                     <td>id</td>
                                     <td>
-                                            <code>string | number</code>
+                                            <code>number | string</code>
                                     </td>
 
                                     <td>
@@ -378,6 +466,98 @@
             </tr>
         </tbody>
     </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="update"></a>
+                    <span class="name">
+                        <b>
+                            <span class="modifier">Public</span>
+                            update
+                        </b>
+                        <a href="#update"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+                    <span class="modifier-icon icon ion-ios-reset"></span>
+                    <code>update(id: <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/number" target="_blank">number</a>, product: T)</code>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-line">Defined in <a href="" data-line="27"
+                            class="link-to-prism">libs/data-access/src/lib/services/product/product.service.ts:27</a></div>
+                </td>
+            </tr>
+
+            <tr>
+                <td class="col-md-4">
+                    <b>Type parameters :</b>
+                    <ul class="type-parameters">
+                        <li>T</li>
+                    </ul>
+                </td>
+            </tr>
+
+            <tr>
+                <td class="col-md-4">
+
+                    <div class="io-description">
+                        <b>Parameters :</b>
+                        <table class="params">
+                            <thead>
+                                <tr>
+                                    <td>Name</td>
+                                    <td>Type</td>
+                                    <td>Optional</td>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>id</td>
+                                    <td>
+                                                <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/number" target="_blank" >number</a></code>
+                                    </td>
+
+                                    <td>
+                                        No
+                                    </td>
+
+
+                                </tr>
+                                <tr>
+                                    <td>product</td>
+                                    <td>
+                                            <code>T</code>
+                                    </td>
+
+                                    <td>
+                                        No
+                                    </td>
+
+
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <div>
+                    </div>
+                    <div class="io-description">
+                        <b>Returns : </b>    <code>Observable&lt;Object&gt;</code>
+
+                    </div>
+                    <div class="io-description">
+                        
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
 </section>
             <section>
     
@@ -388,13 +568,13 @@
             <tbody>
                 <tr>
                     <td class="col-md-4">
-                        <a name="DEFAULT_URL"></a>
+                        <a name="DEFAULT_PRODUCT_URL"></a>
                         <span class="name">
                             <b>
                                 <span class="modifier">Private</span>
                                 <span class="modifier">Readonly</span>
-                            DEFAULT_URL</b>
-                            <a href="#DEFAULT_URL"><span class="icon ion-ios-link"></span></a>
+                            DEFAULT_PRODUCT_URL</b>
+                            <a href="#DEFAULT_PRODUCT_URL"><span class="icon ion-ios-link"></span></a>
                         </span>
                     </td>
                 </tr>
@@ -411,7 +591,7 @@
                     </tr>
                         <tr>
                             <td class="col-md-4">
-                                    <div class="io-line">Defined in <a href="" data-line="10" class="link-to-prism">apps/admin/src/app/core/services/product.service.ts:10</a></div>
+                                    <div class="io-line">Defined in <a href="" data-line="10" class="link-to-prism">libs/data-access/src/lib/services/product/product.service.ts:10</a></div>
                             </td>
                         </tr>
 
@@ -433,21 +613,30 @@ import { Observable } from &#x27;rxjs&#x27;;
 })
 export class ProductService {
 
-  private readonly DEFAULT_URL: string &#x3D; &#x27;http://localhost:3333/api/product&#x27;;
+  private readonly DEFAULT_PRODUCT_URL: string &#x3D; &#x27;http://localhost:3333/api/product&#x27;;
 
   constructor(private http: HttpClient) { }
 
   public getAll&lt;T&gt;(): Observable&lt;T&gt; {
-    return this.http.get&lt;T&gt;(this.DEFAULT_URL);
+    return this.http.get&lt;T&gt;(this.DEFAULT_PRODUCT_URL);
   }
 
-  public getById&lt;T&gt;(id: string | number): Observable&lt;T&gt; {
-    const url &#x3D; &#x60;${this.DEFAULT_URL}/${id}&#x60;;
+  public getById&lt;T&gt;(id: number | string): Observable&lt;T&gt; {
+    const url &#x3D; &#x60;${this.DEFAULT_PRODUCT_URL}/${id}&#x60;;
     return this.http.get&lt;T&gt;(url);
   }
 
-  public create&lt;T&gt;(product: T): Observable&lt;T&gt; {
-    return this.http.post&lt;T&gt;(this.DEFAULT_URL, product);
+  public add&lt;T&gt;(product: T): Observable&lt;T&gt; {
+    return this.http.post&lt;T&gt;(this.DEFAULT_PRODUCT_URL, product);
+  }
+
+  public update&lt;T&gt;(id: number, product: T): Observable&lt;Object&gt; {
+    return this.http.put(&#x60;${this.DEFAULT_PRODUCT_URL}/${id}&#x60;, product);
+  }
+
+  public delete&lt;T&gt;(id: number): Observable&lt;T&gt; {
+    const url &#x3D; &#x60;${this.DEFAULT_PRODUCT_URL}/${id}&#x60;;
+    return this.http.delete&lt;T&gt;(url);
   }
 
 }

@@ -54,7 +54,7 @@
             <h3>File</h3>
         </p>
         <p class="comment">
-            <code>apps/api/src/app/product/product.controller.ts</code>
+            <code>apps/api/src/app/modules/product/product.controller.ts</code>
         </p>
 
             <p class="comment">
@@ -100,6 +100,11 @@
                                     <span class="modifier">Public</span>
                                     <span class="modifier">Async</span>
                                 <a href="#getById">getById</a>
+                            </li>
+                            <li>
+                                    <span class="modifier">Public</span>
+                                    <span class="modifier">Async</span>
+                                <a href="#updateById">updateById</a>
                             </li>
                         </ul>
                     </td>
@@ -151,7 +156,7 @@
             <tr>
                 <td class="col-md-4">
                     <div class="io-line">Defined in <a href="" data-line="38"
-                            class="link-to-prism">apps/api/src/app/product/product.controller.ts:38</a></div>
+                            class="link-to-prism">apps/api/src/app/modules/product/product.controller.ts:38</a></div>
                 </td>
             </tr>
 
@@ -230,8 +235,8 @@
 
             <tr>
                 <td class="col-md-4">
-                    <div class="io-line">Defined in <a href="" data-line="48"
-                            class="link-to-prism">apps/api/src/app/product/product.controller.ts:48</a></div>
+                    <div class="io-line">Defined in <a href="" data-line="54"
+                            class="link-to-prism">apps/api/src/app/modules/product/product.controller.ts:54</a></div>
                 </td>
             </tr>
 
@@ -311,7 +316,7 @@
             <tr>
                 <td class="col-md-4">
                     <div class="io-line">Defined in <a href="" data-line="18"
-                            class="link-to-prism">apps/api/src/app/product/product.controller.ts:18</a></div>
+                            class="link-to-prism">apps/api/src/app/modules/product/product.controller.ts:18</a></div>
                 </td>
             </tr>
 
@@ -360,7 +365,7 @@
             <tr>
                 <td class="col-md-4">
                     <div class="io-line">Defined in <a href="" data-line="28"
-                            class="link-to-prism">apps/api/src/app/product/product.controller.ts:28</a></div>
+                            class="link-to-prism">apps/api/src/app/modules/product/product.controller.ts:28</a></div>
                 </td>
             </tr>
 
@@ -407,16 +412,108 @@
             </tr>
         </tbody>
     </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="updateById"></a>
+                    <span class="name">
+                        <b>
+                            <span class="modifier">Public</span>
+                            <span class="modifier">Async</span>
+                            updateById
+                        </b>
+                        <a href="#updateById"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+                    <span class="modifier-icon icon ion-ios-reset"></span>
+                    <code>updateById(id: <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/number" target="_blank">number</a>, updateProduct: <a href="../classes/Product.html">Product</a>)</code>
+                </td>
+            </tr>
+
+            <tr>
+                <td class="col-md-4">
+                    <b>Decorators : </b>
+                    <br />
+                    <code>@Put(&#x27;:id&#x27;)<br /></code>
+                </td>
+            </tr>
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-line">Defined in <a href="" data-line="48"
+                            class="link-to-prism">apps/api/src/app/modules/product/product.controller.ts:48</a></div>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+
+                    <div class="io-description">
+                        <b>Parameters :</b>
+                        <table class="params">
+                            <thead>
+                                <tr>
+                                    <td>Name</td>
+                                    <td>Type</td>
+                                    <td>Optional</td>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>id</td>
+                                    <td>
+                                                <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/number" target="_blank" >number</a></code>
+                                    </td>
+
+                                    <td>
+                                        No
+                                    </td>
+
+
+                                </tr>
+                                <tr>
+                                    <td>updateProduct</td>
+                                    <td>
+                                                <code><a href="../classes/Product.html" target="_self" >Product</a></code>
+                                    </td>
+
+                                    <td>
+                                        No
+                                    </td>
+
+
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <div>
+                    </div>
+                    <div class="io-description">
+                        <b>Returns : </b>    <code>Promise&lt;SuccessResponse&lt;UpdateResult&gt;&gt;</code>
+
+                    </div>
+                    <div class="io-description">
+                        
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
 </section>    </div>
 
 
     <div class="tab-pane fade  tab-source-code" id="c-source">
-        <pre class="line-numbers compodoc-sourcecode"><code class="language-typescript">import { Body, Controller, Delete, Get, Param, Post } from &#x27;@nestjs/common&#x27;;
+        <pre class="line-numbers compodoc-sourcecode"><code class="language-typescript">import { Body, Controller, Delete, Get, Param, Post, Put } from &#x27;@nestjs/common&#x27;;
 import { Product } from &#x27;./Product.entity&#x27;;
 import { ProductService } from &#x27;./product.service&#x27;;
-import { ErrorResponse } from &#x27;../models/ErrorResponse&#x27;;
-import { SuccessResponse } from &#x27;../models/SuccessResponse&#x27;;
-import { Response } from &#x27;../models/IResponse&#x27;;
+import { ErrorResponse } from &#x27;../../models/ErrorResponse&#x27;;
+import { SuccessResponse } from &#x27;../../models/SuccessResponse&#x27;;
+import { UpdateResult } from &#x27;typeorm&#x27;;
 
 type ProductResponse &#x3D; ErrorResponse&lt;Product&gt; | SuccessResponse&lt;Product&gt;;
 type ArrayOfProductsResponse &#x3D; ErrorResponse&lt;Array&lt;Product&gt;&gt; | SuccessResponse&lt;Array&lt;Product&gt;&gt;;
@@ -455,6 +552,12 @@ export class ProductController {
     }
 
     return  new SuccessResponse(product);
+  }
+
+  @Put(&#x27;:id&#x27;)
+  public async updateById(@Param(&#x27;id&#x27;) id: number, @Body() updateProduct: Product): Promise&lt;SuccessResponse&lt;UpdateResult&gt;&gt; {
+    const updatedProduct: UpdateResult &#x3D; await this.productService.updateById(id, updateProduct);
+    return new SuccessResponse(updatedProduct);
   }
 
   @Delete(&#x27;:id&#x27;)

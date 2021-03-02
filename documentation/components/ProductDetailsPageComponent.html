@@ -1,0 +1,993 @@
+<!doctype html>
+<html class="no-js" lang="">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="x-ua-compatible" content="ie=edge">
+        <title>customify documentation</title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+
+        <link rel="icon" type="image/x-icon" href="../images/favicon.ico">
+	      <link rel="stylesheet" href="../styles/style.css">
+    </head>
+    <body>
+
+        <div class="navbar navbar-default navbar-fixed-top visible-xs">
+            <a href="../" class="navbar-brand">customify documentation</a>
+            <button type="button" class="btn btn-default btn-menu ion-ios-menu" id="btn-menu"></button>
+        </div>
+
+        <div class="xs-menu menu" id="mobile-menu">
+                <div id="book-search-input" role="search"><input type="text" placeholder="Type to search"></div>            <compodoc-menu></compodoc-menu>
+        </div>
+
+        <div class="container-fluid main">
+           <div class="row main">
+               <div class="hidden-xs menu">
+                   <compodoc-menu mode="normal"></compodoc-menu>
+               </div>
+               <!-- START CONTENT -->
+               <div class="content component">
+                   <div class="content-data">
+
+
+
+
+<ol class="breadcrumb">
+  <li>Components</li>
+  <li>ProductDetailsPageComponent</li>
+</ol>
+
+<ul class="nav nav-tabs" role="tablist">
+        <li class="active">
+            <a href="#info" role="tab" id="info-tab" data-toggle="tab" data-link="info">Info</a>
+        </li>
+        <li >
+            <a href="#source" role="tab" id="source-tab" data-toggle="tab" data-link="source">Source</a>
+        </li>
+        <li >
+            <a href="#templateData" role="tab" id="templateData-tab" data-toggle="tab" data-link="template">Template</a>
+        </li>
+        <li >
+            <a href="#styleData" role="tab" id="styleData-tab" data-toggle="tab" data-link="style">Styles</a>
+        </li>
+        <li >
+            <a href="#tree" role="tab" id="tree-tab" data-toggle="tab" data-link="dom-tree">DOM Tree</a>
+        </li>
+</ul>
+
+<div class="tab-content">
+    <div class="tab-pane fade active in" id="c-info"><p class="comment">
+    <h3>File</h3>
+</p>
+<p class="comment">
+    <code>apps/admin/src/app/modules/products/components/product-details-page/product-details-page.component.ts</code>
+</p>
+
+
+
+    <p class="comment">
+        <h3>Implements</h3>
+    </p>
+    <p class="comment">
+                    <code><a href="https://angular.io/api/core/OnInit" target="_blank" >OnInit</a></code>
+    </p>
+
+
+<section>
+    <h3>Metadata</h3>
+    <table class="table table-sm table-hover">
+        <tbody>
+
+
+
+
+
+
+
+
+
+
+
+            <tr>
+                <td class="col-md-3">selector</td>
+                <td class="col-md-9"><code>customify-product-details-page</code></td>
+            </tr>
+
+            <tr>
+                <td class="col-md-3">styleUrls</td>
+                <td class="col-md-9"><code>./product-details-page.component.scss</code></td>
+            </tr>
+
+
+
+            <tr>
+                <td class="col-md-3">templateUrl</td>
+                <td class="col-md-9"><code>./product-details-page.component.html</code></td>
+            </tr>
+
+
+
+
+
+
+
+
+        </tbody>
+    </table>
+</section>
+
+    <section>
+    <h3 id="index">Index</h3>
+    <table class="table table-sm table-bordered index-table">
+        <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <h6><b>Properties</b></h6>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <ul class="index-list">
+                            <li>
+                                    <span class="modifier">Public</span>
+                                <a href="#product">product</a>
+                            </li>
+                            <li>
+                                    <span class="modifier">Private</span>
+                                <a href="#productId">productId</a>
+                            </li>
+                            <li>
+                                    <span class="modifier">Public</span>
+                                <a href="#updateProductForm">updateProductForm</a>
+                            </li>
+                        </ul>
+                    </td>
+                </tr>
+
+                <tr>
+                    <td class="col-md-4">
+                        <h6><b>Methods</b></h6>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <ul class="index-list">
+                            <li>
+                                    <span class="modifier">Private</span>
+                                <a href="#getProduct">getProduct</a>
+                            </li>
+                            <li>
+                                    <span class="modifier">Private</span>
+                                <a href="#getProductIdFromParams">getProductIdFromParams</a>
+                            </li>
+                            <li>
+                                    <span class="modifier">Public</span>
+                                <a href="#goToPreviousPage">goToPreviousPage</a>
+                            </li>
+                            <li>
+                                    <span class="modifier">Private</span>
+                                <a href="#initUpdateProductForm">initUpdateProductForm</a>
+                            </li>
+                            <li>
+                                <a href="#ngOnInit">ngOnInit</a>
+                            </li>
+                            <li>
+                                    <span class="modifier">Public</span>
+                                <a href="#removeProduct">removeProduct</a>
+                            </li>
+                            <li>
+                                    <span class="modifier">Private</span>
+                                <a href="#setDefaultUpdateProductFormValues">setDefaultUpdateProductFormValues</a>
+                            </li>
+                            <li>
+                                    <span class="modifier">Public</span>
+                                <a href="#updateProduct">updateProduct</a>
+                            </li>
+                        </ul>
+                    </td>
+                </tr>
+
+
+
+
+
+        </tbody>
+    </table>
+</section>
+
+    <section>
+    <h3 id="constructor">Constructor</h3>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+<code>constructor(route: <a href="https://angular.io/api/router/ActivatedRoute" target="_blank">ActivatedRoute</a>, location: <a href="https://angular.io/api/common/Location" target="_blank">Location</a>, productService: <a href="../injectables/ProductService.html">ProductService</a>, formBuilder: <a href="https://angular.io/api/forms/FormBuilder" target="_blank">FormBuilder</a>, productFormService: <a href="../injectables/ProductFormService.html">ProductFormService</a>)</code>
+                    </td>
+                </tr>
+                        <tr>
+                            <td class="col-md-4">
+                                <div class="io-line">Defined in <a href="" data-line="22" class="link-to-prism">apps/admin/src/app/modules/products/components/product-details-page/product-details-page.component.ts:22</a></div>
+                            </td>
+                        </tr>
+
+                <tr>
+                    <td class="col-md-4">
+                            <div>
+                                    <b>Parameters :</b>
+                                    <table class="params">
+                                        <thead>
+                                            <tr>
+                                                <td>Name</td>
+                                                    <td>Type</td>
+                                                <td>Optional</td>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                                <tr>
+                                                        <td>route</td>
+
+                                                        <td>
+                                                                        <code><a href="https://angular.io/api/router/ActivatedRoute" target="_blank" >ActivatedRoute</a></code>
+                                                        </td>
+
+                                                    <td>
+                                                            No
+                                                    </td>
+
+                                                </tr>
+                                                <tr>
+                                                        <td>location</td>
+
+                                                        <td>
+                                                                        <code><a href="https://angular.io/api/common/Location" target="_blank" >Location</a></code>
+                                                        </td>
+
+                                                    <td>
+                                                            No
+                                                    </td>
+
+                                                </tr>
+                                                <tr>
+                                                        <td>productService</td>
+
+                                                        <td>
+                                                                        <code><a href="../injectables/ProductService.html" target="_self" >ProductService</a></code>
+                                                        </td>
+
+                                                    <td>
+                                                            No
+                                                    </td>
+
+                                                </tr>
+                                                <tr>
+                                                        <td>formBuilder</td>
+
+                                                        <td>
+                                                                        <code><a href="https://angular.io/api/forms/FormBuilder" target="_blank" >FormBuilder</a></code>
+                                                        </td>
+
+                                                    <td>
+                                                            No
+                                                    </td>
+
+                                                </tr>
+                                                <tr>
+                                                        <td>productFormService</td>
+
+                                                        <td>
+                                                                        <code><a href="../injectables/ProductFormService.html" target="_self" >ProductFormService</a></code>
+                                                        </td>
+
+                                                    <td>
+                                                            No
+                                                    </td>
+
+                                                </tr>
+                                        </tbody>
+                                    </table>
+                            </div>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+</section>
+
+
+
+
+
+    <section>
+
+    <h3 id="methods">
+        Methods
+    </h3>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="getProduct"></a>
+                    <span class="name">
+                        <b>
+                            <span class="modifier">Private</span>
+                            getProduct
+                        </b>
+                        <a href="#getProduct"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+                    <span class="modifier-icon icon ion-ios-reset"></span>
+                    <code>getProduct()</code>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-line">Defined in <a href="" data-line="64"
+                            class="link-to-prism">apps/admin/src/app/modules/products/components/product-details-page/product-details-page.component.ts:64</a></div>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+
+                    <div class="io-description">
+                        <b>Returns : </b>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >void</a></code>
+
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="getProductIdFromParams"></a>
+                    <span class="name">
+                        <b>
+                            <span class="modifier">Private</span>
+                            getProductIdFromParams
+                        </b>
+                        <a href="#getProductIdFromParams"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+                    <span class="modifier-icon icon ion-ios-reset"></span>
+                    <code>getProductIdFromParams()</code>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-line">Defined in <a href="" data-line="58"
+                            class="link-to-prism">apps/admin/src/app/modules/products/components/product-details-page/product-details-page.component.ts:58</a></div>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+
+                    <div class="io-description">
+                        <b>Returns : </b>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >void</a></code>
+
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="goToPreviousPage"></a>
+                    <span class="name">
+                        <b>
+                            <span class="modifier">Public</span>
+                            goToPreviousPage
+                        </b>
+                        <a href="#goToPreviousPage"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+                    <span class="modifier-icon icon ion-ios-reset"></span>
+                    <code>goToPreviousPage()</code>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-line">Defined in <a href="" data-line="36"
+                            class="link-to-prism">apps/admin/src/app/modules/products/components/product-details-page/product-details-page.component.ts:36</a></div>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+
+                    <div class="io-description">
+                        <b>Returns : </b>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >void</a></code>
+
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="initUpdateProductForm"></a>
+                    <span class="name">
+                        <b>
+                            <span class="modifier">Private</span>
+                            initUpdateProductForm
+                        </b>
+                        <a href="#initUpdateProductForm"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+                    <span class="modifier-icon icon ion-ios-reset"></span>
+                    <code>initUpdateProductForm()</code>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-line">Defined in <a href="" data-line="73"
+                            class="link-to-prism">apps/admin/src/app/modules/products/components/product-details-page/product-details-page.component.ts:73</a></div>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+
+                    <div class="io-description">
+                        <b>Returns : </b>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >void</a></code>
+
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="ngOnInit"></a>
+                    <span class="name">
+                        <b>
+                            ngOnInit
+                        </b>
+                        <a href="#ngOnInit"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+<code>ngOnInit()</code>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-line">Defined in <a href="" data-line="30"
+                            class="link-to-prism">apps/admin/src/app/modules/products/components/product-details-page/product-details-page.component.ts:30</a></div>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+
+                    <div class="io-description">
+                        <b>Returns : </b>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >void</a></code>
+
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="removeProduct"></a>
+                    <span class="name">
+                        <b>
+                            <span class="modifier">Public</span>
+                            removeProduct
+                        </b>
+                        <a href="#removeProduct"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+                    <span class="modifier-icon icon ion-ios-reset"></span>
+                    <code>removeProduct()</code>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-line">Defined in <a href="" data-line="49"
+                            class="link-to-prism">apps/admin/src/app/modules/products/components/product-details-page/product-details-page.component.ts:49</a></div>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+
+                    <div class="io-description">
+                        <b>Returns : </b>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >void</a></code>
+
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="setDefaultUpdateProductFormValues"></a>
+                    <span class="name">
+                        <b>
+                            <span class="modifier">Private</span>
+                            setDefaultUpdateProductFormValues
+                        </b>
+                        <a href="#setDefaultUpdateProductFormValues"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+                    <span class="modifier-icon icon ion-ios-reset"></span>
+                    <code>setDefaultUpdateProductFormValues()</code>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-line">Defined in <a href="" data-line="77"
+                            class="link-to-prism">apps/admin/src/app/modules/products/components/product-details-page/product-details-page.component.ts:77</a></div>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+
+                    <div class="io-description">
+                        <b>Returns : </b>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >void</a></code>
+
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="updateProduct"></a>
+                    <span class="name">
+                        <b>
+                            <span class="modifier">Public</span>
+                            updateProduct
+                        </b>
+                        <a href="#updateProduct"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+                    <span class="modifier-icon icon ion-ios-reset"></span>
+                    <code>updateProduct()</code>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-line">Defined in <a href="" data-line="40"
+                            class="link-to-prism">apps/admin/src/app/modules/products/components/product-details-page/product-details-page.component.ts:40</a></div>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+
+                    <div class="io-description">
+                        <b>Returns : </b>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >void</a></code>
+
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+</section>
+    <section>
+
+        <h3 id="inputs">
+            Properties
+        </h3>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="product"></a>
+                        <span class="name">
+                            <b>
+                                <span class="modifier">Public</span>
+                            product</b>
+                            <a href="#product"><span class="icon ion-ios-link"></span></a>
+                        </span>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <i>Type : </i>        <code><a href="../interfaces/IProduct.html" target="_self" >IProduct</a></code>
+
+                        </td>
+                    </tr>
+                        <tr>
+                            <td class="col-md-4">
+                                    <div class="io-line">Defined in <a href="" data-line="19" class="link-to-prism">apps/admin/src/app/modules/products/components/product-details-page/product-details-page.component.ts:19</a></div>
+                            </td>
+                        </tr>
+
+
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="productId"></a>
+                        <span class="name">
+                            <b>
+                                <span class="modifier">Private</span>
+                            productId</b>
+                            <a href="#productId"><span class="icon ion-ios-link"></span></a>
+                        </span>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <i>Type : </i>        <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/number" target="_blank" >number</a></code>
+
+                        </td>
+                    </tr>
+                        <tr>
+                            <td class="col-md-4">
+                                    <div class="io-line">Defined in <a href="" data-line="22" class="link-to-prism">apps/admin/src/app/modules/products/components/product-details-page/product-details-page.component.ts:22</a></div>
+                            </td>
+                        </tr>
+
+
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="updateProductForm"></a>
+                        <span class="name">
+                            <b>
+                                <span class="modifier">Public</span>
+                            updateProductForm</b>
+                            <a href="#updateProductForm"><span class="icon ion-ios-link"></span></a>
+                        </span>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <i>Type : </i>        <code><a href="https://angular.io/api/forms/FormGroup" target="_blank" >FormGroup</a></code>
+
+                        </td>
+                    </tr>
+                        <tr>
+                            <td class="col-md-4">
+                                    <div class="io-line">Defined in <a href="" data-line="20" class="link-to-prism">apps/admin/src/app/modules/products/components/product-details-page/product-details-page.component.ts:20</a></div>
+                            </td>
+                        </tr>
+
+
+            </tbody>
+        </table>
+</section>
+
+</div>
+
+
+    <div class="tab-pane fade  tab-source-code" id="c-source">
+        <pre class="line-numbers compodoc-sourcecode"><code class="language-typescript">import { Component, OnInit } from &#x27;@angular/core&#x27;;
+import { ActivatedRoute, Params } from &#x27;@angular/router&#x27;;
+import { Location } from &#x27;@angular/common&#x27;;
+import { IProduct } from &#x27;@customify/api-interfaces&#x27;;
+import { ProductService } from &#x27;@customify/data-access&#x27;;
+import { IResponse } from &#x27;../../../../shared/models/IResponse&#x27;;
+import { FormBuilder, FormGroup } from &#x27;@angular/forms&#x27;;
+import { ProductFormService } from &#x27;../../../../core/services/product-form.service&#x27;;
+
+type ResponseProduct &#x3D; IResponse&lt;IProduct&gt;;
+
+@Component({
+  selector: &#x27;customify-product-details-page&#x27;,
+  templateUrl: &#x27;./product-details-page.component.html&#x27;,
+  styleUrls: [&#x27;./product-details-page.component.scss&#x27;]
+})
+export class ProductDetailsPageComponent implements OnInit {
+
+  public product: IProduct;
+  public updateProductForm: FormGroup;
+
+  private productId: number;
+
+  constructor(private route: ActivatedRoute,
+              private location: Location,
+              private productService: ProductService,
+              private formBuilder: FormBuilder,
+              private productFormService: ProductFormService) { }
+
+  ngOnInit(): void {
+    this.getProductIdFromParams();
+    this.getProduct();
+    this.initUpdateProductForm();
+  }
+
+  public goToPreviousPage(): void {
+    this.location.back();
+  }
+
+  public updateProduct(): void {
+    this.productService.update&lt;ResponseProduct&gt;(this.productId, this.updateProductForm.value)
+      .subscribe((response: ResponseProduct) &#x3D;&gt; {
+        if (response.success) {
+          this.getProduct();
+        }
+      });
+  }
+
+  public removeProduct(): void {
+    this.productService.delete&lt;ResponseProduct&gt;(this.productId)
+      .subscribe((response: ResponseProduct) &#x3D;&gt; {
+        if (response.success) {
+          this.goToPreviousPage();
+        }
+      });
+  }
+
+  private getProductIdFromParams(): void {
+    this.route.params.subscribe((params: Params) &#x3D;&gt; {
+      this.productId &#x3D; params[&#x27;id&#x27;];
+    });
+  }
+
+  private getProduct(): void {
+    this.productService.getById&lt;ResponseProduct&gt;(this.productId).subscribe((response: ResponseProduct) &#x3D;&gt; {
+      if (response.success) {
+        this.product &#x3D; response.data;
+        this.setDefaultUpdateProductFormValues();
+      }
+    });
+  }
+
+  private initUpdateProductForm(): void {
+    this.updateProductForm &#x3D; this.formBuilder.group(this.productFormService.getControlsConfig());
+  }
+
+  private setDefaultUpdateProductFormValues(): void {
+    this.updateProductForm.get(&#x27;name&#x27;).setValue(this.product?.name);
+    this.updateProductForm.get(&#x27;price&#x27;).setValue(this.product?.price);
+    this.updateProductForm.get(&#x27;description&#x27;).setValue(this.product?.description);
+    this.updateProductForm.get(&#x27;brand&#x27;).setValue(this.product?.brand);
+    this.updateProductForm.get(&#x27;imgUrl&#x27;).setValue(this.product?.imgUrl);
+    this.updateProductForm.get(&#x27;imgAlt&#x27;).setValue(this.product?.imgAlt);
+  }
+
+}
+</code></pre>
+    </div>
+
+    <div class="tab-pane fade " id="c-templateData">
+        <pre class="line-numbers"><code class="language-html">&lt;ui-button status&#x3D;&#x27;default&#x27; size&#x3D;&#x27;small&#x27; (click)&#x3D;&#x27;goToPreviousPage()&#x27;&gt;
+  &lt;i class&#x3D;&#x27;bx bxs-chevron-left&#x27;&gt;&lt;/i&gt;
+&lt;/ui-button&gt;
+&lt;div class&#x3D;&#x27;page-wrapper&#x27;&gt;
+  &lt;div class&#x3D;&#x27;page-wrapper__photos&#x27;&gt;
+    &lt;img [src]&#x3D;&#x27;product.imgUrl&#x27; [alt]&#x3D;&#x27;product.imgAlt&#x27;&gt;
+  &lt;/div&gt;
+  &lt;div class&#x3D;&#x27;page-wrapper__details&#x27;&gt;
+    &lt;ui-form [formGroup]&#x3D;&#x27;updateProductForm&#x27; (ngSubmit)&#x3D;&#x27;updateProduct()&#x27;&gt;
+      &lt;ui-label name&#x3D;&#x27;name&#x27;&gt;
+        &lt;input type&#x3D;&#x27;text&#x27; [value]&#x3D;&#x27;product.name&#x27; formControlName&#x3D;&#x27;name&#x27; uiInput&gt;
+      &lt;/ui-label&gt;
+      &lt;ui-label name&#x3D;&#x27;description&#x27;&gt;
+        &lt;input type&#x3D;&#x27;text&#x27; [value]&#x3D;&#x27;product.description&#x27; formControlName&#x3D;&#x27;description&#x27; uiInput&gt;
+      &lt;/ui-label&gt;
+      &lt;ui-label name&#x3D;&#x27;price&#x27;&gt;
+        &lt;input type&#x3D;&#x27;number&#x27; [value]&#x3D;&#x27;product.price&#x27; formControlName&#x3D;&#x27;price&#x27; uiInput&gt;
+      &lt;/ui-label&gt;
+      &lt;ui-label name&#x3D;&#x27;brand&#x27;&gt;
+        &lt;input type&#x3D;&#x27;text&#x27; [value]&#x3D;&#x27;product.brand&#x27; formControlName&#x3D;&#x27;brand&#x27; uiInput&gt;
+      &lt;/ui-label&gt;
+      &lt;div class&#x3D;&#x27;btn-wrapper&#x27;&gt;
+        &lt;ui-button status&#x3D;&#x27;primary&#x27; shadow&#x3D;&#x27;false&#x27; type&#x3D;&#x27;submit&#x27;&gt;Update&lt;/ui-button&gt;
+        &lt;ui-button status&#x3D;&#x27;warning&#x27; shadow&#x3D;&#x27;false&#x27; (click)&#x3D;&#x27;removeProduct()&#x27;&gt;
+          Remove
+        &lt;/ui-button&gt;
+      &lt;/div&gt;
+    &lt;/ui-form&gt;
+  &lt;/div&gt;
+&lt;/div&gt;
+</code></pre>
+    </div>
+
+    <div class="tab-pane fade " id="c-styleData">
+                <p class="comment">
+                    <code>./product-details-page.component.scss</code>
+                </p>
+                <pre class="line-numbers"><code class="language-scss">$margin: 10px;
+$page-width: calc(100% - 2 * #{$margin});
+
+.bx {
+  font-size: 1rem;
+}
+
+.page-wrapper {
+  width: $page-width;
+  height: auto;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+
+  &amp;__photos {
+    width: calc(#{$page-width} - 2 * #{$margin});
+    display: flex;
+    justify-content: center;
+
+    &amp; img {
+      width: 95%;
+      height: auto;
+    }
+  }
+
+  &amp;__details {
+    width: calc(#{$page-width} - 2 * #{$margin});
+  }
+}
+
+@media (min-width: 768px) {
+  .page-wrapper {
+    margin: $margin;
+    flex-direction: row;
+
+    &amp;__photos,
+    &amp;__details {
+      width: calc(#{$page-width} / 2);
+    }
+  }
+}
+</code></pre>
+    </div>
+
+    <div class="tab-pane fade " id="c-tree">
+        <div id="tree-container"></div>
+        <div class="tree-legend">
+            <div class="title">
+                <b>Legend</b>
+            </div>
+            <div>
+                <div class="color htmlelement"></div><span>Html element</span>
+            </div>
+            <div>
+                <div class="color component"></div><span>Component</span>
+            </div>
+            <div>
+                <div class="color directive"></div><span>Html element with directive</span>
+            </div>
+        </div>
+    </div>
+
+
+</div>
+
+<script src="../js/libs/vis.min.js"></script>
+<script src="../js/libs/htmlparser.js"></script>
+<script src="../js/libs/deep-iterator.js"></script>
+<script>
+        var COMPONENT_TEMPLATE = '<div><ui-button status=\'default\' size=\'small\' (click)=\'goToPreviousPage()\'>  <i class=\'bx bxs-chevron-left\'></i></ui-button><div class=\'page-wrapper\'>  <div class=\'page-wrapper__photos\'>    <img [src]=\'product.imgUrl\' [alt]=\'product.imgAlt\'>  </div>  <div class=\'page-wrapper__details\'>    <ui-form [formGroup]=\'updateProductForm\' (ngSubmit)=\'updateProduct()\'>      <ui-label name=\'name\'>        <input type=\'text\' [value]=\'product.name\' formControlName=\'name\' uiInput>      </ui-label>      <ui-label name=\'description\'>        <input type=\'text\' [value]=\'product.description\' formControlName=\'description\' uiInput>      </ui-label>      <ui-label name=\'price\'>        <input type=\'number\' [value]=\'product.price\' formControlName=\'price\' uiInput>      </ui-label>      <ui-label name=\'brand\'>        <input type=\'text\' [value]=\'product.brand\' formControlName=\'brand\' uiInput>      </ui-label>      <div class=\'btn-wrapper\'>        <ui-button status=\'primary\' shadow=\'false\' type=\'submit\'>Update</ui-button>        <ui-button status=\'warning\' shadow=\'false\' (click)=\'removeProduct()\'>          Remove        </ui-button>      </div>    </ui-form>  </div></div></div>'
+    var COMPONENTS = [{'name': 'AccountComponent', 'selector': 'customify-profile'},{'name': 'AccountInformationPageComponent', 'selector': 'customify-account-page-header-information'},{'name': 'AccountInformationWrapperComponent', 'selector': 'customify-account-page-header-information-wrapper'},{'name': 'AccountPageComponent', 'selector': 'customify-profile-page'},{'name': 'AccountTypeEditPageComponent', 'selector': 'customify-account-page-header-type-edit'},{'name': 'AppComponent', 'selector': 'customify-root'},{'name': 'AppComponent', 'selector': 'customify-root'},{'name': 'BannerComponent', 'selector': 'ui-banner'},{'name': 'BannersListComponent', 'selector': 'customify-banners-list'},{'name': 'ButtonComponent', 'selector': 'ui-button'},{'name': 'CategoryComponent', 'selector': 'customify-category'},{'name': 'CategoryListComponent', 'selector': 'customify-category-list'},{'name': 'CategoryListElementComponent', 'selector': 'customify-category-list-element'},{'name': 'CateogryPageComponent', 'selector': 'customify-cateogry-page'},{'name': 'DashboardComponent', 'selector': 'customify-dashboard'},{'name': 'EditDataWrapperComponent', 'selector': 'customify-edit-data-wrapper'},{'name': 'EmailEditPageComponent', 'selector': 'customify-email-edit'},{'name': 'FooterComponent', 'selector': 'ui-footer'},{'name': 'FormComponent', 'selector': 'ui-form'},{'name': 'HomeComponent', 'selector': 'customify-home'},{'name': 'LabelComponent', 'selector': 'ui-label'},{'name': 'LoaderComponent', 'selector': 'ui-loader'},{'name': 'NavbarComponent', 'selector': 'ui-navbar'},{'name': 'OrdersPageComponent', 'selector': 'customify-orders-page'},{'name': 'PageIntroHeaderComponent', 'selector': 'ui-page-intro-header'},{'name': 'PageTitleComponent', 'selector': 'customify-sub-page-title'},{'name': 'PasswordEditPageComponent', 'selector': 'customify-password-edit'},{'name': 'PhoneNumberEditPageComponent', 'selector': 'customify-phone-number-edit'},{'name': 'PreviousPageButtonComponent', 'selector': 'customify-previous-page'},{'name': 'ProductComponent', 'selector': 'ui-product'},{'name': 'ProductDetailsPageComponent', 'selector': 'customify-product-details-page'},{'name': 'ProductFilterBarComponent', 'selector': 'customify-product-filter-bar'},{'name': 'ProductFormComponent', 'selector': 'customify-new-product-form'},{'name': 'ProductPageComponent', 'selector': 'customify-product-page'},{'name': 'ProductsPageComponent', 'selector': 'customify-products-list'},{'name': 'ProductTableComponent', 'selector': 'customify-product-table'},{'name': 'ProfileComponent', 'selector': 'customify-profile'},{'name': 'TableComponent', 'selector': 'ui-table'},{'name': 'UsernameEditComponent', 'selector': 'customify-username-edit'}];
+    var DIRECTIVES = [{'name': 'InputDirective', 'selector': '[uiInput]'}];
+    var ACTUAL_COMPONENT = {'name': 'ProductDetailsPageComponent'};
+</script>
+<script src="../js/tree.js"></script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+                   </div><div class="search-results">
+    <div class="has-results">
+        <h1 class="search-results-title"><span class='search-results-count'></span> result-matching "<span class='search-query'></span>"</h1>
+        <ul class="search-results-list"></ul>
+    </div>
+    <div class="no-results">
+        <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
+    </div>
+</div>
+</div>
+               <!-- END CONTENT -->
+           </div>
+       </div>
+
+       <script>
+            var COMPODOC_CURRENT_PAGE_DEPTH = 1;
+            var COMPODOC_CURRENT_PAGE_CONTEXT = 'component';
+            var COMPODOC_CURRENT_PAGE_URL = 'ProductDetailsPageComponent.html';
+            var MAX_SEARCH_RESULTS = 15;
+       </script>
+
+       <script src="../js/libs/custom-elements.min.js"></script>
+       <script src="../js/libs/lit-html.js"></script>
+       <!-- Required to polyfill modern browsers as code is ES5 for IE... -->
+       <script src="../js/libs/custom-elements-es5-adapter.js" charset="utf-8" defer></script>
+       <script src="../js/menu-wc.js" defer></script>
+
+       <script src="../js/libs/bootstrap-native.js"></script>
+
+       <script src="../js/libs/es6-shim.min.js"></script>
+       <script src="../js/libs/EventDispatcher.js"></script>
+       <script src="../js/libs/promise.min.js"></script>
+       <script src="../js/libs/zepto.min.js"></script>
+
+       <script src="../js/compodoc.js"></script>
+
+       <script src="../js/tabs.js"></script>
+       <script src="../js/menu.js"></script>
+       <script src="../js/libs/clipboard.min.js"></script>
+       <script src="../js/libs/prism.js"></script>
+       <script src="../js/sourceCode.js"></script>
+          <script src="../js/search/search.js"></script>
+          <script src="../js/search/lunr.min.js"></script>
+          <script src="../js/search/search-lunr.js"></script>
+          <script src="../js/search/search_index.js"></script>
+       <script src="../js/lazy-load-graphs.js"></script>
+
+
+    </body>
+</html>
