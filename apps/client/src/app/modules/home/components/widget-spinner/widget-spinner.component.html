@@ -1,0 +1,11 @@
+<div class='wrapper'>
+  <customify-widget [widget]='widgets[indexOfCurrentWidget]'>
+  </customify-widget>
+  <ul class='list'>
+    <li class='list__element'
+        *ngFor='let widget of widgets; let i = index'
+        (click)='changeCurrentWidget(i)'
+        [class.list__element--active]='i === indexOfCurrentWidget'>
+    </li>
+  </ul>
+</div>
