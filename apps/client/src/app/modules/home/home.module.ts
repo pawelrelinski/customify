@@ -5,13 +5,17 @@ import { HomePageComponent } from './components/home-page/home-page.component';
 import { RouterModule } from '@angular/router';
 import { WidgetSpinnerComponent } from './components/widget-spinner/widget-spinner.component';
 import { WidgetComponent } from './components/widget/widget.component';
+import { ActionButtonsComponent } from './components/action-buttons/action-buttons.component';
+import { ActionButtonComponent } from './components/action-button/action-button.component';
 
 
 @NgModule({
   declarations: [
     HomePageComponent,
     WidgetSpinnerComponent,
-    WidgetComponent
+    WidgetComponent,
+    ActionButtonsComponent,
+    ActionButtonComponent
   ],
   imports: [
     CommonModule,

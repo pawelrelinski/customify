@@ -19,6 +19,11 @@ const routes: Routes = [
     loadChildren: () => import('./modules/account/account.module').then(({ AccountModule }) => AccountModule)
   },
   {
+    path: 'favorites',
+    pathMatch: 'full',
+    redirectTo: 'account'
+  },
+  {
     path: '',
     pathMatch: 'full',
     redirectTo: 'home'

@@ -1,0 +1,36 @@
+$btn-size: 75px;
+$main-color: rgb(71, 35, 217);
+
+.button {
+  margin-right: 40px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  height: 150px;
+
+  &:hover {
+    cursor: pointer;
+  }
+
+  &__circle {
+    width: $btn-size;
+    height: $btn-size;
+    border-radius: $btn-size / 2;
+    background-color: lighten($main-color, 40%);
+    color: $main-color;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    & > i {
+      font-size: 1.4rem;
+    }
+  }
+
+  &__name {
+    text-align: center;
+    width: 100%;
+    color: $main-color;
+  }
+}
