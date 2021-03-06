@@ -175,27 +175,27 @@
                                         <tbody>
                                                 <tr>
                                                         <td>location</td>
-
+                                                  
                                                         <td>
                                                                         <code><a href="https://angular.io/api/common/Location" target="_blank" >Location</a></code>
                                                         </td>
-
+                                                  
                                                     <td>
                                                             No
                                                     </td>
-
+                                                    
                                                 </tr>
                                                 <tr>
                                                         <td>router</td>
-
+                                                  
                                                         <td>
                                                                         <code><a href="https://angular.io/api/router/Router" target="_blank" >Router</a></code>
                                                         </td>
-
+                                                  
                                                     <td>
                                                             No
                                                     </td>
-
+                                                    
                                                 </tr>
                                         </tbody>
                                     </table>
@@ -211,7 +211,7 @@
 
 
     <section>
-
+    
     <h3 id="methods">
         Methods
     </h3>
@@ -282,7 +282,7 @@
 
                     </div>
                     <div class="io-description">
-
+                        
                     </div>
                 </td>
             </tr>
@@ -365,9 +365,9 @@ export class AccountInformationPageComponent {
     <div class="tab-pane fade " id="c-templateData">
         <pre class="line-numbers"><code class="language-html">&lt;div class&#x3D;&#x27;page-wrapper&#x27;&gt;
   &lt;customify-previous-page&gt;&lt;/customify-previous-page&gt;
-  &lt;customify-page-title&gt;
+  &lt;customify-subpage-title&gt;
     Account information
-  &lt;/customify-page-title&gt;
+  &lt;/customify-subpage-title&gt;
   &lt;customify-account-information-wrapper name&#x3D;&#x27;User name&#x27;
                                          value&#x3D;&#x27;James Warden&#x27;
                                          (onClick)&#x3D;&#x27;goToEditPage($event)&#x27;&gt;
@@ -420,15 +420,15 @@ export class AccountInformationPageComponent {
         </div>
     </div>
 
-
+    
 </div>
 
 <script src="../js/libs/vis.min.js"></script>
 <script src="../js/libs/htmlparser.js"></script>
 <script src="../js/libs/deep-iterator.js"></script>
 <script>
-        var COMPONENT_TEMPLATE = '<div><div class=\'page-wrapper\'>  <customify-previous-page></customify-previous-page>  <customify-subpage-title>    Account information  </customify-subpage-title>  <customify-account-page-header-information-wrapper name=\'User name\'                                         value=\'James Warden\'                                         (onClick)=\'goToEditPage($event)\'>  </customify-account-page-header-information-wrapper>  <customify-account-page-header-information-wrapper name=\'Email\'                                         value=\'j-warden@email.com\'                                         (onClick)=\'goToEditPage($event)\'>  </customify-account-page-header-information-wrapper>  <customify-account-page-header-information-wrapper name=\'Phone number\'                                         value=\'+33 6 16 39 54 78\'                                         (onClick)=\'goToEditPage($event)\'>  </customify-account-page-header-information-wrapper>  <customify-account-page-header-information-wrapper name=\'Password\'                                         value=\'********\'                                         (onClick)=\'goToEditPage($event)\'>  </customify-account-page-header-information-wrapper>  <customify-account-page-header-information-wrapper name=\'Account type\'                                         value=\'Premium\'                                         (onClick)=\'goToEditPage($event)\'>  </customify-account-page-header-information-wrapper></div></div>'
-    var COMPONENTS = [{'name': 'AccountComponent', 'selector': 'customify-profile'},{'name': 'AccountInformationPageComponent', 'selector': 'customify-account-page-header-information'},{'name': 'AccountInformationWrapperComponent', 'selector': 'customify-account-page-header-information-wrapper'},{'name': 'AccountPageComponent', 'selector': 'customify-profile-page'},{'name': 'AccountTypeEditPageComponent', 'selector': 'customify-account-page-header-type-edit'},{'name': 'AppComponent', 'selector': 'customify-root'},{'name': 'AppComponent', 'selector': 'customify-root'},{'name': 'BannerComponent', 'selector': 'ui-banner'},{'name': 'BannersListComponent', 'selector': 'customify-banners-list'},{'name': 'ButtonComponent', 'selector': 'ui-button'},{'name': 'CategoryComponent', 'selector': 'customify-category'},{'name': 'CategoryListComponent', 'selector': 'customify-category-list'},{'name': 'CategoryListElementComponent', 'selector': 'customify-category-list-element'},{'name': 'CateogryPageComponent', 'selector': 'customify-cateogry-page'},{'name': 'DashboardComponent', 'selector': 'customify-dashboard'},{'name': 'EditDataWrapperComponent', 'selector': 'customify-edit-data-wrapper'},{'name': 'EmailEditPageComponent', 'selector': 'customify-email-edit'},{'name': 'FooterComponent', 'selector': 'ui-footer'},{'name': 'FormComponent', 'selector': 'ui-form'},{'name': 'HomeComponent', 'selector': 'customify-home'},{'name': 'LabelComponent', 'selector': 'ui-label'},{'name': 'LoaderComponent', 'selector': 'ui-loader'},{'name': 'NavbarComponent', 'selector': 'ui-navbar'},{'name': 'OrdersPageComponent', 'selector': 'customify-orders-page'},{'name': 'PageIntroHeaderComponent', 'selector': 'ui-page-intro-header'},{'name': 'PageTitleComponent', 'selector': 'customify-sub-page-title'},{'name': 'PasswordEditPageComponent', 'selector': 'customify-password-edit'},{'name': 'PhoneNumberEditPageComponent', 'selector': 'customify-phone-number-edit'},{'name': 'PreviousPageButtonComponent', 'selector': 'customify-previous-page'},{'name': 'ProductComponent', 'selector': 'ui-product'},{'name': 'ProductDetailsPageComponent', 'selector': 'customify-product-details-page'},{'name': 'ProductFilterBarComponent', 'selector': 'customify-product-filter-bar'},{'name': 'ProductFormComponent', 'selector': 'customify-new-product-form'},{'name': 'ProductPageComponent', 'selector': 'customify-product-page'},{'name': 'ProductsPageComponent', 'selector': 'customify-products-list'},{'name': 'ProductTableComponent', 'selector': 'customify-product-table'},{'name': 'ProfileComponent', 'selector': 'customify-profile'},{'name': 'TableComponent', 'selector': 'ui-table'},{'name': 'UsernameEditComponent', 'selector': 'customify-username-edit'}];
+        var COMPONENT_TEMPLATE = '<div><div class=\'page-wrapper\'>  <customify-previous-page></customify-previous-page>  <customify-subpage-title>    Account information  </customify-subpage-title>  <customify-account-information-wrapper name=\'User name\'                                         value=\'James Warden\'                                         (onClick)=\'goToEditPage($event)\'>  </customify-account-information-wrapper>  <customify-account-information-wrapper name=\'Email\'                                         value=\'j-warden@email.com\'                                         (onClick)=\'goToEditPage($event)\'>  </customify-account-information-wrapper>  <customify-account-information-wrapper name=\'Phone number\'                                         value=\'+33 6 16 39 54 78\'                                         (onClick)=\'goToEditPage($event)\'>  </customify-account-information-wrapper>  <customify-account-information-wrapper name=\'Password\'                                         value=\'********\'                                         (onClick)=\'goToEditPage($event)\'>  </customify-account-information-wrapper>  <customify-account-information-wrapper name=\'Account type\'                                         value=\'Premium\'                                         (onClick)=\'goToEditPage($event)\'>  </customify-account-information-wrapper></div></div>'
+    var COMPONENTS = [{'name': 'AccountInformationPageComponent', 'selector': 'customify-account-information'},{'name': 'AccountInformationWrapperComponent', 'selector': 'customify-account-information-wrapper'},{'name': 'AccountPageComponent', 'selector': 'customify-account-page'},{'name': 'AccountPageHeaderComponent', 'selector': 'customify-account-page-header'},{'name': 'AccountTypeEditPageComponent', 'selector': 'customify-account-type-edit'},{'name': 'ActionButtonComponent', 'selector': 'customify-action-button'},{'name': 'ActionButtonsComponent', 'selector': 'customify-action-buttons'},{'name': 'AppComponent', 'selector': 'customify-root'},{'name': 'AppComponent', 'selector': 'customify-root'},{'name': 'BannerComponent', 'selector': 'ui-banner'},{'name': 'BannersListComponent', 'selector': 'customify-banners-list'},{'name': 'ButtonComponent', 'selector': 'ui-button'},{'name': 'CategoryComponent', 'selector': 'customify-category'},{'name': 'CategoryListComponent', 'selector': 'customify-category-list'},{'name': 'CategoryListElementComponent', 'selector': 'customify-category-list-element'},{'name': 'CateogryPageComponent', 'selector': 'customify-cateogry-page'},{'name': 'DashboardComponent', 'selector': 'customify-dashboard'},{'name': 'EditDataWrapperComponent', 'selector': 'customify-edit-data-wrapper'},{'name': 'EmailEditPageComponent', 'selector': 'customify-email-edit'},{'name': 'FavoritesPageComponent', 'selector': 'customify-favorites-page'},{'name': 'FooterComponent', 'selector': 'ui-footer'},{'name': 'FormComponent', 'selector': 'ui-form'},{'name': 'HelpPageComponent', 'selector': 'customify-help-page'},{'name': 'HomeComponent', 'selector': 'customify-home'},{'name': 'HomePageComponent', 'selector': 'customify-home-page'},{'name': 'LabelComponent', 'selector': 'ui-label'},{'name': 'LoaderComponent', 'selector': 'ui-loader'},{'name': 'NavbarComponent', 'selector': 'ui-navbar'},{'name': 'OrdersPageComponent', 'selector': 'customify-orders-page'},{'name': 'PageIntroHeaderComponent', 'selector': 'ui-page-intro-header'},{'name': 'PasswordEditPageComponent', 'selector': 'customify-password-edit'},{'name': 'PhoneNumberEditPageComponent', 'selector': 'customify-phone-number-edit'},{'name': 'PreviousPageButtonComponent', 'selector': 'customify-previous-page'},{'name': 'ProductComponent', 'selector': 'ui-product'},{'name': 'ProductDetailsPageComponent', 'selector': 'customify-product-details-page'},{'name': 'ProductFilterBarComponent', 'selector': 'customify-product-filter-bar'},{'name': 'ProductFormComponent', 'selector': 'customify-new-product-form'},{'name': 'ProductPageComponent', 'selector': 'customify-product-page'},{'name': 'ProductsPageComponent', 'selector': 'customify-products-list'},{'name': 'ProductTableComponent', 'selector': 'customify-product-table'},{'name': 'ProfileComponent', 'selector': 'customify-profile'},{'name': 'ReturnsAndRefundsPageComponent', 'selector': 'customify-returns-and-refunds-page'},{'name': 'SecurityAndSettingsPageComponent', 'selector': 'customify-security-and-settings-page'},{'name': 'ShoppingBagPageComponent', 'selector': 'customify-shopping-bag-page'},{'name': 'SubPageTitleComponent', 'selector': 'customify-subpage-title'},{'name': 'TableComponent', 'selector': 'ui-table'},{'name': 'UsernameEditComponent', 'selector': 'customify-username-edit'},{'name': 'WidgetComponent', 'selector': 'customify-widget'},{'name': 'WidgetSpinnerComponent', 'selector': 'customify-widget-spinner'}];
     var DIRECTIVES = [{'name': 'InputDirective', 'selector': '[uiInput]'}];
     var ACTUAL_COMPONENT = {'name': 'AccountInformationPageComponent'};
 </script>
@@ -443,7 +443,7 @@ export class AccountInformationPageComponent {
 
 
 
-
+                   
 
 
 

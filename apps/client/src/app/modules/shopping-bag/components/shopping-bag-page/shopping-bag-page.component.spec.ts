@@ -1,20 +1,20 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { MainPageTitleComponent } from './main-page-title.component';
+import { ShoppingBagPageComponent } from './shopping-bag-page.component';
 
-describe('MainPageTitleComponent', () => {
-  let component: MainPageTitleComponent;
-  let fixture: ComponentFixture<MainPageTitleComponent>;
+describe('ShoppingBagPageComponent', () => {
+  let component: ShoppingBagPageComponent;
+  let fixture: ComponentFixture<ShoppingBagPageComponent>;
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [ MainPageTitleComponent ]
+      declarations: [ ShoppingBagPageComponent ]
     })
     .compileComponents();
   });
 
   beforeEach(() => {
-    fixture = TestBed.createComponent(MainPageTitleComponent);
+    fixture = TestBed.createComponent(ShoppingBagPageComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });

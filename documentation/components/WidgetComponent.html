@@ -1,0 +1,865 @@
+<!doctype html>
+<html class="no-js" lang="">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="x-ua-compatible" content="ie=edge">
+        <title>customify documentation</title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+
+        <link rel="icon" type="image/x-icon" href="../images/favicon.ico">
+	      <link rel="stylesheet" href="../styles/style.css">
+    </head>
+    <body>
+
+        <div class="navbar navbar-default navbar-fixed-top visible-xs">
+            <a href="../" class="navbar-brand">customify documentation</a>
+            <button type="button" class="btn btn-default btn-menu ion-ios-menu" id="btn-menu"></button>
+        </div>
+
+        <div class="xs-menu menu" id="mobile-menu">
+                <div id="book-search-input" role="search"><input type="text" placeholder="Type to search"></div>            <compodoc-menu></compodoc-menu>
+        </div>
+
+        <div class="container-fluid main">
+           <div class="row main">
+               <div class="hidden-xs menu">
+                   <compodoc-menu mode="normal"></compodoc-menu>
+               </div>
+               <!-- START CONTENT -->
+               <div class="content component">
+                   <div class="content-data">
+
+
+
+
+<ol class="breadcrumb">
+  <li>Components</li>
+  <li>WidgetComponent</li>
+</ol>
+
+<ul class="nav nav-tabs" role="tablist">
+        <li class="active">
+            <a href="#info" role="tab" id="info-tab" data-toggle="tab" data-link="info">Info</a>
+        </li>
+        <li >
+            <a href="#source" role="tab" id="source-tab" data-toggle="tab" data-link="source">Source</a>
+        </li>
+        <li >
+            <a href="#templateData" role="tab" id="templateData-tab" data-toggle="tab" data-link="template">Template</a>
+        </li>
+        <li >
+            <a href="#styleData" role="tab" id="styleData-tab" data-toggle="tab" data-link="style">Styles</a>
+        </li>
+        <li >
+            <a href="#tree" role="tab" id="tree-tab" data-toggle="tab" data-link="dom-tree">DOM Tree</a>
+        </li>
+</ul>
+
+<div class="tab-content">
+    <div class="tab-pane fade active in" id="c-info"><p class="comment">
+    <h3>File</h3>
+</p>
+<p class="comment">
+    <code>apps/client/src/app/modules/home/components/widget/widget.component.ts</code>
+</p>
+
+
+
+    <p class="comment">
+        <h3>Implements</h3>
+    </p>
+    <p class="comment">
+                    <code><a href="https://angular.io/api/core/OnInit" target="_blank" >OnInit</a></code>
+                    <code><a href="https://angular.io/api/core/OnDestroy" target="_blank" >OnDestroy</a></code>
+    </p>
+
+
+<section>
+    <h3>Metadata</h3>
+    <table class="table table-sm table-hover">
+        <tbody>
+
+
+
+
+
+
+
+
+
+
+
+            <tr>
+                <td class="col-md-3">selector</td>
+                <td class="col-md-9"><code>customify-widget</code></td>
+            </tr>
+
+            <tr>
+                <td class="col-md-3">styleUrls</td>
+                <td class="col-md-9"><code>./widget.component.scss</code></td>
+            </tr>
+
+
+
+            <tr>
+                <td class="col-md-3">templateUrl</td>
+                <td class="col-md-9"><code>./widget.component.html</code></td>
+            </tr>
+
+
+
+
+
+
+
+
+        </tbody>
+    </table>
+</section>
+
+    <section>
+    <h3 id="index">Index</h3>
+    <table class="table table-sm table-bordered index-table">
+        <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <h6><b>Properties</b></h6>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <ul class="index-list">
+                            <li>
+                                    <span class="modifier">Public</span>
+                                <a href="#currentStateAnimation">currentStateAnimation</a>
+                            </li>
+                            <li>
+                                    <span class="modifier">Private</span>
+                                <a href="#intervalId">intervalId</a>
+                            </li>
+                        </ul>
+                    </td>
+                </tr>
+
+                <tr>
+                    <td class="col-md-4">
+                        <h6><b>Methods</b></h6>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <ul class="index-list">
+                            <li>
+                                <a href="#ngOnDestroy">ngOnDestroy</a>
+                            </li>
+                            <li>
+                                    <span class="modifier">Async</span>
+                                <a href="#ngOnInit">ngOnInit</a>
+                            </li>
+                            <li>
+                                    <span class="modifier">Private</span>
+                                <a href="#setCurrentStateAnimationToIn">setCurrentStateAnimationToIn</a>
+                            </li>
+                            <li>
+                                    <span class="modifier">Private</span>
+                                <a href="#setCurrentStateAnimationToOut">setCurrentStateAnimationToOut</a>
+                            </li>
+                            <li>
+                                    <span class="modifier">Private</span>
+                                    <span class="modifier">Async</span>
+                                <a href="#setIntervalForChangeCurrentWidget">setIntervalForChangeCurrentWidget</a>
+                            </li>
+                            <li>
+                                    <span class="modifier">Private</span>
+                                <a href="#wait">wait</a>
+                            </li>
+                        </ul>
+                    </td>
+                </tr>
+
+                <tr>
+                    <td class="col-md-4">
+                        <h6><b>Inputs</b></h6>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <ul class="index-list">
+                            <li>
+                                <a href="#widget">widget</a>
+                            </li>
+                        </ul>
+                    </td>
+                </tr>
+
+
+
+
+        </tbody>
+    </table>
+</section>
+
+    <section>
+    <h3 id="constructor">Constructor</h3>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+<code>constructor()</code>
+                    </td>
+                </tr>
+                        <tr>
+                            <td class="col-md-4">
+                                <div class="io-line">Defined in <a href="" data-line="39" class="link-to-prism">apps/client/src/app/modules/home/components/widget/widget.component.ts:39</a></div>
+                            </td>
+                        </tr>
+
+            </tbody>
+        </table>
+</section>
+
+    <section>
+    <h3 id="inputs">Inputs</h3>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="widget"></a>
+                        <b>widget</b>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Type : </i>        <code><a href="../interfaces/IWidget.html" target="_self" >IWidget</a></code>
+
+                    </td>
+                </tr>
+                        <tr>
+                            <td class="col-md-2" colspan="2">
+                                    <div class="io-line">Defined in <a href="" data-line="35" class="link-to-prism">apps/client/src/app/modules/home/components/widget/widget.component.ts:35</a></div>
+                            </td>
+                        </tr>
+            </tbody>
+        </table>
+</section>
+
+
+
+    <section>
+    
+    <h3 id="methods">
+        Methods
+    </h3>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="ngOnDestroy"></a>
+                    <span class="name">
+                        <b>
+                            ngOnDestroy
+                        </b>
+                        <a href="#ngOnDestroy"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+<code>ngOnDestroy()</code>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-line">Defined in <a href="" data-line="48"
+                            class="link-to-prism">apps/client/src/app/modules/home/components/widget/widget.component.ts:48</a></div>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+
+                    <div class="io-description">
+                        <b>Returns : </b>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >void</a></code>
+
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="ngOnInit"></a>
+                    <span class="name">
+                        <b>
+                            <span class="modifier">Async</span>
+                            ngOnInit
+                        </b>
+                        <a href="#ngOnInit"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+                    <span class="modifier-icon icon ion-ios-reset"></span>
+                    <code>ngOnInit()</code>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-line">Defined in <a href="" data-line="43"
+                            class="link-to-prism">apps/client/src/app/modules/home/components/widget/widget.component.ts:43</a></div>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+
+                    <div class="io-description">
+                        <b>Returns : </b>    <code>Promise&lt;void&gt;</code>
+
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="setCurrentStateAnimationToIn"></a>
+                    <span class="name">
+                        <b>
+                            <span class="modifier">Private</span>
+                            setCurrentStateAnimationToIn
+                        </b>
+                        <a href="#setCurrentStateAnimationToIn"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+                    <span class="modifier-icon icon ion-ios-reset"></span>
+                    <code>setCurrentStateAnimationToIn()</code>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-line">Defined in <a href="" data-line="71"
+                            class="link-to-prism">apps/client/src/app/modules/home/components/widget/widget.component.ts:71</a></div>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+
+                    <div class="io-description">
+                        <b>Returns : </b>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >void</a></code>
+
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="setCurrentStateAnimationToOut"></a>
+                    <span class="name">
+                        <b>
+                            <span class="modifier">Private</span>
+                            setCurrentStateAnimationToOut
+                        </b>
+                        <a href="#setCurrentStateAnimationToOut"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+                    <span class="modifier-icon icon ion-ios-reset"></span>
+                    <code>setCurrentStateAnimationToOut()</code>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-line">Defined in <a href="" data-line="67"
+                            class="link-to-prism">apps/client/src/app/modules/home/components/widget/widget.component.ts:67</a></div>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+
+                    <div class="io-description">
+                        <b>Returns : </b>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >void</a></code>
+
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="setIntervalForChangeCurrentWidget"></a>
+                    <span class="name">
+                        <b>
+                            <span class="modifier">Private</span>
+                            <span class="modifier">Async</span>
+                            setIntervalForChangeCurrentWidget
+                        </b>
+                        <a href="#setIntervalForChangeCurrentWidget"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+                    <span class="modifier-icon icon ion-ios-reset"></span>
+                    <code>setIntervalForChangeCurrentWidget()</code>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-line">Defined in <a href="" data-line="52"
+                            class="link-to-prism">apps/client/src/app/modules/home/components/widget/widget.component.ts:52</a></div>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+
+                    <div class="io-description">
+                        <b>Returns : </b>    <code>Promise&lt;void&gt;</code>
+
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="wait"></a>
+                    <span class="name">
+                        <b>
+                            <span class="modifier">Private</span>
+                            wait
+                        </b>
+                        <a href="#wait"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+                    <span class="modifier-icon icon ion-ios-reset"></span>
+                    <code>wait(time: <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/number" target="_blank">number</a>)</code>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-line">Defined in <a href="" data-line="63"
+                            class="link-to-prism">apps/client/src/app/modules/home/components/widget/widget.component.ts:63</a></div>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+
+                    <div class="io-description">
+                        <b>Parameters :</b>
+                        <table class="params">
+                            <thead>
+                                <tr>
+                                    <td>Name</td>
+                                    <td>Type</td>
+                                    <td>Optional</td>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>time</td>
+                                    <td>
+                                                <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/number" target="_blank" >number</a></code>
+                                    </td>
+
+                                    <td>
+                                        No
+                                    </td>
+
+
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <div>
+                    </div>
+                    <div class="io-description">
+                        <b>Returns : </b>    <code>Promise&lt;unknown&gt;</code>
+
+                    </div>
+                    <div class="io-description">
+                        
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+</section>
+    <section>
+    
+        <h3 id="inputs">
+            Properties
+        </h3>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="currentStateAnimation"></a>
+                        <span class="name">
+                            <b>
+                                <span class="modifier">Public</span>
+                            currentStateAnimation</b>
+                            <a href="#currentStateAnimation"><span class="icon ion-ios-link"></span></a>
+                        </span>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <i>Type : </i>        <code><a href="../miscellaneous/enumerations.html#changeWidgetStates" target="_self" >changeWidgetStates</a></code>
+
+                        </td>
+                    </tr>
+                        <tr>
+                            <td class="col-md-4">
+                                    <div class="io-line">Defined in <a href="" data-line="37" class="link-to-prism">apps/client/src/app/modules/home/components/widget/widget.component.ts:37</a></div>
+                            </td>
+                        </tr>
+
+
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="intervalId"></a>
+                        <span class="name">
+                            <b>
+                                <span class="modifier">Private</span>
+                            intervalId</b>
+                            <a href="#intervalId"><span class="icon ion-ios-link"></span></a>
+                        </span>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <i>Type : </i>        <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/number" target="_blank" >number</a></code>
+
+                        </td>
+                    </tr>
+                        <tr>
+                            <td class="col-md-4">
+                                    <div class="io-line">Defined in <a href="" data-line="39" class="link-to-prism">apps/client/src/app/modules/home/components/widget/widget.component.ts:39</a></div>
+                            </td>
+                        </tr>
+
+
+            </tbody>
+        </table>
+</section>
+
+</div>
+
+
+    <div class="tab-pane fade  tab-source-code" id="c-source">
+        <pre class="line-numbers compodoc-sourcecode"><code class="language-typescript">import { Component, Input, OnDestroy, OnInit } from &#x27;@angular/core&#x27;;
+import { animate, state, style, transition, trigger } from &#x27;@angular/animations&#x27;;
+import { INTERVAL_TIME_IN_MS } from &#x27;../widget-spinner/widget-spinner.component&#x27;;
+
+export interface IWidget {
+  img: string;
+  mainText: string;
+  secondText: string;
+}
+
+enum changeWidgetStates {
+  OUT &#x3D; &#x27;out&#x27;,
+  IN &#x3D; &#x27;in&#x27;
+}
+
+@Component({
+  selector: &#x27;customify-widget&#x27;,
+  animations: [
+    trigger(&#x27;changeWidget&#x27;, [
+      state(changeWidgetStates.IN, style({
+        opacity: 1
+      })),
+      state(changeWidgetStates.OUT, style({
+        opacity: 0.1
+      })),
+      transition(&#x27;in&#x3D;&gt;out&#x27;, animate(&#x27;.5s&#x27;)),
+      transition(&#x27;out&#x3D;&gt;in&#x27;, animate(&#x27;.5s&#x27;)),
+    ])
+  ],
+  templateUrl: &#x27;./widget.component.html&#x27;,
+  styleUrls: [&#x27;./widget.component.scss&#x27;]
+})
+export class WidgetComponent implements OnInit, OnDestroy {
+
+  @Input() widget: IWidget;
+
+  public currentStateAnimation: changeWidgetStates;
+
+  private intervalId: number;
+
+  constructor() { }
+
+  async ngOnInit(): Promise&lt;void&gt; {
+    await this.setIntervalForChangeCurrentWidget();
+    this.setCurrentStateAnimationToIn();
+  }
+
+  ngOnDestroy(): void {
+    clearInterval(this.intervalId);
+  }
+
+  private async setIntervalForChangeCurrentWidget(): Promise&lt;void&gt; {
+    const WAIT_TIME_IN_MS &#x3D; INTERVAL_TIME_IN_MS - 500;
+
+    this.wait(WAIT_TIME_IN_MS).then(() &#x3D;&gt; this.setCurrentStateAnimationToOut());
+
+    setInterval(() &#x3D;&gt; {
+      this.wait(WAIT_TIME_IN_MS).then(() &#x3D;&gt; this.setCurrentStateAnimationToOut());
+      this.setCurrentStateAnimationToIn();
+    }, INTERVAL_TIME_IN_MS);
+  }
+
+  private wait(time: number): Promise&lt;unknown&gt; {
+    return new Promise((resolve) &#x3D;&gt; setTimeout(resolve, time));
+  }
+
+  private setCurrentStateAnimationToOut(): void {
+    this.currentStateAnimation &#x3D; changeWidgetStates.OUT;
+  }
+
+  private setCurrentStateAnimationToIn(): void {
+    this.currentStateAnimation &#x3D; changeWidgetStates.IN;
+  }
+
+}
+</code></pre>
+    </div>
+
+    <div class="tab-pane fade " id="c-templateData">
+        <pre class="line-numbers"><code class="language-html">&lt;div class&#x3D;&#x27;widget&#x27;&gt;
+  &lt;div class&#x3D;&#x27;widget__info&#x27;&gt;
+    &lt;h3 class&#x3D;&#x27;widget__main-text&#x27; [@changeWidget]&#x3D;&#x27;currentStateAnimation&#x27;&gt;
+      {{ widget.mainText }}
+    &lt;/h3&gt;
+    &lt;p class&#x3D;&#x27;widget__second-text&#x27; [@changeWidget]&#x3D;&#x27;currentStateAnimation&#x27;&gt;
+      {{ widget.secondText }}
+    &lt;/p&gt;
+  &lt;/div&gt;
+  &lt;div class&#x3D;&#x27;widget__img-wrapper&#x27;&gt;
+    &lt;img [src]&#x3D;&#x27;widget.img&#x27; [@changeWidget]&#x3D;&#x27;currentStateAnimation&#x27;
+         alt&#x3D;&#x27;Apple Watch&#x27;&gt;
+  &lt;/div&gt;
+&lt;/div&gt;
+</code></pre>
+    </div>
+
+    <div class="tab-pane fade " id="c-styleData">
+                <p class="comment">
+                    <code>./widget.component.scss</code>
+                </p>
+                <pre class="line-numbers"><code class="language-scss">.widget {
+  width: 100%;
+  height: 100%;
+  background-color: rgb(71, 35, 217);
+  color: white;
+  display: flex;
+  flex-direction: row;
+  border-radius: 10px;
+
+  &amp;__info {
+    height: auto;
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding-left: 20px;
+  }
+
+  &amp;__img-wrapper {
+    width: auto;
+    max-width: 50%;
+    height: 20vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    &amp; &gt; img {
+      max-height: 100%;
+      max-width: 100%;
+    }
+  }
+
+  &amp;__main-text {
+    margin: 10px 10px 10px 0;
+    font-size: 1.3rem;
+  }
+
+  &amp;__second-text {
+    margin: 5px 5px 5px 0;
+    font-size: .8rem;
+    font-weight: lighter;
+  }
+}
+
+@media (min-width: 768px) {
+  .widget {
+
+    &amp;__img-wrapper {
+      height: 50vh;
+    }
+
+    &amp;__main-text {
+      font-size: 3rem;
+    }
+
+    &amp;__second-text {
+      font-size: 1.5rem;
+    }
+  }
+}
+
+@media (min-width: 1024px) {
+  .widget {
+
+    &amp;__info {
+      padding-left: 120px;
+    }
+  }
+}
+</code></pre>
+    </div>
+
+    <div class="tab-pane fade " id="c-tree">
+        <div id="tree-container"></div>
+        <div class="tree-legend">
+            <div class="title">
+                <b>Legend</b>
+            </div>
+            <div>
+                <div class="color htmlelement"></div><span>Html element</span>
+            </div>
+            <div>
+                <div class="color component"></div><span>Component</span>
+            </div>
+            <div>
+                <div class="color directive"></div><span>Html element with directive</span>
+            </div>
+        </div>
+    </div>
+
+    
+</div>
+
+<script src="../js/libs/vis.min.js"></script>
+<script src="../js/libs/htmlparser.js"></script>
+<script src="../js/libs/deep-iterator.js"></script>
+<script>
+        var COMPONENT_TEMPLATE = '<div><div class=\'widget\'>  <div class=\'widget__info\'>    <h3 class=\'widget__main-text\' [@changeWidget]=\'currentStateAnimation\'>      {{ widget.mainText }}    </h3>    <p class=\'widget__second-text\' [@changeWidget]=\'currentStateAnimation\'>      {{ widget.secondText }}    </p>  </div>  <div class=\'widget__img-wrapper\'>    <img [src]=\'widget.img\' [@changeWidget]=\'currentStateAnimation\'         alt=\'Apple Watch\'>  </div></div></div>'
+    var COMPONENTS = [{'name': 'AccountInformationPageComponent', 'selector': 'customify-account-information'},{'name': 'AccountInformationWrapperComponent', 'selector': 'customify-account-information-wrapper'},{'name': 'AccountPageComponent', 'selector': 'customify-account-page'},{'name': 'AccountPageHeaderComponent', 'selector': 'customify-account-page-header'},{'name': 'AccountTypeEditPageComponent', 'selector': 'customify-account-type-edit'},{'name': 'ActionButtonComponent', 'selector': 'customify-action-button'},{'name': 'ActionButtonsComponent', 'selector': 'customify-action-buttons'},{'name': 'AppComponent', 'selector': 'customify-root'},{'name': 'AppComponent', 'selector': 'customify-root'},{'name': 'BannerComponent', 'selector': 'ui-banner'},{'name': 'BannersListComponent', 'selector': 'customify-banners-list'},{'name': 'ButtonComponent', 'selector': 'ui-button'},{'name': 'CategoryComponent', 'selector': 'customify-category'},{'name': 'CategoryListComponent', 'selector': 'customify-category-list'},{'name': 'CategoryListElementComponent', 'selector': 'customify-category-list-element'},{'name': 'CateogryPageComponent', 'selector': 'customify-cateogry-page'},{'name': 'DashboardComponent', 'selector': 'customify-dashboard'},{'name': 'EditDataWrapperComponent', 'selector': 'customify-edit-data-wrapper'},{'name': 'EmailEditPageComponent', 'selector': 'customify-email-edit'},{'name': 'FavoritesPageComponent', 'selector': 'customify-favorites-page'},{'name': 'FooterComponent', 'selector': 'ui-footer'},{'name': 'FormComponent', 'selector': 'ui-form'},{'name': 'HelpPageComponent', 'selector': 'customify-help-page'},{'name': 'HomeComponent', 'selector': 'customify-home'},{'name': 'HomePageComponent', 'selector': 'customify-home-page'},{'name': 'LabelComponent', 'selector': 'ui-label'},{'name': 'LoaderComponent', 'selector': 'ui-loader'},{'name': 'NavbarComponent', 'selector': 'ui-navbar'},{'name': 'OrdersPageComponent', 'selector': 'customify-orders-page'},{'name': 'PageIntroHeaderComponent', 'selector': 'ui-page-intro-header'},{'name': 'PasswordEditPageComponent', 'selector': 'customify-password-edit'},{'name': 'PhoneNumberEditPageComponent', 'selector': 'customify-phone-number-edit'},{'name': 'PreviousPageButtonComponent', 'selector': 'customify-previous-page'},{'name': 'ProductComponent', 'selector': 'ui-product'},{'name': 'ProductDetailsPageComponent', 'selector': 'customify-product-details-page'},{'name': 'ProductFilterBarComponent', 'selector': 'customify-product-filter-bar'},{'name': 'ProductFormComponent', 'selector': 'customify-new-product-form'},{'name': 'ProductPageComponent', 'selector': 'customify-product-page'},{'name': 'ProductsPageComponent', 'selector': 'customify-products-list'},{'name': 'ProductTableComponent', 'selector': 'customify-product-table'},{'name': 'ProfileComponent', 'selector': 'customify-profile'},{'name': 'ReturnsAndRefundsPageComponent', 'selector': 'customify-returns-and-refunds-page'},{'name': 'SecurityAndSettingsPageComponent', 'selector': 'customify-security-and-settings-page'},{'name': 'ShoppingBagPageComponent', 'selector': 'customify-shopping-bag-page'},{'name': 'SubPageTitleComponent', 'selector': 'customify-subpage-title'},{'name': 'TableComponent', 'selector': 'ui-table'},{'name': 'UsernameEditComponent', 'selector': 'customify-username-edit'},{'name': 'WidgetComponent', 'selector': 'customify-widget'},{'name': 'WidgetSpinnerComponent', 'selector': 'customify-widget-spinner'}];
+    var DIRECTIVES = [{'name': 'InputDirective', 'selector': '[uiInput]'}];
+    var ACTUAL_COMPONENT = {'name': 'WidgetComponent'};
+</script>
+<script src="../js/tree.js"></script>
+
+
+
+
+
+
+
+
+
+
+                   
+
+
+
+
+                   </div><div class="search-results">
+    <div class="has-results">
+        <h1 class="search-results-title"><span class='search-results-count'></span> result-matching "<span class='search-query'></span>"</h1>
+        <ul class="search-results-list"></ul>
+    </div>
+    <div class="no-results">
+        <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
+    </div>
+</div>
+</div>
+               <!-- END CONTENT -->
+           </div>
+       </div>
+
+       <script>
+            var COMPODOC_CURRENT_PAGE_DEPTH = 1;
+            var COMPODOC_CURRENT_PAGE_CONTEXT = 'component';
+            var COMPODOC_CURRENT_PAGE_URL = 'WidgetComponent.html';
+            var MAX_SEARCH_RESULTS = 15;
+       </script>
+
+       <script src="../js/libs/custom-elements.min.js"></script>
+       <script src="../js/libs/lit-html.js"></script>
+       <!-- Required to polyfill modern browsers as code is ES5 for IE... -->
+       <script src="../js/libs/custom-elements-es5-adapter.js" charset="utf-8" defer></script>
+       <script src="../js/menu-wc.js" defer></script>
+
+       <script src="../js/libs/bootstrap-native.js"></script>
+
+       <script src="../js/libs/es6-shim.min.js"></script>
+       <script src="../js/libs/EventDispatcher.js"></script>
+       <script src="../js/libs/promise.min.js"></script>
+       <script src="../js/libs/zepto.min.js"></script>
+
+       <script src="../js/compodoc.js"></script>
+
+       <script src="../js/tabs.js"></script>
+       <script src="../js/menu.js"></script>
+       <script src="../js/libs/clipboard.min.js"></script>
+       <script src="../js/libs/prism.js"></script>
+       <script src="../js/sourceCode.js"></script>
+          <script src="../js/search/search.js"></script>
+          <script src="../js/search/lunr.min.js"></script>
+          <script src="../js/search/search-lunr.js"></script>
+          <script src="../js/search/search_index.js"></script>
+       <script src="../js/lazy-load-graphs.js"></script>
+
+
+    </body>
+</html>

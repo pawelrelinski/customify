@@ -1,0 +1,30 @@
+.page-wrapper {
+  padding: 10px;
+}
+
+.content {
+
+  &__products {
+    display: none;
+  }
+}
+
+@media (min-width: 1024px) {
+  .page-wrapper {
+    padding-left: 25px;
+  }
+
+  .content {
+    display: flex;
+    flex-direction: row;
+
+    &__products {
+      display: block;
+      margin-left: 20px;
+      width: calc(100% - 300px - 20px);
+      height: auto;
+      min-height: 300px;
+      border: 1px solid red;
+    }
+  }
+}

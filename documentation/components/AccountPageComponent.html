@@ -91,7 +91,7 @@
 
             <tr>
                 <td class="col-md-3">selector</td>
-                <td class="col-md-9"><code>customify-profile-page</code></td>
+                <td class="col-md-9"><code>customify-account-page</code></td>
             </tr>
 
             <tr>
@@ -169,7 +169,7 @@
 
 
     <section>
-
+    
     <h3 id="methods">
         Methods
     </h3>
@@ -221,7 +221,7 @@
         <pre class="line-numbers compodoc-sourcecode"><code class="language-typescript">import { Component, OnInit } from &#x27;@angular/core&#x27;;
 
 @Component({
-  selector: &#x27;customify-profile-page&#x27;,
+  selector: &#x27;customify-account-page&#x27;,
   templateUrl: &#x27;./account-page.component.html&#x27;,
   styleUrls: [&#x27;./account-page.component.scss&#x27;]
 })
@@ -238,23 +238,23 @@ export class AccountPageComponent implements OnInit {
 
     <div class="tab-pane fade " id="c-templateData">
         <pre class="line-numbers"><code class="language-html">&lt;div class&#x3D;&#x27;page-wrapper&#x27;&gt;
-  &lt;h1 class&#x3D;&#x27;title&#x27;&gt;Account&lt;/h1&gt;
-  &lt;customify-profile&gt;&lt;/customify-profile&gt;
+  &lt;customify-subpage-title&gt;Account&lt;/customify-subpage-title&gt;
+  &lt;customify-account-page-header&gt;&lt;/customify-account-page-header&gt;
   &lt;ul class&#x3D;&#x27;list&#x27;&gt;
     &lt;li class&#x3D;&#x27;list__element&#x27;&gt;
-      &lt;a href&#x3D;&#x27;&#x27; class&#x3D;&#x27;list__link&#x27;&gt;Orders&lt;/a&gt;
+      &lt;a routerLink&#x3D;&#x27;orders&#x27; class&#x3D;&#x27;list__link&#x27;&gt;Orders&lt;/a&gt;
     &lt;/li&gt;
     &lt;li class&#x3D;&#x27;list__element&#x27;&gt;
-      &lt;a href&#x3D;&#x27;&#x27; class&#x3D;&#x27;list__link&#x27;&gt;Returns and refunds&lt;/a&gt;
+      &lt;a routerLink&#x3D;&#x27;returns-and-refunds&#x27; class&#x3D;&#x27;list__link&#x27;&gt;Returns and refunds&lt;/a&gt;
     &lt;/li&gt;
     &lt;li class&#x3D;&#x27;list__element&#x27;&gt;
       &lt;a routerLink&#x3D;&#x27;information&#x27; class&#x3D;&#x27;list__link&#x27;&gt;Account information&lt;/a&gt;
     &lt;/li&gt;
     &lt;li class&#x3D;&#x27;list__element&#x27;&gt;
-      &lt;a href&#x3D;&#x27;&#x27; class&#x3D;&#x27;list__link&#x27;&gt;Security and settings&lt;/a&gt;
+      &lt;a routerLink&#x3D;&#x27;security-and-settings&#x27; class&#x3D;&#x27;list__link&#x27;&gt;Security and settings&lt;/a&gt;
     &lt;/li&gt;
     &lt;li class&#x3D;&#x27;list__element&#x27;&gt;
-      &lt;a href&#x3D;&#x27;&#x27; class&#x3D;&#x27;list__link&#x27;&gt;Help&lt;/a&gt;
+      &lt;a routerLink&#x3D;&#x27;help&#x27; class&#x3D;&#x27;list__link&#x27;&gt;Help&lt;/a&gt;
     &lt;/li&gt;
   &lt;/ul&gt;
 &lt;/div&gt;
@@ -346,15 +346,15 @@ export class AccountPageComponent implements OnInit {
         </div>
     </div>
 
-
+    
 </div>
 
 <script src="../js/libs/vis.min.js"></script>
 <script src="../js/libs/htmlparser.js"></script>
 <script src="../js/libs/deep-iterator.js"></script>
 <script>
-        var COMPONENT_TEMPLATE = '<div><div class=\'page-wrapper\'>  <h1 class=\'title\'>Account</h1>  <customify-account-page-header-header></customify-account-page-header-header>  <ul class=\'list\'>    <li class=\'list__element\'>      <a href=\'\' class=\'list__link\'>Orders</a>    </li>    <li class=\'list__element\'>      <a href=\'\' class=\'list__link\'>Returns and refunds</a>    </li>    <li class=\'list__element\'>      <a routerLink=\'information\' class=\'list__link\'>Account information</a>    </li>    <li class=\'list__element\'>      <a href=\'\' class=\'list__link\'>Security and settings</a>    </li>    <li class=\'list__element\'>      <a href=\'\' class=\'list__link\'>Help</a>    </li>  </ul></div></div>'
-    var COMPONENTS = [{'name': 'AccountComponent', 'selector': 'customify-profile'},{'name': 'AccountInformationPageComponent', 'selector': 'customify-account-page-header-information'},{'name': 'AccountInformationWrapperComponent', 'selector': 'customify-account-page-header-information-wrapper'},{'name': 'AccountPageComponent', 'selector': 'customify-profile-page'},{'name': 'AccountTypeEditPageComponent', 'selector': 'customify-account-page-header-type-edit'},{'name': 'AppComponent', 'selector': 'customify-root'},{'name': 'AppComponent', 'selector': 'customify-root'},{'name': 'BannerComponent', 'selector': 'ui-banner'},{'name': 'BannersListComponent', 'selector': 'customify-banners-list'},{'name': 'ButtonComponent', 'selector': 'ui-button'},{'name': 'CategoryComponent', 'selector': 'customify-category'},{'name': 'CategoryListComponent', 'selector': 'customify-category-list'},{'name': 'CategoryListElementComponent', 'selector': 'customify-category-list-element'},{'name': 'CateogryPageComponent', 'selector': 'customify-cateogry-page'},{'name': 'DashboardComponent', 'selector': 'customify-dashboard'},{'name': 'EditDataWrapperComponent', 'selector': 'customify-edit-data-wrapper'},{'name': 'EmailEditPageComponent', 'selector': 'customify-email-edit'},{'name': 'FooterComponent', 'selector': 'ui-footer'},{'name': 'FormComponent', 'selector': 'ui-form'},{'name': 'HomeComponent', 'selector': 'customify-home'},{'name': 'LabelComponent', 'selector': 'ui-label'},{'name': 'LoaderComponent', 'selector': 'ui-loader'},{'name': 'NavbarComponent', 'selector': 'ui-navbar'},{'name': 'OrdersPageComponent', 'selector': 'customify-orders-page'},{'name': 'PageIntroHeaderComponent', 'selector': 'ui-page-intro-header'},{'name': 'PageTitleComponent', 'selector': 'customify-sub-page-title'},{'name': 'PasswordEditPageComponent', 'selector': 'customify-password-edit'},{'name': 'PhoneNumberEditPageComponent', 'selector': 'customify-phone-number-edit'},{'name': 'PreviousPageButtonComponent', 'selector': 'customify-previous-page'},{'name': 'ProductComponent', 'selector': 'ui-product'},{'name': 'ProductDetailsPageComponent', 'selector': 'customify-product-details-page'},{'name': 'ProductFilterBarComponent', 'selector': 'customify-product-filter-bar'},{'name': 'ProductFormComponent', 'selector': 'customify-new-product-form'},{'name': 'ProductPageComponent', 'selector': 'customify-product-page'},{'name': 'ProductsPageComponent', 'selector': 'customify-products-list'},{'name': 'ProductTableComponent', 'selector': 'customify-product-table'},{'name': 'ProfileComponent', 'selector': 'customify-profile'},{'name': 'TableComponent', 'selector': 'ui-table'},{'name': 'UsernameEditComponent', 'selector': 'customify-username-edit'}];
+        var COMPONENT_TEMPLATE = '<div><div class=\'page-wrapper\'>  <customify-subpage-title>Account</customify-subpage-title>  <customify-account-page-header></customify-account-page-header>  <ul class=\'list\'>    <li class=\'list__element\'>      <a routerLink=\'orders\' class=\'list__link\'>Orders</a>    </li>    <li class=\'list__element\'>      <a routerLink=\'returns-and-refunds\' class=\'list__link\'>Returns and refunds</a>    </li>    <li class=\'list__element\'>      <a routerLink=\'information\' class=\'list__link\'>Account information</a>    </li>    <li class=\'list__element\'>      <a routerLink=\'security-and-settings\' class=\'list__link\'>Security and settings</a>    </li>    <li class=\'list__element\'>      <a routerLink=\'help\' class=\'list__link\'>Help</a>    </li>  </ul></div></div>'
+    var COMPONENTS = [{'name': 'AccountInformationPageComponent', 'selector': 'customify-account-information'},{'name': 'AccountInformationWrapperComponent', 'selector': 'customify-account-information-wrapper'},{'name': 'AccountPageComponent', 'selector': 'customify-account-page'},{'name': 'AccountPageHeaderComponent', 'selector': 'customify-account-page-header'},{'name': 'AccountTypeEditPageComponent', 'selector': 'customify-account-type-edit'},{'name': 'ActionButtonComponent', 'selector': 'customify-action-button'},{'name': 'ActionButtonsComponent', 'selector': 'customify-action-buttons'},{'name': 'AppComponent', 'selector': 'customify-root'},{'name': 'AppComponent', 'selector': 'customify-root'},{'name': 'BannerComponent', 'selector': 'ui-banner'},{'name': 'BannersListComponent', 'selector': 'customify-banners-list'},{'name': 'ButtonComponent', 'selector': 'ui-button'},{'name': 'CategoryComponent', 'selector': 'customify-category'},{'name': 'CategoryListComponent', 'selector': 'customify-category-list'},{'name': 'CategoryListElementComponent', 'selector': 'customify-category-list-element'},{'name': 'CateogryPageComponent', 'selector': 'customify-cateogry-page'},{'name': 'DashboardComponent', 'selector': 'customify-dashboard'},{'name': 'EditDataWrapperComponent', 'selector': 'customify-edit-data-wrapper'},{'name': 'EmailEditPageComponent', 'selector': 'customify-email-edit'},{'name': 'FavoritesPageComponent', 'selector': 'customify-favorites-page'},{'name': 'FooterComponent', 'selector': 'ui-footer'},{'name': 'FormComponent', 'selector': 'ui-form'},{'name': 'HelpPageComponent', 'selector': 'customify-help-page'},{'name': 'HomeComponent', 'selector': 'customify-home'},{'name': 'HomePageComponent', 'selector': 'customify-home-page'},{'name': 'LabelComponent', 'selector': 'ui-label'},{'name': 'LoaderComponent', 'selector': 'ui-loader'},{'name': 'NavbarComponent', 'selector': 'ui-navbar'},{'name': 'OrdersPageComponent', 'selector': 'customify-orders-page'},{'name': 'PageIntroHeaderComponent', 'selector': 'ui-page-intro-header'},{'name': 'PasswordEditPageComponent', 'selector': 'customify-password-edit'},{'name': 'PhoneNumberEditPageComponent', 'selector': 'customify-phone-number-edit'},{'name': 'PreviousPageButtonComponent', 'selector': 'customify-previous-page'},{'name': 'ProductComponent', 'selector': 'ui-product'},{'name': 'ProductDetailsPageComponent', 'selector': 'customify-product-details-page'},{'name': 'ProductFilterBarComponent', 'selector': 'customify-product-filter-bar'},{'name': 'ProductFormComponent', 'selector': 'customify-new-product-form'},{'name': 'ProductPageComponent', 'selector': 'customify-product-page'},{'name': 'ProductsPageComponent', 'selector': 'customify-products-list'},{'name': 'ProductTableComponent', 'selector': 'customify-product-table'},{'name': 'ProfileComponent', 'selector': 'customify-profile'},{'name': 'ReturnsAndRefundsPageComponent', 'selector': 'customify-returns-and-refunds-page'},{'name': 'SecurityAndSettingsPageComponent', 'selector': 'customify-security-and-settings-page'},{'name': 'ShoppingBagPageComponent', 'selector': 'customify-shopping-bag-page'},{'name': 'SubPageTitleComponent', 'selector': 'customify-subpage-title'},{'name': 'TableComponent', 'selector': 'ui-table'},{'name': 'UsernameEditComponent', 'selector': 'customify-username-edit'},{'name': 'WidgetComponent', 'selector': 'customify-widget'},{'name': 'WidgetSpinnerComponent', 'selector': 'customify-widget-spinner'}];
     var DIRECTIVES = [{'name': 'InputDirective', 'selector': '[uiInput]'}];
     var ACTUAL_COMPONENT = {'name': 'AccountPageComponent'};
 </script>
@@ -369,7 +369,7 @@ export class AccountPageComponent implements OnInit {
 
 
 
-
+                   
 
 
 

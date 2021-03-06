@@ -8,7 +8,7 @@ const routes: Routes = [
   },
   {
     path: 'category',
-    loadChildren: () => import('@customify/category').then(({ CategoryModule }) => CategoryModule)
+    loadChildren: () => import('./modules/category/category.module').then(({ CategoryModule }) => CategoryModule)
   },
   {
     path: 'products/:productId',
@@ -20,8 +20,11 @@ const routes: Routes = [
   },
   {
     path: 'favorites',
-    pathMatch: 'full',
-    redirectTo: 'account'
+    loadChildren: () => import('./modules/favorites/favorites.module').then(({ FavoritesModule }) => FavoritesModule)
+  },
+  {
+    path: 'shopping-bag',
+    loadChildren: () => import('./modules/shopping-bag/shopping-bag.module').then(({ ShoppingBagModule }) => ShoppingBagModule)
   },
   {
     path: '',
@@ -31,7 +34,9 @@ const routes: Routes = [
 ];
 
 @NgModule({
-  imports: [RouterModule.forRoot(routes)],
+  imports: [RouterModule.forRoot(routes, {
+    scrollPositionRestoration: 'enabled'
+  })],
   exports: [RouterModule]
 })
 export class AppRoutingModule { }
