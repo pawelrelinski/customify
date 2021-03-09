@@ -1,5 +1,3 @@
-<div class='category-element' queryParamsHandling='merge'
-     [routerLink]="[{ outlets: { productsList: [ 'category', categoryName ] } }]"
-     [queryParams]='{ category: categoryName }'>
+<div class='category-element' (click)='updateCategory()'>
   {{ categoryName | titlecase }}
 </div>

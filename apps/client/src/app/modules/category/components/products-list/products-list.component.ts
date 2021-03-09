@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
-import { ActivatedRoute } from '@angular/router';
+import { CurrentDisplayProductsListInCategoriesService as CurrentCategoryService } from '../../../../core/services/current-display-products-list-in-categories.service';
+import { Observable } from 'rxjs';
 
 @Component({
   selector: 'customify-products-list',
@@ -10,19 +11,18 @@ export class ProductsListComponent implements OnInit {
 
   public categoryName: string;
 
-  constructor(private activatedRoute: ActivatedRoute) { }
+  private currentCategory$: Observable<string>;
+
+  constructor(private currentCategoryService: CurrentCategoryService) { }
 
   ngOnInit(): void {
+    this.currentCategory$ = this.currentCategoryService.getCurrentCategory();
     this.setCategoryName();
-    this.activatedRoute.params.subscribe(params => {
-      console.log(params['category']);
-    });
   }
 
   private setCategoryName(): void {
-    this.activatedRoute.queryParams.subscribe(params => {
-      console.log(params);
-      this.categoryName = params['category'];
+    this.currentCategory$.subscribe((category: string) => {
+      this.categoryName = category;
     });
   }
 
