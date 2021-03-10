@@ -1,0 +1,18 @@
+<div class='page-wrapper'>
+  <customify-subpage-title>
+    Categories
+  </customify-subpage-title>
+  <div class='content'>
+    <div class='content_categories'>
+      <ui-button class='content__btn' (click)='toggleCategories()'>
+        {{ showCategoriesBtnText }}
+      </ui-button>
+      <customify-categories-list *ngIf='categoriesListIsShow'>
+      </customify-categories-list>
+    </div>
+    <div class='content__products'>
+      <customify-products-list></customify-products-list>
+    </div>
+  </div>
+</div>
+

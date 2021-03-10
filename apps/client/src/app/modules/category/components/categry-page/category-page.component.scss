@@ -3,9 +3,12 @@
 }
 
 .content {
+  display: flex;
+  flex-direction: column;
+  transition: all .3s ease;
 
-  &__products {
-    display: none;
+  &__btn {
+    margin-left: -5px;
   }
 }
 
@@ -15,11 +18,13 @@
   }
 
   .content {
-    display: flex;
     flex-direction: row;
 
+    &__categories {
+      width: 300px;
+    }
+
     &__products {
-      display: block;
       margin-left: 20px;
       width: calc(100% - 300px - 20px);
       height: auto;

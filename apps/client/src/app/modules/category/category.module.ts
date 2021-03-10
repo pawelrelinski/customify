@@ -1,7 +1,7 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { RouterModule } from '@angular/router';
-import { CateogryPageComponent } from './components/cateogry-page/cateogry-page.component';
+import { CategoryPageComponent } from './components/categry-page/category-page.component';
 import { SharedModule } from '../../shared/shared.module';
 import { CategoryListElementComponent } from './components/category-list-element/category-list-element.component';
 import { CategoriesListComponent } from './components/categories-list/categories-list.component';
@@ -10,7 +10,7 @@ import { ProductsListComponent } from './components/products-list/products-list.
 
 @NgModule({
   declarations: [
-    CateogryPageComponent,
+    CategoryPageComponent,
     CategoryListElementComponent,
     CategoriesListComponent,
     ProductsListComponent
@@ -21,7 +21,7 @@ import { ProductsListComponent } from './components/products-list/products-list.
     RouterModule.forChild([
       {
         path: '',
-        component: CateogryPageComponent,
+        component: CategoryPageComponent,
         children: [
           { path: 'category/:category', outlet: 'productsList', component: ProductsListComponent }
         ]
