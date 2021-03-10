@@ -28,13 +28,13 @@
 <title>cluster_CategoryModule_declarations</title>
 <polygon fill="none" stroke="black" points="114,-78 114,-130 822,-130 822,-78 114,-78"/>
 </g>
-<g id="clust7" class="cluster">
-<title>cluster_CategoryModule_imports</title>
-<polygon fill="none" stroke="black" points="16,-78 16,-130 106,-130 106,-78 16,-78"/>
-</g>
 <g id="clust8" class="cluster">
 <title>cluster_CategoryModule_exports</title>
 <polygon fill="none" stroke="black" points="332,-208 332,-260 506,-260 506,-208 332,-208"/>
+</g>
+<g id="clust7" class="cluster">
+<title>cluster_CategoryModule_imports</title>
+<polygon fill="none" stroke="black" points="16,-78 16,-130 106,-130 106,-78 16,-78"/>
 </g>
 <!-- BannersListComponent -->
 <g id="node1" class="node">

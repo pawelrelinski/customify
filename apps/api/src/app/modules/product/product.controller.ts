@@ -1,12 +1,12 @@
 import { Body, Controller, Delete, Get, Param, Post, Put } from '@nestjs/common';
-import { Product } from './Product.entity';
+import { ProductEntity } from './Product.entity';
 import { ProductService } from './product.service';
 import { ErrorResponse } from '../../models/ErrorResponse';
 import { SuccessResponse } from '../../models/SuccessResponse';
 import { UpdateResult } from 'typeorm';
 
-type ProductResponse = ErrorResponse<Product> | SuccessResponse<Product>;
-type ArrayOfProductsResponse = ErrorResponse<Array<Product>> | SuccessResponse<Array<Product>>;
+type ProductResponse = ErrorResponse<ProductEntity> | SuccessResponse<ProductEntity>;
+type ArrayOfProductsResponse = ErrorResponse<Array<ProductEntity>> | SuccessResponse<Array<ProductEntity>>;
 
 @Controller('product')
 export class ProductController {
@@ -16,17 +16,17 @@ export class ProductController {
 
   @Get()
   public async  getAll(): Promise<ArrayOfProductsResponse> {
-    const products: Array<Product> = await this.productService.findAll();
+    const products: Array<ProductEntity> = await this.productService.findAll();
     if (products.length === 0) {
-      return new ErrorResponse<Array<Product>>(products);
+      return new ErrorResponse<Array<ProductEntity>>(products);
     }
 
-    return new SuccessResponse<Array<Product>>(products);
+    return new SuccessResponse<Array<ProductEntity>>(products);
   }
 
   @Get(':id')
   public async getById(@Param('id') id: number | string): Promise<ProductResponse> {
-    const product: Product  = await this.productService.findById(id);
+    const product: ProductEntity  = await this.productService.findById(id);
     if (!product) {
       return new ErrorResponse(product);
     }
@@ -35,8 +35,8 @@ export class ProductController {
   }
 
   @Post()
-  public async create(@Body() productData: Product): Promise<ProductResponse> {
-    const product: Product = await this.productService.create(productData);
+  public async create(@Body() productData: ProductEntity): Promise<ProductResponse> {
+    const product: ProductEntity = await this.productService.create(productData);
     if (!product) {
       return new ErrorResponse(product);
     }
@@ -45,7 +45,7 @@ export class ProductController {
   }
 
   @Put(':id')
-  public async updateById(@Param('id') id: number, @Body() updateProduct: Product): Promise<SuccessResponse<UpdateResult>> {
+  public async updateById(@Param('id') id: number, @Body() updateProduct: ProductEntity): Promise<SuccessResponse<UpdateResult>> {
     const updatedProduct: UpdateResult = await this.productService.updateById(id, updateProduct);
     return new SuccessResponse(updatedProduct);
   }

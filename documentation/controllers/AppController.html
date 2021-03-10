@@ -76,7 +76,11 @@
                     <td class="col-md-4">
                         <ul class="index-list">
                             <li>
-                                <a href="#getData">getData</a>
+                                <a href="#getProfile">getProfile</a>
+                            </li>
+                            <li>
+                                    <span class="modifier">Async</span>
+                                <a href="#login">login</a>
                             </li>
                         </ul>
                     </td>
@@ -99,18 +103,18 @@
         <tbody>
             <tr>
                 <td class="col-md-4">
-                    <a name="getData"></a>
+                    <a name="getProfile"></a>
                     <span class="name">
                         <b>
-                            getData
+                            getProfile
                         </b>
-                        <a href="#getData"><span class="icon ion-ios-link"></span></a>
+                        <a href="#getProfile"><span class="icon ion-ios-link"></span></a>
                     </span>
                 </td>
             </tr>
             <tr>
                 <td class="col-md-4">
-<code>getData()</code>
+<code>getProfile(req)</code>
                 </td>
             </tr>
 
@@ -118,14 +122,14 @@
                 <td class="col-md-4">
                     <b>Decorators : </b>
                     <br />
-                    <code>@Get(&#x27;hello&#x27;)<br /></code>
+                    <code>@UseGuards(JwtAuthGuard)<br />@Get(&#x27;profile&#x27;)<br /></code>
                 </td>
             </tr>
 
             <tr>
                 <td class="col-md-4">
-                    <div class="io-line">Defined in <a href="" data-line="9"
-                            class="link-to-prism">apps/api/src/app/app.controller.ts:9</a></div>
+                    <div class="io-line">Defined in <a href="" data-line="20"
+                            class="link-to-prism">apps/api/src/app/app.controller.ts:20</a></div>
                 </td>
             </tr>
 
@@ -134,8 +138,110 @@
                 <td class="col-md-4">
 
                     <div class="io-description">
-                        <b>Returns : </b>        <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank" >string</a></code>
+                        <b>Parameters :</b>
+                        <table class="params">
+                            <thead>
+                                <tr>
+                                    <td>Name</td>
+                                    <td>Optional</td>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>req</td>
 
+                                    <td>
+                                        No
+                                    </td>
+
+
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <div>
+                    </div>
+                    <div class="io-description">
+                        <b>Returns : </b>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >any</a></code>
+
+                    </div>
+                    <div class="io-description">
+                        
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="login"></a>
+                    <span class="name">
+                        <b>
+                            <span class="modifier">Async</span>
+                            login
+                        </b>
+                        <a href="#login"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+                    <span class="modifier-icon icon ion-ios-reset"></span>
+                    <code>login(req)</code>
+                </td>
+            </tr>
+
+            <tr>
+                <td class="col-md-4">
+                    <b>Decorators : </b>
+                    <br />
+                    <code>@UseGuards(LocalAuthGuard)<br />@Post(&#x27;auth/login&#x27;)<br /></code>
+                </td>
+            </tr>
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-line">Defined in <a href="" data-line="14"
+                            class="link-to-prism">apps/api/src/app/app.controller.ts:14</a></div>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+
+                    <div class="io-description">
+                        <b>Parameters :</b>
+                        <table class="params">
+                            <thead>
+                                <tr>
+                                    <td>Name</td>
+                                    <td>Optional</td>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>req</td>
+
+                                    <td>
+                                        No
+                                    </td>
+
+
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <div>
+                    </div>
+                    <div class="io-description">
+                        <b>Returns : </b>    <code>{}</code>
+
+                    </div>
+                    <div class="io-description">
+                        
                     </div>
                 </td>
             </tr>
@@ -145,17 +251,29 @@
 
 
     <div class="tab-pane fade  tab-source-code" id="c-source">
-        <pre class="line-numbers compodoc-sourcecode"><code class="language-typescript">import { Controller, Get } from &#x27;@nestjs/common&#x27;;
-import { AppService } from &#x27;./app.service&#x27;;
+        <pre class="line-numbers compodoc-sourcecode"><code class="language-typescript">import { Controller, Post, UseGuards, Request, Get } from &#x27;@nestjs/common&#x27;;
+import { LocalAuthGuard } from &#x27;./modules/auth/local-auth.guard&#x27;;
+import { AuthService } from &#x27;./modules/auth/auth.service&#x27;;
+import { JwtAuthGuard } from &#x27;./modules/auth/jwt-auth.guard&#x27;;
 
 @Controller()
 export class AppController {
-  constructor(private readonly appService: AppService) {}
 
-  @Get(&#x27;hello&#x27;)
-  getData(): string {
-    return this.appService.getData();
+  constructor(private authService: AuthService) {
   }
+
+  @UseGuards(LocalAuthGuard)
+  @Post(&#x27;auth/login&#x27;)
+  async login(@Request() req) {
+    return this.authService.login(req.user);
+  }
+
+  @UseGuards(JwtAuthGuard)
+  @Get(&#x27;profile&#x27;)
+  getProfile(@Request() req) {
+    return req.user;
+  }
+
 }
 </code></pre>
     </div>

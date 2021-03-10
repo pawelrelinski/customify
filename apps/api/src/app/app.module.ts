@@ -2,7 +2,7 @@ import { Module } from '@nestjs/common';
 import { AppController } from './app.controller';
 import { ProductModule } from './modules/product/product.module';
 import { TypeOrmModule } from '@nestjs/typeorm';
-import { Product } from './modules/product/Product.entity';
+import { ProductEntity } from './modules/product/Product.entity';
 import { Connection } from 'typeorm';
 import { AuthModule } from './modules/auth/auth.module';
 import { UserModule } from './modules/user/user.module';
@@ -16,7 +16,7 @@ import { UserModule } from './modules/user/user.module';
       "username": "root",
       "password": "",
       "database": "customify",
-      "entities": [Product],
+      "entities": [ProductEntity],
       "synchronize": true,
       "autoLoadEntities": true
     }),

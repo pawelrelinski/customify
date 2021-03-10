@@ -118,7 +118,7 @@
             <tbody>
                 <tr>
                     <td class="col-md-4">
-<code>constructor(productRepository: <a href="../classes/Product.html">Repository<Product></a>)</code>
+<code>constructor(productRepository: <a href="../classes/ProductEntity.html">Repository<ProductEntity></a>)</code>
                     </td>
                 </tr>
                         <tr>
@@ -144,7 +144,7 @@
                                                         <td>productRepository</td>
                                                   
                                                         <td>
-                                                                        <code><a href="../classes/Product.html" target="_self" >Repository&lt;Product&gt;</a></code>
+                                                                        <code><a href="../classes/ProductEntity.html" target="_self" >Repository&lt;ProductEntity&gt;</a></code>
                                                         </td>
                                                   
                                                     <td>
@@ -184,7 +184,7 @@
             <tr>
                 <td class="col-md-4">
                     <span class="modifier-icon icon ion-ios-reset"></span>
-                    <code>create(product: <a href="../classes/Product.html">Product</a>)</code>
+                    <code>create(product: <a href="../classes/ProductEntity.html">ProductEntity</a>)</code>
                 </td>
             </tr>
 
@@ -214,7 +214,7 @@
                                 <tr>
                                     <td>product</td>
                                     <td>
-                                                <code><a href="../classes/Product.html" target="_self" >Product</a></code>
+                                                <code><a href="../classes/ProductEntity.html" target="_self" >ProductEntity</a></code>
                                     </td>
 
                                     <td>
@@ -229,7 +229,7 @@
                     <div>
                     </div>
                     <div class="io-description">
-                        <b>Returns : </b>        <code><a href="../classes/Product.html" target="_self" >Promise&lt;Product&gt;</a></code>
+                        <b>Returns : </b>        <code><a href="../classes/ProductEntity.html" target="_self" >Promise&lt;ProductEntity&gt;</a></code>
 
                     </div>
                     <div class="io-description">
@@ -274,7 +274,7 @@
                 <td class="col-md-4">
 
                     <div class="io-description">
-                        <b>Returns : </b>        <code><a href="../classes/Product.html" target="_self" >Promise&lt;Array&lt;Product&gt;&gt;</a></code>
+                        <b>Returns : </b>        <code><a href="../classes/ProductEntity.html" target="_self" >Promise&lt;Array&lt;ProductEntity&gt;&gt;</a></code>
 
                     </div>
                 </td>
@@ -344,7 +344,7 @@
                     <div>
                     </div>
                     <div class="io-description">
-                        <b>Returns : </b>        <code><a href="../classes/Product.html" target="_self" >Promise&lt;Product&gt;</a></code>
+                        <b>Returns : </b>        <code><a href="../classes/ProductEntity.html" target="_self" >Promise&lt;ProductEntity&gt;</a></code>
 
                     </div>
                     <div class="io-description">
@@ -445,7 +445,7 @@
             <tr>
                 <td class="col-md-4">
                     <span class="modifier-icon icon ion-ios-reset"></span>
-                    <code>updateById(id: <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/number" target="_blank">number</a>, product: <a href="../classes/Product.html">Product</a>)</code>
+                    <code>updateById(id: <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/number" target="_blank">number</a>, product: <a href="../classes/ProductEntity.html">ProductEntity</a>)</code>
                 </td>
             </tr>
 
@@ -487,7 +487,7 @@
                                 <tr>
                                     <td>product</td>
                                     <td>
-                                                <code><a href="../classes/Product.html" target="_self" >Product</a></code>
+                                                <code><a href="../classes/ProductEntity.html" target="_self" >ProductEntity</a></code>
                                     </td>
 
                                     <td>
@@ -520,30 +520,30 @@
     <div class="tab-pane fade  tab-source-code" id="c-source">
         <pre class="line-numbers compodoc-sourcecode"><code class="language-typescript">import { Injectable } from &#x27;@nestjs/common&#x27;;
 import { InjectRepository } from &#x27;@nestjs/typeorm&#x27;;
-import { Product } from &#x27;./Product.entity&#x27;;
+import { ProductEntity } from &#x27;./Product.entity&#x27;;
 import { Repository } from &#x27;typeorm&#x27;;
 
 @Injectable()
 export class ProductService {
 
   constructor(
-    @InjectRepository(Product) private productRepository: Repository&lt;Product&gt;
+    @InjectRepository(ProductEntity) private productRepository: Repository&lt;ProductEntity&gt;
   ) {
   }
 
-  public async findAll(): Promise&lt;Array&lt;Product&gt;&gt; {
+  public async findAll(): Promise&lt;Array&lt;ProductEntity&gt;&gt; {
     return await this.productRepository.find();
   }
 
-  public async findById(id: number | string): Promise&lt;Product&gt; {
+  public async findById(id: number | string): Promise&lt;ProductEntity&gt; {
     return await this.productRepository.findOne(id);
   }
 
-  public async create(product: Product): Promise&lt;Product&gt; {
+  public async create(product: ProductEntity): Promise&lt;ProductEntity&gt; {
     return await this.productRepository.save(product);
   }
 
-  public async updateById(id: number, product: Product) {
+  public async updateById(id: number, product: ProductEntity) {
     return await this.productRepository.update(id, product);
   }
 

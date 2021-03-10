@@ -141,7 +141,7 @@
             <tr>
                 <td class="col-md-4">
                     <span class="modifier-icon icon ion-ios-reset"></span>
-                    <code>create(productData: <a href="../classes/Product.html">Product</a>)</code>
+                    <code>create(productData: <a href="../classes/ProductEntity.html">ProductEntity</a>)</code>
                 </td>
             </tr>
 
@@ -178,7 +178,7 @@
                                 <tr>
                                     <td>productData</td>
                                     <td>
-                                                <code><a href="../classes/Product.html" target="_self" >Product</a></code>
+                                                <code><a href="../classes/ProductEntity.html" target="_self" >ProductEntity</a></code>
                                     </td>
 
                                     <td>
@@ -193,7 +193,7 @@
                     <div>
                     </div>
                     <div class="io-description">
-                        <b>Returns : </b>        <code><a href="../miscellaneous/typealiases.html#ProductResponse" target="_self" >Promise&lt;ProductResponse&gt;</a></code>
+                        <b>Returns : </b>        <code><a href="../classes/Response.html" target="_self" >Promise&lt;ProductResponse&gt;</a></code>
 
                     </div>
                     <div class="io-description">
@@ -325,7 +325,7 @@
                 <td class="col-md-4">
 
                     <div class="io-description">
-                        <b>Returns : </b>        <code><a href="../miscellaneous/typealiases.html#ArrayOfProductsResponse" target="_self" >Promise&lt;ArrayOfProductsResponse&gt;</a></code>
+                        <b>Returns : </b>        <code><a href="../classes/Response.html" target="_self" >Promise&lt;ArrayOfProductsResponse&gt;</a></code>
 
                     </div>
                 </td>
@@ -402,7 +402,7 @@
                     <div>
                     </div>
                     <div class="io-description">
-                        <b>Returns : </b>        <code><a href="../miscellaneous/typealiases.html#ProductResponse" target="_self" >Promise&lt;ProductResponse&gt;</a></code>
+                        <b>Returns : </b>        <code><a href="../classes/Response.html" target="_self" >Promise&lt;ProductResponse&gt;</a></code>
 
                     </div>
                     <div class="io-description">
@@ -430,7 +430,7 @@
             <tr>
                 <td class="col-md-4">
                     <span class="modifier-icon icon ion-ios-reset"></span>
-                    <code>updateById(id: <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/number" target="_blank">number</a>, updateProduct: <a href="../classes/Product.html">Product</a>)</code>
+                    <code>updateById(id: <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/number" target="_blank">number</a>, updateProduct: <a href="../classes/ProductEntity.html">ProductEntity</a>)</code>
                 </td>
             </tr>
 
@@ -479,7 +479,7 @@
                                 <tr>
                                     <td>updateProduct</td>
                                     <td>
-                                                <code><a href="../classes/Product.html" target="_self" >Product</a></code>
+                                                <code><a href="../classes/ProductEntity.html" target="_self" >ProductEntity</a></code>
                                     </td>
 
                                     <td>
@@ -509,14 +509,14 @@
 
     <div class="tab-pane fade  tab-source-code" id="c-source">
         <pre class="line-numbers compodoc-sourcecode"><code class="language-typescript">import { Body, Controller, Delete, Get, Param, Post, Put } from &#x27;@nestjs/common&#x27;;
-import { Product } from &#x27;./Product.entity&#x27;;
+import { ProductEntity } from &#x27;./Product.entity&#x27;;
 import { ProductService } from &#x27;./product.service&#x27;;
 import { ErrorResponse } from &#x27;../../models/ErrorResponse&#x27;;
 import { SuccessResponse } from &#x27;../../models/SuccessResponse&#x27;;
 import { UpdateResult } from &#x27;typeorm&#x27;;
 
-type ProductResponse &#x3D; ErrorResponse&lt;Product&gt; | SuccessResponse&lt;Product&gt;;
-type ArrayOfProductsResponse &#x3D; ErrorResponse&lt;Array&lt;Product&gt;&gt; | SuccessResponse&lt;Array&lt;Product&gt;&gt;;
+type ProductResponse &#x3D; ErrorResponse&lt;ProductEntity&gt; | SuccessResponse&lt;ProductEntity&gt;;
+type ArrayOfProductsResponse &#x3D; ErrorResponse&lt;Array&lt;ProductEntity&gt;&gt; | SuccessResponse&lt;Array&lt;ProductEntity&gt;&gt;;
 
 @Controller(&#x27;product&#x27;)
 export class ProductController {
@@ -526,17 +526,17 @@ export class ProductController {
 
   @Get()
   public async  getAll(): Promise&lt;ArrayOfProductsResponse&gt; {
-    const products: Array&lt;Product&gt; &#x3D; await this.productService.findAll();
+    const products: Array&lt;ProductEntity&gt; &#x3D; await this.productService.findAll();
     if (products.length &#x3D;&#x3D;&#x3D; 0) {
-      return new ErrorResponse&lt;Array&lt;Product&gt;&gt;(products);
+      return new ErrorResponse&lt;Array&lt;ProductEntity&gt;&gt;(products);
     }
 
-    return new SuccessResponse&lt;Array&lt;Product&gt;&gt;(products);
+    return new SuccessResponse&lt;Array&lt;ProductEntity&gt;&gt;(products);
   }
 
   @Get(&#x27;:id&#x27;)
   public async getById(@Param(&#x27;id&#x27;) id: number | string): Promise&lt;ProductResponse&gt; {
-    const product: Product  &#x3D; await this.productService.findById(id);
+    const product: ProductEntity  &#x3D; await this.productService.findById(id);
     if (!product) {
       return new ErrorResponse(product);
     }
@@ -545,8 +545,8 @@ export class ProductController {
   }
 
   @Post()
-  public async create(@Body() productData: Product): Promise&lt;ProductResponse&gt; {
-    const product: Product &#x3D; await this.productService.create(productData);
+  public async create(@Body() productData: ProductEntity): Promise&lt;ProductResponse&gt; {
+    const product: ProductEntity &#x3D; await this.productService.create(productData);
     if (!product) {
       return new ErrorResponse(product);
     }
@@ -555,7 +555,7 @@ export class ProductController {
   }
 
   @Put(&#x27;:id&#x27;)
-  public async updateById(@Param(&#x27;id&#x27;) id: number, @Body() updateProduct: Product): Promise&lt;SuccessResponse&lt;UpdateResult&gt;&gt; {
+  public async updateById(@Param(&#x27;id&#x27;) id: number, @Body() updateProduct: ProductEntity): Promise&lt;SuccessResponse&lt;UpdateResult&gt;&gt; {
     const updatedProduct: UpdateResult &#x3D; await this.productService.updateById(id, updateProduct);
     return new SuccessResponse(updatedProduct);
   }

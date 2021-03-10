@@ -1,22 +1,34 @@
 import { Column, Entity, PrimaryGeneratedColumn } from 'typeorm';
 import { IProduct } from '@customify/api-interfaces';
 
-@Entity()
-export class Product implements IProduct {
+@Entity('product')
+export class ProductEntity implements IProduct {
 
   @PrimaryGeneratedColumn()
   id: number;
 
-  @Column()
+  @Column({
+    type: 'varchar',
+    nullable: false
+  })
   name: string;
 
-  @Column()
+  @Column({
+    type: 'int',
+    nullable: false
+  })
   price: number;
 
-  @Column()
+  @Column({
+    type: 'varchar',
+    nullable: false
+  })
   description: string;
 
-  @Column()
+  @Column({
+    type: 'varchar',
+    nullable: false
+  })
   brand: string;
 
   @Column()
