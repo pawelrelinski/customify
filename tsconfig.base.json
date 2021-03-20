@@ -22,7 +22,8 @@
       "@customify/category": ["libs/category/src/index.ts"],
       "@customify/profile": ["libs/profile/src/index.ts"],
       "@customify/util": ["libs/util/src/index.ts"],
-      "@customify/navbar": ["libs/navbar/src/index.ts"]
+      "@customify/navbar": ["libs/navbar/src/index.ts"],
+      "@customify/auth": ["libs/auth/src/index.ts"]
     }
   },
   "exclude": ["node_modules", "tmp"]

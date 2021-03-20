@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { INavElement } from '@customify/ui';
+import { CheckIsAuthPathService } from '@customify/auth';
 
 @Component({
   selector: 'customify-root',
@@ -9,11 +10,13 @@ import { INavElement } from '@customify/ui';
 export class AppComponent implements OnInit {
 
   public navElements: Array<INavElement> = [];
+  public isAuthPath: boolean;
 
-  constructor() { }
+  constructor(private checkIsAuthPath: CheckIsAuthPathService) { }
 
   ngOnInit(): void {
     this.setRouterLinks();
+    this.checkAuthPath();
   }
 
   private setRouterLinks(): void {
@@ -23,6 +26,12 @@ export class AppComponent implements OnInit {
       { routerLink: '/favorites', name: 'favorites', classes: 'bx bx-heart' },
       { routerLink: '/account', name: 'Account', classes: 'bx bx-user' }
     );
+  }
+
+  private checkAuthPath(): void {
+    this.checkIsAuthPath.isAuthPath().subscribe(isAuth => {
+      this.isAuthPath = isAuth;
+    });
   }
 
 }

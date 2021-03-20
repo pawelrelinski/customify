@@ -1,3 +1,6 @@
-<ui-navbar [navElements]='navElements'>
+<ui-navbar [navElements]='navElements' *ngIf='!isAuthPath; else authView'>
   <router-outlet></router-outlet>
 </ui-navbar>
+<ng-template #authView>
+  <router-outlet></router-outlet>
+</ng-template>

@@ -1,0 +1,30 @@
+$main-color: rgb(71, 36, 217);
+
+$mobile-element-width: 80%;
+$desktop-element-width: 300px;
+
+.wrapper {
+  width: 100%;
+  height: 100%;
+  box-sizing: border-box;
+  background-color: $main-color;
+  color: white;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-end;
+  padding-bottom: 50px;
+}
+
+.title {
+  margin: 0;
+  position: absolute;
+  top: 100px;
+}
+
+.login-form {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}

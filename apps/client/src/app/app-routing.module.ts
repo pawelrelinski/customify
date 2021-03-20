@@ -27,6 +27,10 @@ const routes: Routes = [
     loadChildren: () => import('./modules/shopping-bag/shopping-bag.module').then(({ ShoppingBagModule }) => ShoppingBagModule)
   },
   {
+    path: 'auth',
+    loadChildren: () => import('@customify/auth').then(({ AuthModule }) => AuthModule)
+  },
+  {
     path: '',
     pathMatch: 'full',
     redirectTo: 'home'

@@ -1,0 +1,64 @@
+$main-color: rgb(71, 36, 217);
+
+$mobile-element-width: 80%;
+$desktop-element-width: 300px;
+
+.login-form {
+
+  &__label {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 30px;
+    text-align: left;
+
+    & span {
+      width: $mobile-element-width;
+      text-align: left;
+      margin-bottom: 5px;
+    }
+  }
+
+  &__input {
+    height: 35px;
+    width: $mobile-element-width;
+    color: white;
+    border: 1px solid white;
+    border-radius: 5px;
+    background-color: transparent;
+  }
+
+  &__login-btn {
+    width: $mobile-element-width;
+    height: 40px;
+    background-color: white;
+    border: none;
+    border-radius: 5px;
+    color: $main-color;
+    font-size: 1.2rem;
+    font-weight: bolder;
+  }
+
+  &__link {
+    color: white;
+    font-weight: bolder;
+  }
+
+}
+
+@media (min-width: 768px) {
+  .wrapper {
+    justify-content: center;
+  }
+
+  .login-form {
+    margin-top: 200px;
+
+    & span,
+    &__input,
+    &__login-btn {
+      width: $desktop-element-width;
+    }
+  }
+}

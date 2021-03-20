@@ -10,5 +10,6 @@ module.exports = {
     '<rootDir>/libs/util',
     '<rootDir>/apps/admin',
     '<rootDir>/libs/navbar',
+    '<rootDir>/libs/auth',
   ],
 };
