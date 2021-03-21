@@ -31,7 +31,9 @@
                    <div class="content-data">
 
 <h1 id="customify">Customify</h1>
-<p>Fullstack application based on monorepo architecture.</p>
+<p>Fullstack application based on monorepo architecture.
+<br>
+An e-commerce system that provides great customization options.</p>
 <h2 id="technologies-reference">Technologies Reference</h2>
 <h3 id="workspace">Workspace</h3>
 <ul>
@@ -46,6 +48,13 @@
 <ul>
 <li><a href="https://nestjs.com/">NestJS</a></li>
 </ul>
+<h3 id="libraries"><a href="#libraries">Libraries</a></h3>
+<ul>
+<li>api-interfaces</li>
+<li>data-access</li>
+<li>ui</li>
+<li>util</li>
+</ul>
 <h3 id="testing">Testing</h3>
 <ul>
 <li><a href="https://www.cypress.io/">Cypress</a></li>
@@ -55,20 +64,429 @@
 <ul>
 <li><a href="https://compodoc.github.io/compodoc/">Compodoc</a></li>
 </ul>
-<h2 id="development-server">Development server</h2>
-<p>Run <code>ng serve my-app</code> for a dev server. Navigate to <a href="http://localhost:4200/">http://localhost:4200/</a>. The app will automatically reload if you change any of the source files.</p>
-<h2 id="build">Build</h2>
-<p>Run <code>ng build my-app</code> to build the project. The build artifacts will be stored in the <code>dist/</code> directory. Use the <code>--prod</code> flag for a production build.</p>
-<h2 id="running-unit-tests">Running unit tests</h2>
-<p>Run <code>ng test my-app</code> to execute the unit tests via <a href="https://jestjs.io">Jest</a>.</p>
-<p>Run <code>nx affected:test</code> to execute the unit tests affected by a change.</p>
-<h2 id="running-end-to-end-tests">Running end-to-end tests</h2>
-<p>Run <code>ng e2e my-app</code> to execute the end-to-end tests via <a href="https://www.cypress.io">Cypress</a>.</p>
-<p>Run <code>nx affected:e2e</code> to execute the end-to-end tests affected by a change.</p>
-<h2 id="running-storybook-tests">Running storybook tests</h2>
-<p>Run <code>ng run storybook:my-lib</code> to run storybook tests. Navigate to <a href="http://localhost:4400/">http://localhost:4400/</a>.</p>
+<h3 id="database">Database</h3>
+<ul>
+<li>MySQL</li>
+</ul>
+<h2 id="applications">Applications</h2>
+<h3 id="api">Api</h3>
+<p>Provides REST Api with which you can communicate with the MySql database. <br>
+It is written in Node.js using the Nest.js framework. <br>
+The API is generally RESTFULL and return results in JSON. <br></p>
+<h4 id="resource-components">Resource components</h4>
+<p>Major resource components supported by the API are:</p>
+<ul>
+<li>products</li>
+<li>users</li>
+</ul>
+<p>These can be used alone like this</p>
+<table class="table table-bordered compodoc-table">
+<thead>
+<tr>
+<th>resource</th>
+<th>description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>GET /api/products</code></td>
+<td>returns a list of all products</td>
+</tr>
+<tr>
+<td><code>GET /api/products/:id</code></td>
+<td>returns the product with the given id</td>
+</tr>
+<tr>
+<td><code>POST /api/products</code></td>
+<td>creates a single product based on the provided data</td>
+</tr>
+<tr>
+<td><code>PUT /api/products/:id</code></td>
+<td>change of product data with the given id</td>
+</tr>
+<tr>
+<td><code>DELETE /api/products/:id</code></td>
+<td>removes the product with the given id</td>
+</tr>
+</tbody>
+</table>
+<h4 id="clone-the-repository-install-node-packages-and-verify-routes-locally">Clone the repository, install node packages and verify routes locally</h4>
+<div><pre class="line-numbers"><code class="language-none">//on local
+git clone https://github.com/Pablogith/customify.git
+cd customify
+npm install
+nx serve api</code></pre></div><h4 id="modules">Modules</h4>
+<ul>
+<li>ProductModule</li>
+<li>AuthModule</li>
+<li>UserModule</li>
+</ul>
+<h3 id="admin">Admin</h3>
+<p>Angular application that provides the ability to edit the content of client applications. <br></p>
+<h4 id="run-admin-application">Run Admin application</h4>
+<div><pre class="line-numbers"><code class="language-none">//on local
+git clone https://github.com/Pablogith/customify.git
+cd customify
+npm install
+nx serve admin</code></pre></div><p>If you checked the repository before, use only this command</p>
+<div><pre class="line-numbers"><code class="language-none">nx serve admin</code></pre></div><h3 id="client-1">Client</h3>
+<p>Angular application for users. <br></p>
+<h4 id="run-admin-application-1">Run Admin application</h4>
+<div><pre class="line-numbers"><code class="language-none">//on local
+git clone https://github.com/Pablogith/customify.git
+cd customify
+npm install
+nx serve client</code></pre></div><p>If you checked the repository before, use only this command</p>
+<div><pre class="line-numbers"><code class="language-none">nx serve client</code></pre></div><h4 id="screenshots">Screenshots</h4>
+<p><i>Home page</i>
+<img src="./photos/client-home-page.png" alt="Note preview" class="img-responsive"></p>
+<p><i>Account page</i>
+<img src="./photos/client-account-page.png" alt="Note preview" class="img-responsive"></p>
+<p><i>Account inforamtion page</i>
+<img src="./photos/client-account-information-page.png" alt="Note preview" class="img-responsive"></p>
+<h3 id="libraries-1">Libraries</h3>
+<h4 id="api-interfaces">Api interfaces</h4>
+<p>Api interfaces for the client, admin and api</p>
+<p>Import the <code>@customify/api-interfaces</code> and add to your angular module.</p>
+<div><pre class="line-numbers"><code class="language-typescript">export interface IProduct {
+  name: string;
+  price: number;
+  readonly id: string | number;
+  description: string;
+  brand: string;
+  imgUrl: string;
+  imgAlt: string;
+}</code></pre></div><div><pre class="line-numbers"><code class="language-typescript">export interface IUser {
+  id: number;
+  username: string;
+  password?: string;
+  email?: string;
+}
+</code></pre></div><h4 id="data-access">Data Access</h4>
+<p>Data access services</p>
+<p>Import the <code>@customify/data-access</code> and add to your angular module.</p>
+<div><pre class="line-numbers"><code class="language-typescript">import { BrowserModule } from &#39;&#64;angular/platform-browser&#39;
+import { NgModule } from &#39;&#64;angular/core&#39;
+import { DataAccessModule } from &#39;&#64;customify/data-access&#39;
+
+import { AppComponent } from &#39;./app.component&#39;
+
+&#64;NgModule({
+  declarations: [AppComponent],
+  imports: [
+    BrowserModule,
+    DataAccessModule
+  ],
+  providers: [],
+  bootstrap: [AppComponent]
+})
+export class AppModule {}</code></pre></div><h5 id="services">Services</h5>
+<ul>
+<li>product</li>
+</ul>
+<div><pre class="line-numbers"><code class="language-typescript">import { ProductService } from &#39;&#64;customify/data-access&#39;;</code></pre></div><div><pre class="line-numbers"><code class="language-typescript">interface IProductService {
+  getAll&lt;T&gt;(): Observable&lt;T&gt;;
+  getById&lt;T&gt;(id: number | string): Observable&lt;T&gt;;
+  add&lt;T&gt;(product: T): Observable&lt;T&gt;;
+  update&lt;T&gt;(id: number, product: T): Observable&lt;Object&gt;;
+  delete&lt;T&gt;(id: number): Observable&lt;T&gt;;
+}</code></pre></div><h5 id="interceptors">Interceptors</h5>
+<ul>
+<li>http-error</li>
+</ul>
+<div><pre class="line-numbers"><code class="language-typescript">import { BrowserModule } from &#39;&#64;angular/platform-browser&#39;;
+import { NgModule } from &#39;&#64;angular/core&#39;;
+import { AppComponent } from &#39;./app.component&#39;;
+import { DataAccessModule, HttpErrorInterceptor } from &#39;&#64;customify/data-access&#39;;
+import { HTTP_INTERCEPTORS } from &#39;&#64;angular/common/http&#39;;
+
+&#64;NgModule({
+  declarations: [
+    AppComponent
+  ],
+  imports: [
+    BrowserModule,
+    DataAccessModule
+  ],
+  providers: [
+    {
+      provide: HTTP_INTERCEPTORS,
+      useClass: HttpErrorInterceptor,
+      multi: true
+    }
+  ],
+  bootstrap: [AppComponent],
+})
+export class AppModule {}</code></pre></div><h4 id="ui">Ui</h4>
+<p>User Interface module with components and pipes</p>
+<h5 id="add-the-module-to-application">Add the module to application</h5>
+<p>Import the <code>@customify/ui</code> and add to your angular module.</p>
+<div><pre class="line-numbers"><code class="language-typescript">import { BrowserModule } from &#39;&#64;angular/platform-browser&#39;
+import { NgModule } from &#39;&#64;angular/core&#39;
+import { UiModule } from &#39;&#64;customify/ui&#39;
+
+import { AppComponent } from &#39;./app.component&#39;
+
+&#64;NgModule({
+  declarations: [AppComponent],
+  imports: [
+    BrowserModule,
+    UiModule
+  ],
+  providers: [],
+  bootstrap: [AppComponent]
+})
+export class AppModule {}</code></pre></div><h5 id="components">Components</h5>
+<ul>
+<li><a href="#banner-component">banner</a></li>
+<li><a href="#button-component">button</a></li>
+<li><a href="#loader-component">loader</a></li>
+<li><a href="#navbar-component">navbar</a></li>
+<li><a href="#page-intro-header-component">page-intro-header</a></li>
+<li><a href="#product-component">product</a></li>
+<li><a href="#table-component">table</a></li>
+</ul>
+<h5 id="pipes">Pipes</h5>
+<ul>
+<li><a href="#truncate-pipe">truncate</a></li>
+</ul>
+<h5 id="banner-component">Banner Component</h5>
+<h3 style="margin-bottom: 0">Input data</h3> <br>
+
+<table class="table table-bordered compodoc-table">
+<thead>
+<tr>
+<th>Attribute</th>
+<th>Type</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>bannerData</td>
+<td>IBanner</td>
+</tr>
+</tbody>
+</table>
+<div><pre class="line-numbers"><code class="language-typescript">interface IBanner {
+  title: string;
+  description: string;
+  img?: string;
+  backgroundColor?: string;
+  height?: number;
+  textColor?: string;
+}</code></pre></div><h3 style="margin-bottom: 0">Usage</h3> <br>
+```html
+<ui-banner [bannerData]='banner'>
+</ui-banner>
+```
+
+<div><pre class="line-numbers"><code class="language-typescript">const banner: IBanner = {
+  title: &#39;My first banner&#39;,
+  description: &#39;Whats up?&#39;,
+  height: 300,
+  backgroundColor: &#39;rgb(31,165,33)&#39;,
+  textColor: &#39;rgb(255, 255, 255)&#39;
+}</code></pre></div><h5 id="button-component">Button Component</h5>
+<h3 style="margin-bottom: 0">Input data</h3> <br>
+
+<table class="table table-bordered compodoc-table">
+<thead>
+<tr>
+<th>Attribute</th>
+<th>Type</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>status</td>
+<td>buttonStatus</td>
+</tr>
+<tr>
+<td>size</td>
+<td>buttonSize</td>
+</tr>
+<tr>
+<td>disabled</td>
+<td>boolean</td>
+</tr>
+</tbody>
+</table>
+<div><pre class="line-numbers"><code class="language-typescript">const defaultConfig = {
+  size: buttonSize.MEDIUM,
+  status: buttonStatus.DEFAULT
+}</code></pre></div><div><pre class="line-numbers"><code class="language-typescript">enum buttonStatus {
+  DEFAULT = &#39;default&#39;,
+  PRIMARY = &#39;primary&#39;,
+  SECONDARY = &#39;secondary&#39;,
+  SUCCESS = &#39;success&#39;,
+  INFO = &#39;info&#39;,
+  WARNING = &#39;warning&#39;
+}
+
+enum buttonSize {
+  SMALL = &#39;small&#39;,
+  MEDIUM = &#39;medium&#39;,
+  LARGE = &#39;large&#39;,
+  GIANT = &#39;giant&#39;
+}</code></pre></div><h3 style="margin-bottom: 0">Usage</h3> <br>
+
+<div><pre class="line-numbers"><code class="language-html">&lt;ui-button&gt;Click me!&lt;/ui-button&gt;</code></pre></div><h5 id="loader-component">Loader Component</h5>
+<h3 style="margin-bottom: 0">Usage</h3> <br>
+
+<div><pre class="line-numbers"><code class="language-html">&lt;ui-loader *ngIf=&#39;isLoading&#39;&gt;&lt;/ui-loader&gt;</code></pre></div><h5 id="navbar-component">Navbar Component</h5>
+<h3 style="margin-bottom: 0">Input data</h3> <br>
+
+<table class="table table-bordered compodoc-table">
+<thead>
+<tr>
+<th>Attribute</th>
+<th>Type</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>navElements</td>
+<td>Array&lt;INavElement&gt;</td>
+</tr>
+<tr>
+<td>title</td>
+<td>string</td>
+</tr>
+</tbody>
+</table>
+<div><pre class="line-numbers"><code class="language-typescript">const deafaultTitle: string = &#39;Customify&#39;;</code></pre></div><div><pre class="line-numbers"><code class="language-typescript">interface INavElement {
+  name: string;
+  routerLink: string;
+  classes: string;
+}</code></pre></div><h3 style="margin-bottom: 0">Usage</h3> <br>
+
+<p><a href="https://boxicons.com">Icons classes is here</a></p>
+<div><pre class="line-numbers"><code class="language-html">&lt;ui-navbar [navElements]=&#39;navElements&#39;&gt;
+  &lt;router-outlet&gt;&lt;/router-outlet&gt;
+&lt;/ui-navbar&gt;</code></pre></div><div><pre class="line-numbers"><code class="language-typescript">public navElements: Array&lt;INavElement&gt; = [];
+
+this.navElements.push(
+      { routerLink: &#39;/dashboard&#39;, name: &#39;dashboard&#39;, classes: &#39;bx bxs-dashboard&#39; },
+      { routerLink: &#39;/account-page-header&#39;, name: &#39;profile&#39;, classes: &#39;bx bx-user&#39; }
+    );</code></pre></div><div><pre class="line-numbers"><code class="language-html">// index.html
+// Add to head
+&lt;link href=&#39;https://cdn.jsdelivr.net/npm/boxicons&#64;2.0.5/css/boxicons.min.css&#39; rel=&#39;stylesheet&#39;&gt;</code></pre></div><div><pre class="line-numbers"><code class="language-scss">// styles.scss
+$header-height: 3rem;
+$nav-width: 68px;
+
+$main-color: #4723D9;
+$main-color-light: #AFA5D9;
+$white-color: #f7f6fb;
+$grey-color: #404040;
+
+$body-font: &#39;Nunito&#39;, sans-serif;
+$normal-font-size: 1rem;
+
+/*===== z index =====*/
+$z-fixed: 100;
+
+*,::before,::after{
+  box-sizing: border-box;
+}
+
+body {
+  position: relative;
+  margin: $header-height 0 0 0;
+  padding: 0;
+  font-family: $body-font;
+  font-size: $normal-font-size;
+  transition: .5s;
+}
+
+a {
+  text-decoration: none;
+}
+
+ul {
+  list-style: none;
+  padding: 0;
+}
+
+html,
+body {
+  height: 100%;
+}
+
+body {
+  margin: 0;
+  font-family: Roboto, &quot;Helvetica Neue&quot;, sans-serif;
+}</code></pre></div><h5 id="page-intro-header-component">Page Intro Header Component</h5>
+<h3 style="margin-bottom: 0">Input data</h3> <br>
+
+<table class="table table-bordered compodoc-table">
+<thead>
+<tr>
+<th>Attribute</th>
+<th>Type</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>headerData</td>
+<td>IPageIntroHeaderData</td>
+</tr>
+</tbody>
+</table>
+<div><pre class="line-numbers"><code class="language-typescript">interface IPageIntroHeaderData {
+  title: string;
+  url?: string;
+  alt?: string;
+}</code></pre></div><h3 style="margin-bottom: 0">Usage</h3> <br>
+
+<div><pre class="line-numbers"><code class="language-html">&lt;ui-page-intro-header [headerData]=&#39;pageIntroHeaderData&#39;&gt;&lt;/ui-page-intro-header&gt;</code></pre></div><h5 id="product-component">Product Component</h5>
+<h3 style="margin-bottom: 0">Input data</h3> <br>
+
+<table class="table table-bordered compodoc-table">
+<thead>
+<tr>
+<th>Attribute</th>
+<th>Type</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>product</td>
+<td>any</td>
+</tr>
+</tbody>
+</table>
+<h3 style="margin-bottom: 0">Usage</h3> <br>
+
+<div><pre class="line-numbers"><code class="language-html">&lt;ui-product [product]=&#39;product&#39;&gt;&lt;/ui-product&gt;</code></pre></div><h5 id="table-component">Table component</h5>
+<h3 style="margin-bottom: 0">Input data</h3> <br>
+
+<table class="table table-bordered compodoc-table">
+<thead>
+<tr>
+<th>Attribute</th>
+<th>Type</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>tableData</td>
+<td>ITable&lt;T&gt;</td>
+</tr>
+</tbody>
+</table>
+<div><pre class="line-numbers"><code class="language-typescript">interface ITableData&lt;T&gt; {
+  columns: Array&lt;string&gt;;
+  body: Array&lt;T&gt;
+}</code></pre></div><h3 style="margin-bottom: 0">Usage</h3> <br>
+
+<div><pre class="line-numbers"><code class="language-html">&lt;ui-table [tableData]=&#39;productsTableData&#39;&gt;&lt;/ui-table&gt;</code></pre></div><h5 id="truncate-pipe">Truncate pipe</h5>
+<h3 style="margin-bottom: 0">Usage</h3> <br>
+
+<div><pre class="line-numbers"><code class="language-html">&lt;h1&gt;{{ veryLongWord | truncate }}&lt;/h1&gt;</code></pre></div><h5 id="running-storyboook-test">Running storyboook test</h5>
+<p>Run <code>npx ng run component:storybook --project=ui</code></p>
 <h2 id="understand-your-workspace">Understand your workspace</h2>
-<p>Run <code>nx dep-graph</code> to see a diagram of the dependencies of your projects.</p>
+<p>Run <code>nx dep-graph</code> to see a diagram of the dependencies of your projects. <br>
+Or open <code>documentation/index.html</code> in your browser (Compodoc docs).</p>
 
 
 

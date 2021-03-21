@@ -37,4 +37,10 @@ export class ProductEntity implements IProduct {
   @Column()
   imgAlt: string;
 
+  @Column({
+    type: 'boolean',
+    default: false
+  })
+  isDeleted: boolean;
+
 }

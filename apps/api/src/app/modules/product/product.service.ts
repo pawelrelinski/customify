@@ -12,11 +12,17 @@ export class ProductService {
   }
 
   public async findAll(): Promise<Array<ProductEntity>> {
-    return await this.productRepository.find();
+    return await this.productRepository.find({
+      isDeleted: false
+    });
   }
 
   public async findById(id: number | string): Promise<ProductEntity> {
-    return await this.productRepository.findOne(id);
+    return await this.productRepository.findOne(id, {
+      where: {
+        isDeleted: false
+      }
+    });
   }
 
   public async create(product: ProductEntity): Promise<ProductEntity> {
@@ -28,6 +34,10 @@ export class ProductService {
   }
 
   public async remove(id: number | string): Promise<void> {
+    await this.productRepository.update(id, { isDeleted: true });
+  }
+
+  protected async deepRemove(id: number | string): Promise<void> {
     await this.productRepository.delete(id);
   }
 

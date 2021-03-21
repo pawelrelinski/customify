@@ -27,7 +27,7 @@ export class ProductController {
   @Get(':id')
   public async getById(@Param('id') id: number | string): Promise<ProductResponse> {
     const product: ProductEntity  = await this.productService.findById(id);
-    if (!product) {
+    if (!product || product.isDeleted) {
       return new ErrorResponse(product);
     }
 

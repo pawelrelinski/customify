@@ -24,95 +24,95 @@
 <title>cluster_CategoryModule</title>
 <polygon fill="none" stroke="black" stroke-dasharray="1,5" points="8,-70 8,-268 830,-268 830,-70 8,-70"/>
 </g>
-<g id="clust2" class="cluster">
-<title>cluster_CategoryModule_declarations</title>
-<polygon fill="none" stroke="black" points="114,-78 114,-130 822,-130 822,-78 114,-78"/>
-</g>
 <g id="clust8" class="cluster">
 <title>cluster_CategoryModule_exports</title>
-<polygon fill="none" stroke="black" points="332,-208 332,-260 506,-260 506,-208 332,-208"/>
+<polygon fill="none" stroke="black" points="396,-208 396,-260 570,-260 570,-208 396,-208"/>
 </g>
 <g id="clust7" class="cluster">
 <title>cluster_CategoryModule_imports</title>
-<polygon fill="none" stroke="black" points="16,-78 16,-130 106,-130 106,-78 16,-78"/>
+<polygon fill="none" stroke="black" points="732,-78 732,-130 822,-130 822,-78 732,-78"/>
+</g>
+<g id="clust2" class="cluster">
+<title>cluster_CategoryModule_declarations</title>
+<polygon fill="none" stroke="black" points="16,-78 16,-130 724,-130 724,-78 16,-78"/>
 </g>
 <!-- BannersListComponent -->
 <g id="node1" class="node">
 <title>BannersListComponent</title>
-<polygon fill="#ffffb3" stroke="black" points="814.48,-122 665.52,-122 665.52,-86 814.48,-86 814.48,-122"/>
-<text text-anchor="middle" x="740" y="-99.8" font-family="Times,serif" font-size="14.00">BannersListComponent</text>
+<polygon fill="#ffffb3" stroke="black" points="716.48,-122 567.52,-122 567.52,-86 716.48,-86 716.48,-122"/>
+<text text-anchor="middle" x="642" y="-99.8" font-family="Times,serif" font-size="14.00">BannersListComponent</text>
 </g>
 <!-- CategoryModule -->
 <g id="node5" class="node">
 <title>CategoryModule</title>
-<polygon fill="#8dd3c7" stroke="black" points="474.37,-187 471.37,-191 450.37,-191 447.37,-187 363.63,-187 363.63,-151 474.37,-151 474.37,-187"/>
-<text text-anchor="middle" x="419" y="-164.8" font-family="Times,serif" font-size="14.00">CategoryModule</text>
+<polygon fill="#8dd3c7" stroke="black" points="538.37,-187 535.37,-191 514.37,-191 511.37,-187 427.63,-187 427.63,-151 538.37,-151 538.37,-187"/>
+<text text-anchor="middle" x="483" y="-164.8" font-family="Times,serif" font-size="14.00">CategoryModule</text>
 </g>
 <!-- BannersListComponent&#45;&gt;CategoryModule -->
 <g id="edge1" class="edge">
 <title>BannersListComponent&#45;&gt;CategoryModule</title>
-<path fill="none" stroke="black" d="M740,-122.28C740,-143.32 740,-175 740,-175 740,-175 484.55,-175 484.55,-175"/>
-<polygon fill="black" stroke="black" points="484.55,-171.5 474.55,-175 484.55,-178.5 484.55,-171.5"/>
+<path fill="none" stroke="black" d="M642,-122.02C642,-139.37 642,-163 642,-163 642,-163 548.61,-163 548.61,-163"/>
+<polygon fill="black" stroke="black" points="548.61,-159.5 538.61,-163 548.61,-166.5 548.61,-159.5"/>
 </g>
 <!-- CategoryComponent -->
 <g id="node2" class="node">
 <title>CategoryComponent</title>
-<polygon fill="#ffffb3" stroke="black" points="647.15,-122 514.85,-122 514.85,-86 647.15,-86 647.15,-122"/>
-<text text-anchor="middle" x="581" y="-99.8" font-family="Times,serif" font-size="14.00">CategoryComponent</text>
+<polygon fill="#ffffb3" stroke="black" points="549.15,-122 416.85,-122 416.85,-86 549.15,-86 549.15,-122"/>
+<text text-anchor="middle" x="483" y="-99.8" font-family="Times,serif" font-size="14.00">CategoryComponent</text>
 </g>
 <!-- CategoryComponent&#45;&gt;CategoryModule -->
 <g id="edge2" class="edge">
 <title>CategoryComponent&#45;&gt;CategoryModule</title>
-<path fill="none" stroke="black" d="M581,-122.02C581,-139.37 581,-163 581,-163 581,-163 484.75,-163 484.75,-163"/>
-<polygon fill="black" stroke="black" points="484.75,-159.5 474.75,-163 484.75,-166.5 484.75,-159.5"/>
+<path fill="none" stroke="black" d="M483,-122.11C483,-122.11 483,-140.99 483,-140.99"/>
+<polygon fill="black" stroke="black" points="479.5,-140.99 483,-150.99 486.5,-140.99 479.5,-140.99"/>
 </g>
 <!-- CategoryListComponent -->
 <g id="node3" class="node">
 <title>CategoryListComponent</title>
-<polygon fill="#ffffb3" stroke="black" points="496.43,-122 341.57,-122 341.57,-86 496.43,-86 496.43,-122"/>
-<text text-anchor="middle" x="419" y="-99.8" font-family="Times,serif" font-size="14.00">CategoryListComponent</text>
+<polygon fill="#ffffb3" stroke="black" points="398.43,-122 243.57,-122 243.57,-86 398.43,-86 398.43,-122"/>
+<text text-anchor="middle" x="321" y="-99.8" font-family="Times,serif" font-size="14.00">CategoryListComponent</text>
 </g>
 <!-- CategoryListComponent&#45;&gt;CategoryModule -->
 <g id="edge3" class="edge">
 <title>CategoryListComponent&#45;&gt;CategoryModule</title>
-<path fill="none" stroke="black" d="M419,-122.11C419,-122.11 419,-140.99 419,-140.99"/>
-<polygon fill="black" stroke="black" points="415.5,-140.99 419,-150.99 422.5,-140.99 415.5,-140.99"/>
+<path fill="none" stroke="black" d="M321,-122.02C321,-139.37 321,-163 321,-163 321,-163 417.25,-163 417.25,-163"/>
+<polygon fill="black" stroke="black" points="417.25,-166.5 427.25,-163 417.25,-159.5 417.25,-166.5"/>
 </g>
 <!-- CategoryListElementComponent -->
 <g id="node4" class="node">
 <title>CategoryListElementComponent</title>
-<polygon fill="#ffffb3" stroke="black" points="323.58,-122 122.42,-122 122.42,-86 323.58,-86 323.58,-122"/>
-<text text-anchor="middle" x="223" y="-99.8" font-family="Times,serif" font-size="14.00">CategoryListElementComponent</text>
+<polygon fill="#ffffb3" stroke="black" points="225.58,-122 24.42,-122 24.42,-86 225.58,-86 225.58,-122"/>
+<text text-anchor="middle" x="125" y="-99.8" font-family="Times,serif" font-size="14.00">CategoryListElementComponent</text>
 </g>
 <!-- CategoryListElementComponent&#45;&gt;CategoryModule -->
 <g id="edge4" class="edge">
 <title>CategoryListElementComponent&#45;&gt;CategoryModule</title>
-<path fill="none" stroke="black" d="M223,-122.02C223,-139.37 223,-163 223,-163 223,-163 353.62,-163 353.62,-163"/>
-<polygon fill="black" stroke="black" points="353.62,-166.5 363.62,-163 353.62,-159.5 353.62,-166.5"/>
+<path fill="none" stroke="black" d="M125,-122.28C125,-143.32 125,-175 125,-175 125,-175 417.46,-175 417.46,-175"/>
+<polygon fill="black" stroke="black" points="417.46,-178.5 427.46,-175 417.46,-171.5 417.46,-178.5"/>
 </g>
 <!-- CategoryListComponent  -->
 <g id="node7" class="node">
 <title>CategoryListComponent </title>
-<polygon fill="#fb8072" stroke="black" points="497.93,-252 340.07,-252 340.07,-216 497.93,-216 497.93,-252"/>
-<text text-anchor="middle" x="419" y="-229.8" font-family="Times,serif" font-size="14.00">CategoryListComponent </text>
+<polygon fill="#fb8072" stroke="black" points="561.93,-252 404.07,-252 404.07,-216 561.93,-216 561.93,-252"/>
+<text text-anchor="middle" x="483" y="-229.8" font-family="Times,serif" font-size="14.00">CategoryListComponent </text>
 </g>
 <!-- CategoryModule&#45;&gt;CategoryListComponent  -->
 <g id="edge6" class="edge">
 <title>CategoryModule&#45;&gt;CategoryListComponent </title>
-<path fill="none" stroke="black" stroke-dasharray="5,2" d="M419,-187.11C419,-187.11 419,-205.99 419,-205.99"/>
-<polygon fill="black" stroke="black" points="415.5,-205.99 419,-215.99 422.5,-205.99 415.5,-205.99"/>
+<path fill="none" stroke="black" stroke-dasharray="5,2" d="M483,-187.11C483,-187.11 483,-205.99 483,-205.99"/>
+<polygon fill="black" stroke="black" points="479.5,-205.99 483,-215.99 486.5,-205.99 479.5,-205.99"/>
 </g>
 <!-- UiModule -->
 <g id="node6" class="node">
 <title>UiModule</title>
-<polygon fill="#8dd3c7" stroke="black" points="97.55,-122 94.55,-126 73.55,-126 70.55,-122 24.45,-122 24.45,-86 97.55,-86 97.55,-122"/>
-<text text-anchor="middle" x="61" y="-99.8" font-family="Times,serif" font-size="14.00">UiModule</text>
+<polygon fill="#8dd3c7" stroke="black" points="813.55,-122 810.55,-126 789.55,-126 786.55,-122 740.45,-122 740.45,-86 813.55,-86 813.55,-122"/>
+<text text-anchor="middle" x="777" y="-99.8" font-family="Times,serif" font-size="14.00">UiModule</text>
 </g>
 <!-- UiModule&#45;&gt;CategoryModule -->
 <g id="edge5" class="edge">
 <title>UiModule&#45;&gt;CategoryModule</title>
-<path fill="none" stroke="black" d="M61,-122.28C61,-143.32 61,-175 61,-175 61,-175 353.46,-175 353.46,-175"/>
-<polygon fill="black" stroke="black" points="353.46,-178.5 363.46,-175 353.46,-171.5 353.46,-178.5"/>
+<path fill="none" stroke="black" d="M777,-122.28C777,-143.32 777,-175 777,-175 777,-175 548.64,-175 548.64,-175"/>
+<polygon fill="black" stroke="black" points="548.64,-171.5 538.64,-175 548.64,-178.5 548.64,-171.5"/>
 </g>
 </g>
 </svg>
